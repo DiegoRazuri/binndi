@@ -17,6 +17,7 @@ module.exports = function (passport){
 	/*
 	*	logica passport twitter
 	*/
+/*	
 	passport.use(new TwitterStrategy({
 		consumerKey: process.env.TWITTER_CONSUMER_KEY,
 		consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
@@ -54,7 +55,7 @@ module.exports = function (passport){
 ********************
 */
 //ESTE QUERY ES APLICANDO POPULATE
-
+/*
 		Userprofiles.findOne({ username: profile.id }, function (err, user) {
 			if(err){
 				return done(err);
@@ -78,6 +79,7 @@ module.exports = function (passport){
 	    });	     
 
 	}))
+*/
 
 	/*
 	*	logica passport facebook

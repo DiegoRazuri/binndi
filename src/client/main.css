@@ -1,0 +1,15 @@
+body{
+	width: 100%;
+}
+#wrapperForms{
+	display: none;
+	background-color: red;
+	width:  500px;
+	height: 100px;
+}
+#wrapperPopups{
+	display: none;
+	background-color: #ccc;
+	width:  500px;
+	height: 100px;
+}
