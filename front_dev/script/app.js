@@ -1,7 +1,19 @@
 
 window.onload = function(){
 
-	//cargarEventos();
+    console.log("cargo")
+
+	$('.scrolleable').on('click',function (e){
+
+        e.preventDefault();
+        var strAncla = $(this).attr('href');
+        var presize = $(strAncla).offset().top
+        var size = presize;
+
+        $('body, html').stop(true, true).animate({
+            scrollTop: size
+        }, 1000);
+    });
 
 }
 
@@ -16,7 +28,7 @@ btnPopupLogin.addEventListener('click', function (e){
 	console.log("mostrar")
 
 	fadeIn(popupLogin, 1, true, 150)
-	fadeIn(popupShadow, 0.6)
+	fadeIn(popupShadow, 1)
 
 
 });
@@ -31,16 +43,33 @@ btnClosePopup.addEventListener('click', function(e){
 
 var btnMovilMenu = document.querySelector('#btn-movil-menu');
 var movilMenu = document.querySelector('#movil-menu');
-var backgroundMovilMenu = document.querySelector('#background-movil-menu');
 var btnClosePopupMovilMenu = document.querySelector('#btn-close-movil-menu')
 
 
 btnMovilMenu.addEventListener('click', function(e){
 	e.preventDefault()
-	console.log("ejecutando")
+	console.log("ejecutando ani")
 
 	fadeIn(movilMenu,1, true, 0)
-    fadeIn(backgroundMovilMenu,1)
+    //fadeIn(backgroundMovilMenu,1)
+    var screenHeight = screen.height + "px"
+    //$(".btn-entered-hidden").css("display", "none");
+    $(".btn-header-hidden").animate({
+        opacity : 0
+    }, "fast");
+    
+    $(".header").animate({
+        height: screenHeight
+    }, "slow");
+    $("#navigation").animate({
+        backgroundColor: '#0097d3'
+    }, "slow");
+    $("#movil-menu").animate({
+        position: "fixed",
+        top: -10
+    }, "slow");
+    console.log(window.pageYOffset);
+    console.log("hey");
 	
 })
 
@@ -48,7 +77,17 @@ btnClosePopupMovilMenu.addEventListener('click', function(e){
 	e.preventDefault()
 	console.log("ejecutando");
 	fadeOut(movilMenu)
-    fadeOut(backgroundMovilMenu)
+    $(".header").animate({
+        height: "50px"
+    }, "slow");
+    $(".btn-header-hidden").animate({
+        opacity : 1
+    }, "fast");
+    $("#navigation").animate({
+        backgroundColor: 'transparent'
+    }, "slow");
+
+    //fadeOut(backgroundMovilMenu)
 })
 
 
@@ -63,6 +102,9 @@ function fadeOut(element) {
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
     }, 8);
+    var doc = document.querySelector('body');
+
+    doc.style.height = "auto";
 }
 
 function fadeIn(element, finalOpacity, center, pixels) {
@@ -92,6 +134,8 @@ function fadeIn(element, finalOpacity, center, pixels) {
         op += op * 0.1;
         element.style.display = 'block'
     }, 8);
+    var container = document.querySelector("container");
+    //container.style.overflow = "hidden";
 }
 
 function slideDown(element){
@@ -126,93 +170,8 @@ function slideUp(element, finalHeight){
 	}, 1);
 }
 
-/*
-**************//////	AUTOMATIC scroll 	////////***************/
-
-var position = 0;
-var bloques, otros;
-var cantidad, sectorActual, iniciaAnimacion = false;
-
-function cargarEventos(){
-    bloques = document.getElementsByClassName("sectors");
-    otros = document.getElementsByClassName("otros");
-    cantidad = bloques.length;
-    document.addEventListener("wheel",docScrollY,false);
-    for(var i=0; i<cantidad;i++){
-        bloques[i].addEventListener("wheel",direccion, true);
-    }
+// ANIMACIÓN DEL SCROLL
+function scroller (){
+    
 }
-function docScrollY(e) {
-    var winY = scrollY;
-    var ultimo = bloques[cantidad-1];
-    var limite = ultimo.offsetTop+ultimo.clientHeight;
-    if(e.deltaY>0){
-        if(winY<limite){
-            e.preventDefault();
-        }
-    }else {
-        if(winY<limite-150){
-            e.preventDefault();
-            if(scrollY>bloques[cantidad-1].offsetTop){
-                destino = bloques[cantidad-1].offsetTop;
-                iniAnim(destino);
-            }
-        }
-    }
-}
-function direccion(e) {
-    var destino;
-    if(iniciaAnimacion){return}
-    if(e.deltaY>0){
-        if(this.nextSibling){
-            console.log("this.nextSibling : "+this.nextSibling );
-            destino = this.nextSibling.offsetTop;
-            iniAnim(destino);
-        }
-    }else {
-        if(this.previousSibling){
-            destino = this.previousSibling.offsetTop;
-            //console.log("this.previousSibling : "+ this.previousSibling + "  destino:"+destino+
-            //"   actual: "+scrollY );
-            iniAnim(destino);
-        }
-    }
-}
-var idST,destY,origY;
-function iniAnim(destino) {
-    destY = destino;
-    origY = scrollY;
-    if(idST){clearInterval(idST);}
-    iniciaAnimacion = true;
-    if(origY==destino){
-        iniciaAnimacion = false;
-        clearInterval(idST);
-    }else {
-        idST = setInterval(slowMove, 25,origY, destY);
-    }
-}
-function slowMove(o,d) {
-    var nvaPos, ny=scrollY;
-    if(origY<destY){
-        if((destY-ny)<5){
-            scrollTo(0,destY);
-            clearInterval(idST);
-            iniciaAnimacion = false;
-        }else {
-            nvaPos = ny+((destY-ny)/4);
-            scrollTo(0,nvaPos);
-        }
-    }else if(origY>destY){
-        if((ny-destY)<5){
-            scrollTo(0,destY);
-            clearInterval(idST);
-            iniciaAnimacion = false;
-        }else {
-            nvaPos = ny-((ny-destY)/4);
-            scrollTo(0,nvaPos);
-        }
-    }else {
-        clearInterval(idST);
-        iniciaAnimacion = false;
-    }
-}
+    

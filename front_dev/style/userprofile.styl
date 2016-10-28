@@ -1,0 +1,378 @@
+.section-userprofile
+	display none
+	background-color white
+	margin 0px 0px 0px 0px
+	padding 0px
+	.userprofile-header
+		width 100%
+		height 190px
+		overflow hidden
+		
+		.userprofile-header-color-filter
+			background #00aeb5
+			background -moz-linear-gradient(left, rgba(0,174,181,0.6) 1%, rgba(0,174,181,0.6) 33%, rgba(0,151,211,0.6) 100%)
+			background -webkit-linear-gradient(left, rgba(0,174,181,0.6) 1%,rgba(0,174,181,0.6) 33%,rgba(0,151,211,0.6) 100%)
+			background linear-gradient(to right, rgba(0,174,181,0.6) 1%,rgba(0,174,181,0.6) 33%,rgba(0,151,211,0.6) 100%)
+			width 100%
+			height 190px
+			margin 0px
+			padding 0px
+			position absolute
+			top 0px
+			z-index 6
+			overflow hidden
+		
+		figure
+			display block
+			img
+				width 100%
+				
+		.userprofile-wrapper-banner
+			width 100%
+			margin 0px
+			padding 0px
+			position relative
+			top 0px
+			height 200px
+			z-index 5
+			display block
+			background url("img/diego-razuri.jpg")
+			background-size cover
+			background-repeat no-repeat
+			
+			
+		.userprofiles-wrapper-margin-photo
+			position absolute
+			top 50px
+			width 100%
+			z-index 7
+			height 140px
+			display flex
+			align-items center
+			.userprofile-wrapper-photo
+				width 85px
+				height 85px
+				margin 0px auto
+				padding 0px
+				border-radius 45px
+				overflow hidden
+			
+	.userprofile-wrapper-body
+		
+		.userprofile-wrapper-nav
+			width 100%
+			height 40px
+			display flex
+			background-color #efefef
+			
+			.userprofile-nav-btn
+				text-decoration none
+				width 32.7%
+				margin 0px
+				padding 0px
+				background-color #efefef
+				overflow hidden
+				div
+					display flex
+					align-items center
+					justify-content center
+					width 100%
+					height 26px
+					margin-top 7px
+
+					.btn-ico
+						color white
+						width 20px
+						height 20px
+						line-height 20px
+						text-align center
+						background-color #58595b
+						border-radius 50%
+						margin-right 5px
+						
+					.icon-heart-outline, .icon-bookmark
+						font-size 0.8em
+
+					.icon-head
+						font-size 0.7em
+						
+			.userprofile-btn-profile:hover
+				background-color white
+				div .btn-ico
+					background-color #02AC36
+			.userprofile-btn-plans:hover
+				background-color white
+				div .btn-ico
+					background-color #0097D3
+					
+			.userprofile-btn-wishlist:hover
+				background-color white
+				div .btn-ico
+					background-color #DC5F5F
+
+		.userprofile-wrapper-profileinfo
+			h1, h4, span, p, img, h5, h2, h6
+				display block
+				width 90%
+				margin 0px auto
+				text-align center
+				
+			.userprofile-wrapper-challenge-ico
+				display flex
+				width 90%
+				margin 0 auto
+			
+			.userprofile-fb-ico
+				background-color #00599f
+				width 25px
+				height 25px
+				line-height 25px
+				border-radius 50%
+				color white
+				font-size 0.9em
+				margin 18px auto
+				
+			h1
+				margin 30px auto 3px auto
+				
+			h4
+				margin 0px auto 8px auto
+				
+			h5
+				margin 3px auto 13px auto
+				padding 0px 0px 10px 0px
+				width 40%
+				border-bottom solid 1px #58595b
+				
+			h2
+				margin 10px auto 30px auto
+				
+			h6
+				margin 30px auto 30px auto
+				
+			p
+				font-family "Oxygen"
+				font-size 1em
+				font-weight normal
+				color #0097d3
+				
+
+			
+			
+
+.userprofile-wrapper-thumbnail
+	display block
+	height 340px
+	.userprofile-plan-thumbnail
+		overflow hidden
+		figure
+			margin 0px
+			padding 0px
+			height 200px
+			overflow hidden
+			position relative
+			z-index 4
+			
+			img
+				width 100%
+		.userprofile-plan-thumbnail-shadow
+			width 100%
+			height 200px
+			position relative
+			background-color black
+			opacity 0.3
+			top -200px
+			z-index 5
+		.userprofile-plan-thumbnail-wrapper-button
+			width 100%
+			height 200px
+			position relative
+			top -400px
+			z-index 6
+			h2
+				margin 45px auto 15px auto
+				text-align center
+			.icon-cross
+				color white
+				display block
+				font-size 0.9em
+				padding 3px 0px 0px 3px
+
+	.userprofile-plan-thumbnail-detail
+		position relative
+		top -400px
+		
+.userprofile-plan-thumbnail-detail
+	width 90%
+	margin 0px auto
+	div	
+		display flex
+		justify-content space-between
+		align-items center
+		height 31px
+		padding 0px 8px
+		
+		.icon-pay-fist
+			color #a2c498
+			
+		.icon-pay-second
+			color #02ad36
+			
+		.icon-calendar
+			color #00aeb5
+			
+		.icon-head
+			color #0097d3
+
+		
+		p
+			margin 0px 0px 0px 10px
+			padding 0px
+		ul
+			list-style none
+			display flex
+			
+			li
+				margin 0px 3px
+				border-radius 5px
+				overflow hidden
+				img
+					width 100%
+		
+	.detail-field
+		border-bottom solid 1px #ccc
+
+	.plan-friend-list
+		border none
+			
+.btn-edit-plan
+	background-color #FFFFFF
+	width 130px
+	height 35px
+	text-decoration none
+	border-radius 20px
+	padding 0px
+	display flex
+	justify-content center
+	align-items center
+	margin 0px auto
+	
+	span
+		font-size 1.1em
+		margin-right 7px
+		color #0097d3
+		
+	p
+		font-family "Montserrat"
+		font-size 0.9em
+		font-weight normal
+		color #0097d3
+		
+	
+
+			
+@media screen and (min-width: 1000px)
+	.section-userprofile 
+		margin-top 50px
+		margin-bottom 40px
+		.userprofile-header 
+			.userprofile-wrapper-banner, .userprofile-header-color-filter
+				display none
+			
+			.userprofiles-wrapper-margin-photo
+				position relative
+				
+				.userprofile-wrapper-photo
+					width 130px
+					height 130px
+				
+	.section-userprofile .userprofile-wrapper-body
+		display flex
+		width 82%
+		margin 0px auto
+		flex-wrap wrap
+		.userprofile-wrapper-profileinfo
+			width 23%
+			
+		.userprofile-wrapper-plans, .userprofile-wrapper-wishlist
+			width 76%
+			display flex
+			flex-wrap wrap
+			
+		.userprofile-wrapper-plans .userprofile-wrapper-thumbnail
+			width 29.5%
+			margin 1% 1.8%
+		.userprofile-wrapper-plans
+			display flex
+			
+		.userprofile-wrapper-wishlist
+			display none
+			.wrapper-thumbnails
+				flex-direction row
+				justify-content space-around
+				flex-wrap wrap
+				width 100%
+				position relative
+				top -75px
+				overflow auto
+				.thumbnail
+					width 250px
+					height 250px
+					border-radius 15px
+					margin-bottom 15px
+					.mask
+						.transparent-mask-content
+							display block
+							.wrapper-price
+								top 26px
+						.blur-mask-content
+							display none
+							
+							.wrapper-blur-mask-btn
+								margin 21px 0px 7px 0px
+	.section-userprofile .userprofile-header
+		width 23%
+	.section-userprofile .userprofile-wrapper-body .userprofile-wrapper-nav
+		width 76%
+		margin-top 40px
+		justify-content center
+		background-color white
+		
+		.userprofile-nav-btn
+			width 48%
+			border-bottom solid 1px #58595b
+			border-top solid 1px #58595b
+			border-right solid 1px #58595b
+			
+			
+		.userprofile-btn-plans
+			border-left solid 1px #58595b
+			border-top-left-radius 20px
+			border-bottom-left-radius 20px
+			
+		.userprofile-btn-wishlist
+			border-top-right-radius 20px
+			border-bottom-right-radius 20px
+	.element-hidden
+		display none
+		
+	.text-small-bold-grey-m
+		font-size 1.1em
+	.text-big-normal-grey-o 
+		font-size 0.8em
+	.text-medium-normal-grey-o
+		font-size 0.8em	
+		
+	.text-smaller-normal-grey-m
+		font-size 1em
+		
+	.text-medium-normal-grey-o
+		font-size 0.8em
+		
+	.section-userprofile .userprofile-wrapper-body .userprofile-wrapper-profileinfo 
+		h5
+			width 140px
+		p
+			font-size 0.8em
+		h1
+			margin-top 20px
