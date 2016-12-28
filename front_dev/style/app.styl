@@ -423,253 +423,216 @@ textarea {
 
 
 /* Landing */
-
+.btn-hidden
+	display none
 body
 	display block
 	background-color white
-	boder none
+	border none
+	height 100%
 	margin 0px
 	padding 0px
-
-	.container
-		width auto
-		margin 0p0
-		padding 0px
-		position relative
-		z-index 10
-		overflow hidden
-		
-		.header
-			display block
-			height 50px
-			background #00aeb5
-			background -moz-linear-gradient(left, rgba(0,174,181,1) 1%, rgba(0,174,181,1) 33%, rgba(0,151,211,1) 100%)
-			background -webkit-linear-gradient(left, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
-			background linear-gradient(to right, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
-			width 100%
-			position fixed
-			top 0px
-			margin 0px 0px
+	.appContainer
+		height 100%
+		.container
+			height 100%
+			width auto
+			margin 0px
 			padding 0px
-			z-index 8
+			position relative
+			z-index 10
+			overflow hidden
 			
-			.nav
-				padding 0px
+			.header
+				display block
+				height 50px
+				background #00aeb5
+				background -moz-linear-gradient(left, rgba(0,174,181,1) 1%, rgba(0,174,181,1) 33%, rgba(0,151,211,1) 100%)
+				background -webkit-linear-gradient(left, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
+				background linear-gradient(to right, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
 				width 100%
-				height 100%
-				display flex
-				flex-wrap nowrap
-				justify-content space-around
-				align-content center
+				position fixed
+				top 0px
+				margin 0px 0px
+				padding 0px
+				z-index 8
 				
-				.nav-left
-					float left
-				.nav-right
-					float right
-				
-				.nav-left, .nav-right
-					margin 0px
+				.nav
 					padding 0px
+					width 100%
+					height 100%
 					display flex
-					list-style none
+					flex-wrap nowrap
+					justify-content space-around
 					align-content center
-					width 360px
-					li
-						height 25px
-						line-height 25px
+					
+					.nav-left
 						
-						a
-							text-decoration none
+						.ico-menu-movil
 							display block
+							color rgba(34, 30, 31, 0.3)
+							font-size 1.5em
+							margin 10px 0px auto 10px
+							float left
+							padding 0px
+							cursor pointer
 							
-							span, p
-								margin 0px 1px
-								color white
-				
-				figure
-					width 105px
-					height 30px
-					margin 9px auto 0px auto
-					padding 0px
-					img
-						height 100%
-						
-				.nav-left
-					justify-content center
-					li
-						margin auto	 30px auto 0px
-						a
+						.btn-desktop
+							display none
+					
+					
+					.nav-left, .nav-right
+						margin 0px
+						padding 0px
+						display flex
+						list-style none
+						width 30%
+						li
+							
+							a
+								text-decoration none
+								display block
+								cursor pointer
+								p, span
+									color white
+								
+							
+					
+					figure
+						width 105px
+						height 30px
+						margin 9px auto 0px auto
+						padding 0px
+						img
 							height 100%
+							
+					.nav-left
+						li
+							margin auto	 33px auto 0px
+							a
+								height 100%
+								span, p
+									display inline-block
+							
+							a p
+								font-family "Oxygen"
+								font-weight 400
+								font-size 13px
+								
+							a span
+								position relative 
+								top 2px
+								margin-right 2px
+						
+								
+					.nav-right
+						justify-content flex-end
+						li
+							margin auto 7px
 							span, p
 								display inline-block
-						
-						a p
-							font-family "Montserrat"
-							font-weight 400
-							font-size 13px
-							
-						a span
-							position relative 
-							top 2px
-					
-							
-				.nav-right
-					justify-content flex-end
-					li
-						margin auto 7px
-						span, p
-							display inline-block
-							
-					.btn-header-right
-						margin-right 7%
-
-.section-landing
-	display none
-
-.movil-menu
-	display none
-
+								
+						.btn-header-right
+							margin-right 7%
 
 	
-.popup-shadow
+
+	
+.btn-login
+	height 20px
+	width 230px
+	margin 15px auto
+	border-radius 10px
+	padding 10px 30px
+	text-decoration none
+	display flex
+	justify-content space-around
+	align-items center
+	
+	p, span
+		font-family "Oxygen"
+		font-size 0.8em
+		font-weight normal
+		margin 0px
+		text-align center
+		line-height 30px
+		height 30px
+	
+	span
+		width 35px
+		
+.btn-login-fb
+	background-color #00599f
+	
+	span, p
+		color white
+	
+.popup-login
 	display none
 	width 100%
-	height 100%
+	height 100vh
 	background: rgb(0,151,211);
 	background: -moz-linear-gradient(-45deg,  rgba(0,151,211,1) 0%, rgba(0,174,181,1) 100%);
 	background: -webkit-linear-gradient(-45deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
 	background: linear-gradient(135deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
-	opacity 0
-	position absolute
+	position fixed
 	top 0px
-	z-index 8
-	
-.popup-login
-	display none
-	opacity 0
-	justify-content center
-	align-content center
-	flex-direction column
-	background-color white
-	width 350px
-	margin-left auto
-	margin-right auto
-	left 0
-	right 0
-	top 100px
-	padding 0px 20px
-	position absolute
-	z-index 12
-	
-	.btn-close
-		text-align right
-		font-size 1.8em
-		color #ccc
-		margin 20px 0px 40px 0px
-		cursor pointer
-
-	.popup-login-wrapper-content
-		.btn-login
-			height 30px
-			width 80%
-			margin 10px auto
-			border-radius 10px
-			padding 13px 30px
-			text-decoration none
-			display flex
-			justify-content space-around
-			align-items center
-			
-			p, span
-				font-family "Oxygen"
-				font-size 1.2em
-				font-weight normal
-				margin 0px
-				text-align center
-				line-height 30px
-				height 30px
-			
-			span
-				width 35px
-	
-	p
-		font-family "Oxygen"
-		font-size  0.9em
-		font-weight normal
-		color #404041
-		width 94%
-		padding 0px
-		margin 20px auto 80px auto
-		text-align justify
-		a
-			text-decoration none
-			color #0097d3
-			
-
-			
-	.btn-login-fb
-		background-color #00599f
-		
-		span, p
-			color white
-			
-	.btn-login-google
+	z-index 11
+	.wrapper-popup-login
 		background-color white
-		border solid 1px #ccc
+		display flex
+		align-content flex-start
+		flex-direction column
+		width 100%
+		height 100vh
+		margin-left auto
+		margin-right auto
+		position relative
+		top 0px
+		z-index 12
 		
-		span, p
-			color #404041
-		figure
-			margin 0px
-			padding 0px
-			height 23px
-			width 23px
-			img
-				height 100%
-	
-	.btn-login-email
-		background: rgb(2,173,54)
-		background: -moz-linear-gradient(left,  rgba(2,173,54,1) 0%, rgba(0,174,181,1) 58%, rgba(0,151,211,1) 100%)
-		background: -webkit-linear-gradient(left,  rgba(2,173,54,1) 0%,rgba(0,174,181,1) 58%,rgba(0,151,211,1) 100%)
-		background: linear-gradient(to right,  rgba(2,173,54,1) 0%,rgba(0,174,181,1) 58%,rgba(0,151,211,1) 100%)
-		
-		span, p
-			color white
-			
-		.icon-envelope
-			border-radius 50%
-			border solid 1px white
-			
-		
+		.btn-close
+			display block
+			text-align right
+			font-size 1.8em
+			color #ccc
+			margin 10px 10px 0px 0px
+			cursor pointer
 
-.headlines
-	display block
-	font-family "Montserrat"
-	font-size 2em
-	line-height 1em
-	font-weight normal
-	margin 0px 
-	padding 0px
-
-.headline-black
-	color #404041
-	text-align center
-	
-.subtitle
-	font-family "Oxygen"
-	font-size 1.2em
-	font-weight lighter
-	margin 10px auto 0px auto
-	padding 0px
-	display block
-.subtitle-black
-	width 60%
-	color #404041
-	text-align center
+		.popup-login-wrapper-content
+			width 90%
+			margin 0px auto
+			height 100%
+			display flex
+			justify-content center
+			flex-direction column
+			
+			h4
+				margin 0px auto 20px auto
+				padding 0px
+				font-family "Oxygen"
+				font-size 1em
+				font-weight normal
+				display block
+				width 80%
+				text-align center
+			.text-terms-conditions	
+				font-family "Oxygen"
+				font-size  0.9em
+				font-weight normal
+				color #404041
+				width 94%
+				padding 0px
+				margin 20px auto 80px auto
+				text-align justify
+				a
+					text-decoration none
+					color #0097d3
+					
+			
 	
 .banner-background
-	border-top solid 10px white
-	width auto
+	width 100%
 	height auto
 	margin 0px
 	padding 0px
@@ -678,22 +641,513 @@ body
 	background: -webkit-linear-gradient(-45deg,  rgba(0,174,181,1) 6%,rgba(0,151,211,1) 100%)
 	background: linear-gradient(135deg,  rgba(0,174,181,1) 6%,rgba(0,151,211,1) 100%)
 
-.banner1
-	background-image url("img/Binndi_Fold1.jpg")
-	background-repeat no-repeat
-	background-size cover
-	height 632px
+	.banner1
+		background-image url("img/Binndi_Fold1.jpg")
+		background-repeat no-repeat
+		background-size cover
+		background-position 68% 50px
+		height 632px
+		width 100%
 		
-.wrapper-text-banners
-	width 460px
-	height auto
+		.wrapper-text-banners
+			width 95%
+			margin 0px auto
+			height auto
+			
+			h1
+				margin 0px auto
 	
-.wrapper-text-banners-first
-	display block
-	position relative
-	top 240px
-	margin 0px 0px 0px 15% 
+		.wrapper-text-banners-first
+			display block
+			position relative
+			top 160px
+			h2
+				width 95%
+				
+			.wrapper-btn-cta
+				display flex
+				justify-content space-between
+				width 300px
+				margin 40px auto
+				.btn-big-curve
+					width 110px
+					padding 10px 17px
+					margin 0px auto
+					
+				.btn-info
+					background-color #0097D2
+
+				.btn-register
+					background-color #02AC36
+					
+	.banner-binndi-tech
+		width 100%
+		margin 0px
+		padding 0px
+		background-color #F4F4F4
+		height auto
+		.wrapper-text-banner-secundary-tech
+			padding-top 30px
+			
+			figure
+				display block
+				margin 0px auto 20px auto
+				padding 0px
+				width 200px
+				img
+					display block
+					width 100%
+					
+			h3
+				margin 0px auto
+			h4
+				width 85%
+			.landing-wrapper-thumbnails
+				width 100%
+				height 260px
+				margin 30px auto 0px auto
+				overflow hidden
+				.landing-thumbnail
+					overflow hidden
+					cursor pointer
+					width 100%
+					position relative
+					height 260px
+					display block
+					figure
+						padding 0px
+						margin 0px
+						width 100%
+						height 100%
+						overflow hidden
+						img 100%
+							
+					.wrapper-elements
+						position relative
+						top -260px
+						height 100%
+						display flex
+						flex-direction column
+							
+						h2, h3
+							margin 0px 10px 0px 0px
+							padding 0px
+							text-align right
+							position relative
+							top 60px
+							
+						.circle-shadow, .ico
+							display block
+							height 50px
+							width 50px
+							margin 0px auto
+							color white
+							
+						.circle-shadow
+							background-color white
+							opacity 0.5
+							border-radius 50%
+							margin-top 100px
+							
+							
+						.ico
+							font-size 2.8em
+							text-align center
+							margin-top -47px
+					
 	
+	.wrapper-slider
+		position relative
+		top 0px
+		width 100%
+		height 600px
+		
+		.banner-sequence .wrapper-banner-content wrapper-text-features-banners
+			display block
+		
+		.slide
+			position absolute
+			top 0px
+			width 100%
+			display none
+			height 600px
+			
+			.wrapper-banner-content
+				overflow hidden
+	
+		
+			.wrapper-banner-content .wrapper-text-features-banners
+				width 85%
+				position relative
+				top 0px
+				margin 80px auto 40px auto
+				h1, h2
+					text-align center
+					margin 0px auto
+					width 90%
+				h2
+					margin-top 20px
+					
+				.btn-big-curve-sub-banners
+					margin 30px auto
+					width 133px
+				
+			.wrapper-banner-content .banner-image
+				padding 0px
+				display block
+				position relative
+				img
+					display block
+					width 100%
+	
+
+			.img-banner-features-1
+				margin 0px auto 0px auto
+				width 200px
+				
+			.img-banner-features-2
+				margin 0px auto 0px auto
+				width 180px
+				
+			.img-banner-features-3
+				margin 70px auto 0px auto
+				width 220px
+			
+
+		.slide_visible
+			display block
+			
+
+	.otros
+		display block	
+		.banner-secundary
+			width 100%
+			margin 0px
+			padding 0px
+
+		
+		
+		.banner-binndi-points, .banner-binndi-enterprise, .banner-binndi-app
+			background-color #FFFFFF
+			display flex
+			flex-direction column
+			div
+				h3, h4
+					width 95%
+				h3
+					margin 0px auto
+			figure
+				display block
+				margin 0px
+				padding 0px
+				width 100%
+				height auto
+				img
+					width 100%
+			
+		.banner-binndi-points
+			.wrapper-text-banner-secundary-binndi-points
+				width 100%
+				height 300px
+				margin 50px 0px 0px 0px
+				
+				.ico-secundary-banners
+					color #02AC36
+					display block
+					margin 17px auto 25px auto
+				
+				.btn-big-curve
+					background-color #02AC36
+					width 125px
+					margin 30px auto
+					padding 10px 17px
+	
+		
+		.banner-binndi-enterprise
+			.wrapper-text-banner-secundary-enterprise
+				width 100%
+				height 320px
+				margin 20px 0px 0px 0px
+				
+				.ico-secundary-banners
+					color #0097D2
+				
+				.btn-big-curve
+					background-color #0097D2
+					width 125px
+					margin 30px auto 30px auto
+					padding 10px 17px
+					
+		.banner-binndi-app
+			.wrapper-text-banner-secundary-app
+				width 100%
+				height 275px
+				padding 40px 0px 40px 0px
+				.btn-big-curve
+					background-color #02AC36
+					width 155px
+					margin 30px auto 0px auto
+					padding 15px 17px
+					p
+						font-size 1.2em
+			.img-cell
+				width 70%
+				margin 0px auto
+				
+			.img-appstore-logos
+				width 200px
+				margin 0px auto
+
+.section-binndi-points
+	display flex
+	flex-direction column
+	margin 50px 0px 0px 0px
+	padding 0px
+	.grid-a 
+		height 260px
+		.wrapper-header-info 
+			.ico
+				display block
+				margin 30px auto 15px auto
+				padding 0px
+				width 30px
+				height 30px
+				line-height 30px
+				text-align center
+				font-size 1.3em
+				border solid 3px #02ad36
+				color #02ad36
+				border-radius 50%
+				
+			h3
+				text-align center
+				width 90%
+				margin 15px auto
+				
+		ol
+			margin 0px auto 0px auto
+			padding 0px 0px 0px 15px
+			width 280px
+	.grid-b
+		margin 0px
+		padding 0px
+		.section-binndi-points-popup-login
+			background-color #F5F5F5
+			padding-bottom 15px
+			.popup-login-wrapper-content
+				width 90%
+				padding 30px 0px 0px 0px
+				margin 0px auto
+				h4
+					text-align center
+					width 60%
+					margin 0px auto
+					padding 0px
+					display block
+					color #02ad36
+					font-size 1.1em
+					font-family "Oxygen"
+					font-weight normal
+				.text-terms-conditions
+					font-family "Oxygen"
+					font-size  0.6em
+					font-weight normal
+					color #404041
+					width 270px
+					padding 0px
+					margin 20px auto 20px auto
+					text-align justify
+					a
+						text-decoration none
+						color #0097d3
+				
+		
+	.grid-c
+		margin 0px
+		padding 20px 0px
+		figure
+			display block
+			margin 0px
+			padding 0px
+			width 100%
+			img
+				width 100%
+			
+.section-binndi-enterprise
+	display flex
+	flex-direction column
+	margin 50px 0px 0px 0px
+	padding 0px	
+	
+	.grid-a, .grid-b, .grid-c
+		display flex
+		flex-direction column
+		
+		figure
+			display block
+			margin 0px
+			padding 0px
+			
+			img
+				width 100%
+		
+	.grid-a 
+		.wrapper-text-tech-benefit
+			h1
+				text-align center
+				margin 40px auto 15px auto
+			h1, h2
+				width 80%
+				
+			a
+				background-color #0097D2
+				height 38px
+				line-height 38px
+				width 170px
+				margin 20px auto 20px auto
+				
+
+	.grid-b
+		display flex
+		flex-direction column
+		padding 0px
+		
+		.subgrid-a .wrapper-text-form
+			.ico
+				display block
+				margin 30px auto 15px auto
+				padding 0px
+				width 30px
+				height 30px
+				line-height 30px
+				text-align center
+				font-size 1.3em
+				border solid 3px #0097D2
+				color #0097D2
+				border-radius 50%
+				
+			h1
+				text-align center
+				width 90%
+				margin 15px auto
+				
+			h2
+				width 90%
+				margin 15px auto
+				
+			a
+				background-color #0097D2
+				height 38px
+				line-height 38px
+				width 170px
+				margin 20px auto 20px auto
+		.subgrid-b
+			margin 0px
+			padding 0px
+			.form-enterprise
+				background-color #F5F5F5
+				padding 10px 0px 30px 0px
+				h4
+					font-family "Oxygen"
+					font-size 1.4em
+					font-weight normal
+					color #0097D2
+					text-align center
+					display block
+					margin 20px auto 30px auto
+					width 300px
+				
+				.input-box
+					width 300px
+					height 40px
+					line-height 40px
+					margin 10px auto
+					border solid 1px #95989A
+					border-radius 10px
+					
+					input
+						border none
+						background-color #F5F5F5
+						color #95989A
+						font-family "Oxygen"
+						font-size 1em
+						height 30px
+						width 245px
+						position relative
+						left 10px
+						outline 0px
+						
+					.ico
+						color #95989A
+						font-size 1.3em
+						text-align center
+						display block
+						float right
+						position relative
+						top 10px
+						right 10px
+						
+				.btn
+					border none
+					border-radius 10px
+					height 40px
+					line-height 40px
+					width 300px
+					margin 25px auto 0px auto
+					padding 0px
+					font-family "Oxygen"
+					font-weight lighter
+					font-size 0.9em
+					color white
+					background-color #0097D2
+					
+		.subgrid-c
+			background-color #F5F5F5
+			margin 0px
+			padding 0px 0px 40px 0px
+			figure
+				display block
+				margin 20px auto 0px auto
+				padding 0px
+				width 90%
+				
+				img
+					width 100%
+		
+	.grid-c
+		margin 0px
+		padding 0px 0px 40px 0px
+		h1
+			width 90%
+			margin 40px auto 30px auto
+		.wrapper-text-benefits
+			display flex
+			flex-wrap wrap
+			justify-content center
+			.benefit
+				width 49%
+				magin-top 20px
+				margin-bottom 20px
+				h4
+					text-align center
+					width 120px
+					display block
+					margin 15px auto
+				
+				figure
+					display block
+					width 60px
+					padding 0px
+					margin 30px auto 20px auto
+					img
+						width 100%
+						
+				p
+					text-align center
+					width 90%
+					margin 0px auto 20px auto
+					
+						
 .btn-small-curve
 	display block
 	background rgba(34, 30, 31, 0.4)
@@ -720,72 +1174,47 @@ body
 		top 4px
 		left 1px
 
-.btn-close
-	float right
-	margin 0px
-	padding 0px
+
 	
 
 .btn-big-curve
 	display block
 	height 15px
 	line-height 15px
+	text-decoration none
 	border-radius 30px
 	
-	p, span
-		float left
-		margin 0px 2px
+	p
+		margin 0px auto
 		padding 0px
 		color white
 		font-family "Oxygen"
-		font-size 1.0em
-		font-weight normal
+		font-size 0.9em
+		font-weight lighter
+		text-align center
 		
-	span
-		position relative
-		top 0px
-		
-.btn-big-curve-full-color
-	max-width 151px
-	padding 10px 16px
-	background #00aeb5
-	background -moz-linear-gradient(left, rgba(0,174,181,0.5) 30%, rgba(0,174,181,0.5) 33%, rgba(0,151,211,0.5) 100%)
-	background -webkit-linear-gradient(left, rgba(0,174,181,0.5) 30%,rgba(0,174,181,0.5) 33%,rgba(0,151,211,0.5) 100%)
-	background linear-gradient(to right, rgba(0,174,181,0.5) 30%,rgba(0,174,181,0.5) 33%,rgba(0,151,211,0.5) 100%)
-	
-.btn-big-curve-color-light
-	padding 10px 16px
-	background rgba(34, 30, 31, 0.25)
-	
-.btn-big-curve-color-dark
-	width auto
-	padding 10px 3px 10px 15px
-	background rgba(34, 30, 31, 0.6)
-		
-.btn-big-curve-center
-	margin 25px auto
 
-.banner-sequence
-	display flex
-	justify-content flex-start
-	flex-direction row-reverse
-	align-items flex-end
+
+
+		
+
+
 	
 
 	
 .nav-sub-banner
-	display none
+	display block
 	float right
 	width 50px
 	height 470px
 	list-style none
 	margin 0px 
 	padding 0px
-	position fixed
-	top 170px
-	right 45px
+	position absolute
+	top 1450px
+	right 5px
 	li
-		margin 25px auto
+		margin 15px auto
 		text-align center
 		
 		span 
@@ -793,7 +1222,7 @@ body
 			text-align center
 		
 		.ico-subnav-banners
-			font-size 1.1em
+			font-size 0.7em
 			border-radius 50%
 			border solid 2px
 			padding 4px
@@ -801,88 +1230,15 @@ body
 			cursor pointer
 			
 		.ico-arrow-subnav-banners
-			font-size 1.2em
+			font-size 0.8em
 			
 		.ico-subnav-banners:hover
 			color white
 			opacity 1
-
-.text-banner-white
-	color white
 	
-.subtitle-banner-white
-	font-size 1.1em
-	
-.btn-big-curve-sub-banners
-	width 133px
-	padding 10px 12px 10px 21px
-	margin-top 20px
-	
-	
-.wrapper-text-features-banners
-	width 450px
-	position relative
-	margin 0px 130px 0px 0px
-	height 370px
-	
-.banner-image
-	margin 0px
-	padding 0px
-	display block
-	position relative
-	margin 0px 100px 0px 0px
-	width 260px
-	height 498px
-	img
-		width 100%
-.wrapper-banner-features
-	width 100%
-	border-bottom solid 1px white
-	height 660px
-	
-.img-banner-features-2
-	width 320px
-	
-.img-banner-features-3
-	width 290px
-	
-.img-banner-features-4
-	width 350px
-	right 0px
-	
-.headline-center
-	text-align center
-	color white
-	
-.banner-binndi-points
-	background-image url("img/Binndi_points.jpg")
-
-.banner-binndi-enterprise	
-	background-image url("img/Binndi_business.jpg")
-
-.shadow
-	height 400px
-	width 100%
-	background-color black
-	opacity 0.4
-	visibility hidden
-	position absolute
-	
-.banner-secundary
-	border-top solid 10px white
-	height 400px
-	background-repeat no-repeat
-	background-size cover
-	background-position 0px 0px;
-	width 100%
-	margin 0px
-	padding 0px
-
-.wrapper-text-banner-secundary-binndi-points
-	position relative
-	float right
-	margin 120px 60px 0px 0px
-	width 400px
+	.activeBanner
+		span
+			color white
 
 .wrapper-text-banner-secundary-enterprise
 	position relative
@@ -898,277 +1254,113 @@ body
 		margin auto 10px
 		
 .ico-secundary-banners
-	color white
-	border solid 2px
+	border solid 3px
 	padding 5px
 	border-radius 50%
-	font-size 1.2em
-	position relative
-	top -2px
-	
-.banner-binndi-tech
-	background-image url("img/Binndi_FondoTechnologies.jpg")
-	
-.wrapper-text-banner-secundary-tech
-	position relative
-	top 100px
-	
-	figure
-		display block
-		margin 0px auto 20px auto
-		padding 0px
-		width 200px
-		img
-			width 100%
+	font-size 1.3em
+	width 28px
+	height 28px
+	text-align center
+	line-height 28px
+	font-size 1.6em
+	display block
+	margin 17px auto 25px auto
+
 	
 
-.instagram-widget
-	border-top solid 10px white
-	background-color white
-	height auto
-	display none
-	width 100%
-	.wrapper-account-data, .wrapper-account-photos
-		width 50%
-		
-	.wrapper-account-data
-		border-right solid 10px white
-		padding 0px
-		margin 0px
-		
-		.wrapper-account-basicdata, .instagram-account-counts
-			width 100%
-			display flex
-			
-		.wrapper-account-basicdata
-			border-bottom solid 1px #404041
-			padding-bottom 30px
-			.account-logo-binndi, .account-basicdata
-				width 50%
-			
-			.account-logo-binndi
-				overflow hidden
-				width 90px
-				margin 40px 40px 20px 40px
-				padding 0px
-				
-				img
-					width 100%
-					
-			.account-basicdata
-				margin 0px
-				padding 0px
-				width 300px
-				
-				h3
-					font-size 1.7em
-					font-weight normal
-					color #404041
-					font-family 'Montserrat'
-					display block
-					width 100px
-					padding 0px
-					margin 40px 0px 5px 0px
-					
-				span
-					background-color #0097d3
-					border-radius 50%
-					border none
-					display block
-					width 15px
-					height 15px
-					color white
-					text-align center
-					padding 2px 10px 10px 2px
-					font-size 1.5em
-					margin 0px
-					
-				h3, span
-					display inline-block
-					
-				.description, .web
-					font-family "Oxygen"
-					font-size 0.9em
-					text-align left
-					margin 0px
-					padding 0px
-					line-height 1.5em
-					
-				.web
-					font-weight bold
-					
-						
-		.instagram-account-counts
-			padding 20px 0px 0px 0px 
-			justify-content center
-			align-content center
-			div
-				width 33%
-				p
-					font-family "Oxygen"
-					font-size 1.2em
-					font-weight bold
-					color #404041
-					margin 0px
-					padding 0px
-					display block
-					text-align center
-				
-		
-	.wrapper-account-photos
-		display flex
-		flex-wrap wrap
-		justify-content flex-end
-		div	
-			border solid 1px green
-			width 150px
-			height 150px
-			margin 3px 0px 3px 6px
-		
-.binndi-section
-	height 290px
-	display flex
-	width 100%
-	div
-		width 50%
-		h4
-			color white
-			font-family "Montserrat"
-			font-size 1.5em
-			font-weight bold
-			margin 30px auto 0px auto
-			padding 0px
-			text-align center
-			border-bottom solid 2px #58595b
-			padding-bottom 7px
-			width 270px
-			
-	.team
-		background-color #313233
-		.wrapper-team-content
-			display flex
-			justify-content space-around
-			width 100%
-			.wrapper-member-info
-				margin 30px 0px
-				width 25%
-				figure
-					display block
-					width 80px
-					height 80px
-					border-radius 50%
-					overflow hidden
-					margin 10px auto
-					padding 0px
-					
-					img
-						display block
-						height 100%
-				
-				h5, h6
-					font-family "Oxygen"
-					text-align center
-					display block
-					margin 5px 0px
-					padding 0px
-					
-				h5
-					color white
-					font-weight bold
-					font-size 0.8em
-				h6
-					font-size 0.7em	
-					color #58595b				
-		
-	.recruitment
-		background-color #221e1f
-		.wrapper-message
-			width 370px
-			margin 25px auto
-			padding 0px
-			display flex
-			
-			.wrapper-recruitment-images, .wrapper-recruitment-text
-				width 50%
-			.wrapper-recruitment-images
-				display flex
-				flex-direction column
-				justify-content center
-				align-content center
-				figure
-					height 60px
-					width 60px
-					border-radius 50%
-					overflow hidden
-					margin 7px auto
-					padding 0px
-					img
-						width 100%
-			.wrapper-recruitment-text
-				margin 30px 0px
-				color white
-				p
-					font-family "Oxygen"
-					text-align left
-					margin 0px
-					padding 0px
-					
-				.recruitment-text-bold
-					font-size 0.9em
-					font-weight bold
-					
-				.recruitment-text-light
-					font-weight lighter
-					font-size 0.8em
-					
-				span, .email
-					margin 7px 0px
-					display inline-block
-					
-				span
-					position relative
-					top 4px
+	
 				
 .footer
-	border-top solid 10px white
-	height 60px
 	display block
 	position relative
 	bottom 0
 	margin 0px
-	padding 0px
+	padding 0px 0px 15px 0px
 	width 100%
-	background: rgb(0,151,211)
-	background: -moz-linear-gradient(left,  rgba(0,151,211,1) 0%, rgba(0,174,181,1) 100%)
-	background: -webkit-linear-gradient(left,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%)
-	background: linear-gradient(to right,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%)
+	background-color #535C61
 		
 	ul
-		margin 0px
+		margin 0px auto 0px auto
 		padding 0px
-		width 100%
+		width 90%
 		height 100%
 		list-style none
 		display flex
-		justify-content center
+		justify-content flex-start
 		align-content center
+		flex-wrap wrap
 		
 		li
-			display block
-			margin auto 10px
-			text-align center
-			height 20px
-			line-height 20px
-			a
-				text-decoration none
-				text-align center
+			display flex
+			flex-direction column
+			justify-content center
+			text-align left
+			width 25%
+			margin-top 25px
+			
+			h5
 				font-family "Oxygen"
-				font-size 0.7em
+				font-size 0.5em
+				font-weight normal
 				color white
-			.nav-footer
-				font-weight lighter
-			.logo-binndi-footer a
-				font-weight bold
+				margin 0px
+				padding 0px
+				
+			.footer-btn-underline
+				width 30px
+				height 7px
+				margin 11px 0px
+				background-color #41BCB7
+				float left
+			ul
+				margin 0px
+				padding 0px
+				width 100%
+				height 100%
+				list-style none
+				display flex
+				justify-content flex-start
+				align-content flex-start
+				flex-direction column
+				
+				li
+					width 100%
+					height 9px
+					margin 4px 0px
+					
+					a
+						text-decoration none
+						margin 0px
+						padding 0px
+						width auto
+						color white
+						font-family "Oxygen"
+						font-weight lighter
+						font-size 0.5em
+						text-align left
+						cursor pointer
+						
+					a:hover
+						color #ccc
+		.footer-grid-logos
+			width 40%
+
+			figure
+				display block
+				margin 0px auto
+				padding 0px
+				width 100%
+				a
+					text-decoration none
+					cursor pointer
+					
+					img
+						width 100%
+		.footer-grid-newsletter
+			display none
+					
+				
+			
 				
 .social-network-ico
 	position relative
@@ -1178,343 +1370,385 @@ body
 	font-size 1em
 	padding 5px
 	
-.ico-menu-movil
-	display none
 
-
-@media screen and (max-width: 1100px)
-
-	.banner1
-		height 768px
-		background-position -350px 0px
-	.wrapper-banner-features
-		padding-bottom 100px
-	.nav-sub-banner
-		top 200px
-	.shadow
-		visibility visible
-	.banner-binndi-points
-		opacity 1
-		
-@media screen and (max-width: 768px)
-
-	body .container
-		margin 0px
-		
-	body .container .header
-		display block
-		
-		
-	.ico-menu-movil
-		display block
-		color rgba(34, 30, 31, 0.3)
-		font-size 2em
-		margin 10px 0px auto 10%
-		padding 0px
-		cursor pointer
-			
-	body .container .header .nav .nav-left
-		display block
-
-	body .container .header .nav .nav-right li
-		margin 10px 7px
-		
-	
-	body .container .header .nav
-		justify-content space-between
-		.nav-right, .nav-left
-			width 25%
-		
-
-
-	.movil-menu
-		
-		display none
-		flex-direction column
-		position fixed
-		top 0px
-		z-index 30
-		width 100%
-		height 100vh
-		margin 0px
-		padding 0px
-		
-		
-		.movil-menu-header
-			display block
-			justify-content flex-end
-			align-content flex-start
-			margin 0px 0px 50px 0px 
-			height 50px
-			
-			figure
-				width 105px
-				margin 19px auto 0px auto
-				img
-					width 100%
-			.btn-close-movil-menu
-				text-align right
-				float right
-				position absolute
-				top 20px
-				right 10px
-				color white
-				font-size 1.8em
-		.movil-menu-options
-			width 70%
-			margin 0px auto 0px auto
-			list-style none
-			padding 0px 0px 20px 0px
-			
-			li 
-				margin 40px 0px
-				a
-					text-decoration none
-					color white
-					font-family "Oxygen"
-					font-weight normal
-					font-size 2.4em
-					display inline
-				
-				span, p
-					display inline-block
-					margin 0px 10px
-		.movil-nav-options
-			border-bottom solid 1px white
-	
-	.btn-desktop
-		display none
-	.btn-entered
-		position relative
-		right 10%
-	.banner1
-		height 1030px
-		background-position -770px 0px
-
-	.wrapper-text-banners-first
-		margin 0px auto	
-		
-	.wrapper-banner-features
-		width 100%
-		height 930px
-		
-	.banner-sequence
-		width 100%
-		flex-direction column
-		justify-content center
-		align-content center
-		
-	.headlines, .subtitle
-		text-align center
-	.headlines	
-		font-size 3.3em
-		line-height 1em
-	.subtitle
-		font-size 2.1em
-		width 80%
-		margin 40px auto 0px auto
-	
-	.btn-big-curve
-		margin 50px auto
-		height 35px
-		line-height 30px
-		
-		p, span
-			font-size 1.6em
-			
-		span
-			top 5px
-	
-	.btn-big-curve-full-color
-		max-width 237px
-		padding 10px 30px 10px 40px
-	
-	.nav-sub-banner
-		display none
-		
-	.wrapper-text-features-banners
-		width 90%
-		margin 210px auto 0px auto
-	.wrapper-text-banners
-		width 550px
-	.text-banner-white
-		width 100%
-			
-	.subtitle-banner-white
-		font-size 1.9em
-	.btn-big-curve-sub-banners
-		display none
-		width 208px
-		
-	.banner-image
-		margin 30px auto 0px auto
-	.img-banner-features-4
-		right 0px
-		
-	.banner-secundary
-		height 590px
-		
-	.wrapper-btn-and-ico-secundary-banners
-		margin 30px auto
-	.wrapper-text-banner-secundary-binndi-points, .wrapper-text-banner-secundary-enterprise
-		width 80%
-		float none
-		margin 60px auto
-	
-	.banner-binndi-points
-		background-position -270px 0px
-		
-	.banner-binndi-enterprise
-		background-position -350px 0px
-	.shadow
-		height 590px
-		opacity 0.6
-	
-	.banner-binndi-tech
-		height 650px
-		
-	.instagram-widget, .binndi-section, .btn-hidden
-		display none
-	
-	
-	
-@media screen and (max-width: 420px)
-	
-	body .container .popup-login
-		display none
-		justify-content flex-start
-		align-items flex-start
-		position absolute
-		top 0px
-		height 750px
-		width 100%
-		padding 0px
-		
-		.btn-close
-			margin 10px 5px 0px 0px
-			font-size 1.8em
-			width 100%
-			
-		
-		.popup-login-wrapper-content
-			margin 120px 0px 0px 0px
-			.btn-login
-				width 70%
-				margin 25px auto
-				p
-					font-size 0.8em
-			.btn-close
-				height 30px
-				margin 0px
-				padding 0px
-
-
-		
-	.movil-menu
-		display none
-		
-
-		.movil-menu-header	
-			display block
-		.movil-menu-options 
-			li
-				margin 20px 0px
-				a
-					font-size 1.2em
-		
-	body .container .header .nav .logo-binndi-header
-		height 30px
-		width 48%
-		margin 9px auto 0px auto 0px
-		
-		img
-			display block
-			margin 0px auto
-	.ico-menu-movil
-		font-size 1.5em
-		
-	.btn-small-curve p, .btn-small-curve span
-		font-size 0.6em
-		
-	.banner1
-		background-position -555px, -200px
-		height 587px
-
-	.wrapper-text-banners
-		width 80%
-		
-	.wrapper-text-banners-first
-		top 110px
+@media screen and (min-width: 767px)
 	.headlines
-		font-size 1.5em
+		margin 0px auto
+		width 51%
+		
 	.subtitle
-		font-size 0.9em
-		width 100%
-		margin 20px auto 0px auto
+		width 67%
 		
-	.subtitle-black
-		font-size 1.1em
+	.banner-background .wrapper-slider .slide .wrapper-banner-content .wrapper-text-features-banners h1, .banner-background .wrapper-slider .slide .wrapper-banner-content .wrapper-text-features-banners h2
+		width 47%
+
 		
-	.btn-big-curve
-		margin 25px auto
-		padding 5px 15px 5px 20px
+	.banner-background .otros .banner-binndi-points div h3, .banner-background .otros .banner-binndi-enterprise div h3, .banner-background .otros .banner-binndi-app div h3, .banner-background .otros .banner-binndi-points div h4, .banner-background .otros .banner-binndi-enterprise div h4, .banner-background .otros .banner-binndi-app div h4
+		width 51%
+	
+	.banner-background
+		.nav-sub-banner
+			top 1333px
+			right 45px
+		.banner-secundary
+			padding-bottom 20px
+			.wrapper-text-banner-secundary-tech .landing-wrapper-thumbnails
+				display flex
+				justify-content space-around
+				.landing-thumbnail
+					width 236px
+					height 227px
+					border-radius 15px
+
+	.section-binndi-points .grid-a .wrapper-header-info h3
+		width 49%
+	.section-binndi-points .grid-c
+		padding 35px 0px
 		
-		p, span
-			font-size 0.9em
-			
-		span
-			top 8px
-			
-		p
-			position relative
-			top 1px
+	.section-binndi-enterprise .grid-c .wrapper-text-benefits .benefit
+		width 200px
 		
-	.btn-big-curve-full-color
-		width 166px
-		span
-			top 10px
-		
-	.wrapper-banner-features
-		height 438px
-		padding-bottom 200px
-		
-	.banner-image
-		margin 0px auto 0px auto
-		width 172px
-		height 495px
-		position relative
-		top 152px
-		
-	.wrapper-text-features-banners
-		margin 0px auto 0px auto
-		position relative 
-		top 330px
-	.banner-secundary
-		height 352px
-		
-	.shadow
-		height 352px
-		
-	.btn-big-curve-full-color
-		width 141px
-		
-	.btn-big-curve-color-dark span
-		margin 0px
-		top 10px
-		
-	.wrapper-text-banner-secundary-tech
-		top 32px
+	.section-binndi-enterprise .grid-b .subgrid-a .wrapper-text-form h2
+		width 65%
 		
 	.footer ul
+		width 70%
+		
+	.popup-login
+		display none
+		justify-content center
+		align-items center
+		.wrapper-popup-login
+			height 450px
+			width 380px
+			.btn-close
+				margin-bottom 40px
+			
+@media screen and (min-width: 1020px)
+	body .appContainer .container .header .nav .nav-left 
+		.ico-menu-movil
+			display none
+		.btn-desktop
+			display flex
+			
+		.first-btn-nav
+			margin-left 40px
+			
+	.banner-background .banner1 .wrapper-text-banners-first
+		h1
+			width 462px
+			font-size 1.9em
+			
+		h2
+			font-size 1.4em
+			
+	.banner-background .banner-binndi-tech 
+		height 510px
+		padding-bottom 0px
+		.wrapper-text-banner-secundary-tech
+			top 64px
+			padding-top 50px
+			.landing-wrapper-thumbnails
+				margin-top 53px
+				width 1000px
+				.landing-thumbnail
+					width 320px
+
+	.banner-background 
+		.nav-sub-banner
+			top 1400px
+			li
+				margin 20px auto
+				.ico-subnav-banners
+					font-size 1.1em
+					
+				.ico-arrow-subnav-banners
+					font-size 1.2em
+		
+		.wrapper-slider 
+
+			#banner-sequence-1 .wrapper-banner-content
+				margin-top 100px
+				width 740px
+			#banner-sequence-2 .wrapper-banner-content
+				margin-top 100px
+				width 760px
+			#banner-sequence-3 .wrapper-banner-content
+				margin-top 100px
+				width 860px
+				
+			.slide
+				
+				.wrapper-banner-content
+					
+					margin 0px auto
+					.wrapper-text-features-banners, .banner-image
+						display block
+					
+					.wrapper-text-features-banners
+						width auto
+						margin 100px 0px 0px 0px
+						float right
+						h1, h2
+							display block
+							padding 0px
+							magin 0px
+							text-align left
+							width 379px
+							
+						h1
+							font-size 1.8em
+						h2
+							font-size 1.1em
+							font-weight lighter
+							
+						.btn-big-curve
+							margin 30px 0px 0px 0px
+					
+
+					.img-banner-features-1
+						width 310px
+					.img-banner-features-2
+						width 310px
+					.img-banner-features-3
+						width 465px
+					
+					.banner-image
+						margin 0px
+
+					
+	.banner-background .otros .banner-binndi-points, .banner-background .otros .banner-binndi-app
+		flex-direction row
+	.banner-background .otros .banner-binndi-enterprise
+		flex-direction row-reverse
+		
+	.banner-background .otros .banner-secundary figure img
+		display block 
+		
+	.banner-background .otros .banner-binndi-points .wrapper-text-banner-secundary-binndi-points
+		margin-top 29px
+			
+	.banner-background .otros .banner-binndi-enterprise .wrapper-text-banner-secundary-enterprise
+		margin-top 34px
+		
+	.banner-background .otros .banner-binndi-points div h3, .banner-background .otros .banner-binndi-enterprise div h3, .banner-background .otros .banner-binndi-app div h3, .banner-background .otros .banner-binndi-points div h4, .banner-background .otros .banner-binndi-enterprise div h4, .banner-background .otros .banner-binndi-app div h4
+		width 323px
+	.banner-background .otros .banner-binndi-app 
+		background-color #e0e0e0
+		.wrapper-text-banner-secundary-app
+			width 50%
+			background-color white
+			height 100%
+		.img-cell
+			width 27%
+			
+
+	.section-binndi-points
+		flex-direction row
 		flex-wrap wrap
-	.footer ul li
-		margin 0px 5px
+		.grid-a
+			width 60%
+			
+		.grid-c
+			width 56%
+			
+		.grid-a
+			.wrapper-header-info
+				display flex
+				justify-content flex-end
+				width 470px
+				margin 80px auto 0px auto
+				h3
+					font-size 1.7em
+					width 405px
+					text-align left
+					margin 0px
+					
+				.ico
+					margin 7px 20px 0px 0px
+			ol 
+				width 395px
+				margin-top 35px
+				padding-left 75px
+				li
+					font-size 0.9em
+					
+		.grid-b .section-binndi-points-popup-login
+			width 355px
+			margin 80px auto 0px auto
+			.popup-login-wrapper-content 
+				h4
+					font-size 1.2em
+				.btn-login
+					margin 25px auto
+				
+					
+		.grid-c
+			figure
+				width 575px
+				margin 20px 0px 0px 0px
+				float right
+	
+	.section-binndi-enterprise 
+		.grid-a
+			flex-direction row-reverse
+			padding 50px 145px
+			background-color #F5F5F5
+			
+			.wrapper-text-tech-benefit
+				h1, h2
+					text-align left
+				a
+					float left
+					margin-left 60px
+					margin-top 20px
+					
+				h1
+					font-size 1.7em
+					margin-top 0px
+					
+				h2
+					font-size 1em
+		.grid-b
+			flex-direction row
+			flex-wrap wrap
+			.subgrid-a
+				width 60%
+				height 370px
+				
+				.wrapper-text-form
+				
+					.wrapper-header-info
+						display flex
+						justify-content flex-end
+						width 530px
+						margin 80px auto 0px auto
+						
+						h1
+							font-size 1.7em
+							width 465px
+							text-align left
+							margin 0px
+							
+						.ico
+							margin 7px 20px 0px 0px
+							width 37px
+							height 37px
+							line-height 37px
+							font-size 1.5em
+							
+					h2
+						width 435px
+						margin-top 20px
+						padding-left 30px
+						text-align left
+						font-size 1em
+					a
+						float left
+						margin-left 175px
+						margin-top 15px
+						
+			.subgrid-b
+				.form-enterprise
+					display block
+					padding 18px 18px 28px 18px
+					margin-top 86px
+					
+					h4
+						display block
+						font-size 1.1em
+						width 270px
+						margin-top 0px
+						
+					.input-box
+						width 250px
+						height 33px
+						line-height 33px
+						border-radius 6px
+						background-color white
+						border-color #ccc
+						input
+							width 200px
+							font-size 0.8em
+							background-color white
+						.ico
+							font-size 1em
+							
+					.btn
+						border-radius 6px
+						height 35px
+						line-height 35px
+						width 250px
+						margin-top 15px
+						font-size 0.8em
+				
+			.subgrid-c
+				width 60%
+				background-color white
+				margin-top -140px
+				figure
+					width 76%
+					float right
+					margin-right 80px
+
+		.grid-c
+			.wrapper-text-benefits
+				border-top solid 1px #95989A
+				width 1020px
+				margin 25px auto
+				
+				h1
+					margin-top 40px
+					font-size 1.9em
+					
+				.benefit
+					figure 
+						margin 40px auto 30px auto
+						width 75px
+						
+					p
+						width 85%
+						
+	.footer ul
+		width 950px
 		
-@media screen and (max-width: 415px)
-	.banner1
-		height 730px
-		background-position -762px, -200px 
-		
+		li
+			margin-top 50px
+			margin-bottom 40px
+			width auto
+			width 18%
+			h5
+				font-size 0.6em
+				
+			.footer-btn-underline
+				height 3px
+				
+			ul li 
+				height 13px
+				a
+					font-size 0.6em
+		.footer-grid-logos
+			width 20%
+			order -1
+			margin-right 6%
+			figure
+				margin 0px
+				float left
+				width 150px
+				
+				
+
+.movil-menu
+	display none
+.section-landing
+	display none
+.section-binndi-points
+	display flex
+	display none
+.section-binndi-enterprise
+	display flex
+.header
+	display block
 
 
 @import "explore.styl"
@@ -1523,3 +1757,4 @@ body
 
 @import "userprofile.styl"
 @import "forms.styl"
+@import "font-style.styl"

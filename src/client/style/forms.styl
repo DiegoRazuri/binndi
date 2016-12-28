@@ -1,0 +1,154 @@
+	
+.popup-add-to-plan
+	display flex
+	opacity 1
+	flex-direction column
+	position fixed
+	top 0
+	z-index 12
+	width 100%
+	height 100vh
+	background-color white
+	.btn-close
+		text-align right
+		margin 10px 10px 0px 0px
+	.popup-plan-title
+		width 100%
+		text-align center
+		padding 0px
+		margin 50px 0px 33px 0px
+		
+	.btn-create-new-plan
+		background-color #02AC36
+		margin 25px auto 10px auto
+	.btn-add-to-car
+		background-color #0097D3
+		margin 0px auto
+		
+	.btn-create-new-plan, .btn-add-to-car
+		display flex
+		align-items center
+		justify-content flex-end
+		width 290px
+		height 40px
+		border-radius 10px
+		p
+			width 75%
+			text-align center
+		span
+			width 12%
+			color white
+			font-size 1.2em
+	
+	.wrapper-popup-add-to-plan
+		width 290px
+		margin 0px auto
+		display block
+		
+		
+		.wrapper-list-plans
+			max-height 250px
+			width 100%
+			border-top solid 1px #CECECE
+			overflow auto
+			.row-plan
+				border-bottom solid 1px #CECECE
+				height 45px
+				width 100%
+				margin 0px
+				padding 0px
+				display flex
+				justify-content space-around
+				align-items center
+				
+				
+				figure
+					width 40px
+					height 30px
+					border solid 1px #ccc
+					margin 0px
+					border-radius 5px
+					padding 0px
+					overflow hidden
+					img
+						width 100%
+						margin 0px
+						padding 0px
+				p
+					width 150px
+					overflow hidden
+				.btn-save-plan
+					background-color #02AC36
+					width 70px
+					height 30px
+					line-height 30px
+					border-radius 4px
+					text-align center
+					cursor pointer
+			
+			.row-plan:hover
+				background-color #EBEBEB
+					
+		
+
+	.wrapper-popup-create-new-plan
+		width 290px
+		margin 0px auto
+		display none
+		form
+			width 100%
+			margin-top 40px
+			.form-field-create-plan
+				border solid 1px #535C61
+				border-radius 10px
+				width 100%
+				margin 10px auto
+				padding 0px
+				height 40px
+				line-height 45px
+				display flex
+				align-items center
+				
+				input
+					width 85%
+					height 60%
+					overflow hidden
+					float left
+					margin-left 7px
+					color #58595b
+					font-family "Oxygen"
+					font-size 0.9em
+					border none
+					
+				input:focus
+					outline 0
+				span
+					color #58595b
+					font-size 1.2em
+					text-align center
+					margin 0px 0px 0px 0px
+					padding 0px
+		a
+			text-decoration none
+			color #DA5655
+			font-family "Oxygen"
+			font-size 0.9em
+			font-weight lighter
+			text-align center
+			display block
+			margin 25px auto
+			width 100px
+			
+
+@media screen and (min-width: 767px)
+	.popup-add-to-plan
+		width 310px
+		height 500px
+		margin-left auto
+		margin-right auto
+		left 0
+		right 0
+		top 100px
+		position fixed
+		
+			

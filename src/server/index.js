@@ -18,7 +18,7 @@ const server = http.createServer(app)
 //conexion a base de datos
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/binndi', function(err, res){
 	if(err) throw err;
-	console.log("conectado con exito a la base de datos");
+	console.log("conectado con éxito a la base de datos");
 })
 
 
@@ -28,11 +28,14 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/binndi', functi
 //Configuracion para obtener datos mediante post con body-parser
 //antes de configurar los archivos estaticos se indica los parsers
 app.use(cookieParser())
+
+app.use(bodyParser.urlencoded({ extended: true })) 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 //sesiones de express
+
+var sessionKey = process.env.SESSION_KEY;
 app.use(expressSession({
-	secret: 'binndicambiarclave',
+	secret: sessionKey,
 	resave : false,
 	saveUninitialized: false
 }))
@@ -51,7 +54,7 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', {
 	failureRedirect : '/'
 }));
 */
-app.get('/auth/facebook', passport.authenticate('facebook'))
+app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 //	successRedirect : '/',
 	failureRedirect : '/'
@@ -60,7 +63,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 		console.log("es nuevo")
 		return res.redirect('/otro')
 	}else{
-		res.redirect('/');
+		res.redirect('/userprofile');
 	}
 });
 
@@ -75,8 +78,12 @@ app.get('/logout', (req, res) =>{
 app.use('/api', api)
 
 //configuracion de ruteo
+
+
+
 app.get('*', function (req, res){
 	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
+
 })
 
 //levantamiento de servidor

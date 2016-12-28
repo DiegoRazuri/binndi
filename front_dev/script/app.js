@@ -15,6 +15,8 @@ window.onload = function(){
         }, 1000);
     });
 
+    var t=setInterval(function(){avanzar2();},3500);
+
 }
 
 
@@ -32,7 +34,7 @@ btnPopupLogin.addEventListener('click', function (e){
 
 
 });
-
+/*
 
 btnClosePopup.addEventListener('click', function(e){
 	e.preventDefault()
@@ -40,6 +42,7 @@ btnClosePopup.addEventListener('click', function(e){
 	fadeOut(popupLogin)
 	fadeOut(popupShadow)
 })
+*/
 
 var btnMovilMenu = document.querySelector('#btn-movil-menu');
 var movilMenu = document.querySelector('#movil-menu');
@@ -173,5 +176,114 @@ function slideUp(element, finalHeight){
 // ANIMACIÓN DEL SCROLL
 function scroller (){
     
+}
+/*
+
+$(document).ready(function(){
+
+    var bannersHeight =  document.getElementById("banner-sequence-1").offsetHeight;
+
+
+    var el = document.getElementById("extraBanners")
+
+    PointNormalScroll = el.offsetTop - screen.height;
+
+    var lastScrollTop = 0;
+
+    var contScrollDistance = bannersHeight;
+    
+    $(window).scroll(function(event){
+
+        var initPosition = $(document).scrollTop()
+
+
+        if( initPosition < PointNormalScroll ){
+            
+
+            var st = $(this).scrollTop();
+            
+            if (st > lastScrollTop){
+                console.log("abajo")
+                $("html, body").animate({ scrollTop: contScrollDistance }, 2000, function(){
+                    contScrollDistance = contScrollDistance + bannersHeight;
+                    console.log(contScrollDistance)
+                });
+            } else {
+                // upscroll code
+                console.log("arriba")
+
+                //$("html, body").animate({ scrollTop: -bannersHeight }, 2000);
+            }
+            
+        
+        }else{
+            console.log("ya no scrollea auto")
+        }
+        lastScrollTop = st;
+    });
+
+/*
+
+    var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+   } else {
+      // upscroll code
+   }
+   lastScrollTop = st;
+});
+    
+
+    
+
+});
+*/
+
+
+
+function stopinterval(tPromo){
+    clearInterval(tPromo);
+}
+
+
+
+function avanzar2()
+{
+    var size = $('#wrapper-slider').find('.slide').size();
+        $('#wrapper-slider').find('.slide').each(
+            function(index,value){
+                if($(value).hasClass('slide_visible'))
+                {
+                    var id_visible = $(value).attr("id");
+                    id_slide = id_visible.substr(-1);
+
+                    console.log(id_slide);
+                    $(".pagination").each( function (){
+                        $(this).removeClass("activeBanner");
+
+                    });
+
+                    $("#slide" + id_slide + "pag").addClass("activeBanner");
+                
+                    $(value).hide("slide", { direction: "down" }, 1000);
+                    setTimeout(function(){ $(value).removeClass('slide_visible'); }, 2000);
+                    //$(value).removeClass('slide_visible');
+                    
+                    if(index+1<size)
+                    {
+                        $($('#wrapper-slider').find('.slide').get(index+1)).show("slide", { direction: "up" }, 1000);
+                        setTimeout(function(){ $($('#wrapper-slider').find('.slide').get(index+1)).addClass('slide_visible'); }, 2000);
+                        
+                    }
+                    else
+                    {
+                        $($('#wrapper-slider').find('.slide').get(0)).show("slide", { direction: "up" }, 1000);
+                        $($('#wrapper-slider').find('.slide').get(0)).addClass('slide_visible');    
+                        return false;
+                    }
+                }
+        });
 }
     

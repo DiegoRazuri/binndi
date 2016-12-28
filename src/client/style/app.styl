@@ -1,0 +1,1774 @@
+@import "style.styl"
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+
+article,
+aside,
+details, /* 1 */
+figcaption,
+figure,
+footer,
+header,
+main, /* 2 */
+menu,
+nav,
+section,
+summary { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+
+template, /* 1 */
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+
+
+/* Landing */
+.btn-hidden
+	display none
+body
+	display block
+	height 100%
+	background-color white
+	border none
+	margin 0px
+	padding 0px
+	.appContainer
+		height 100%
+		.container
+			width auto
+			height 100%
+			margin 0px
+			padding 0px
+			position relative
+			z-index 10
+			overflow hidden
+			
+			.header
+				display block
+				height 50px
+				background #00aeb5
+				background -moz-linear-gradient(left, rgba(0,174,181,1) 1%, rgba(0,174,181,1) 33%, rgba(0,151,211,1) 100%)
+				background -webkit-linear-gradient(left, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
+				background linear-gradient(to right, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
+				width 100%
+				position fixed
+				top 0px
+				margin 0px 0px
+				padding 0px
+				z-index 8
+				
+				.nav
+					padding 0px
+					width 100%
+					height 100%
+					display flex
+					flex-wrap nowrap
+					justify-content space-around
+					align-content center
+					
+					.nav-left
+						display none
+						.ico-menu-movil
+							display none
+							color rgba(34, 30, 31, 0.3)
+							font-size 1.5em
+							margin 10px 0px auto 10px
+							float left
+							padding 0px
+							cursor pointer
+							
+						.btn-desktop
+							display none
+					
+					
+					.nav-left, .nav-right
+						margin 0px
+						padding 0px
+						display flex
+						list-style none
+						width 30%
+						li
+							
+							a
+								text-decoration none
+								display block
+								cursor pointer
+								p, span
+									color white
+								
+							
+					
+					figure
+						width 105px
+						height 30px
+						margin 9px auto 0px auto
+						padding 0px
+						img
+							height 100%
+							
+					.nav-left
+						
+						li
+							margin auto	 33px auto 0px
+							a
+								height 100%
+								span, p
+									display inline-block
+							
+							a p
+								font-family "Oxygen"
+								font-weight 400
+								font-size 13px
+								
+							a span
+								position relative 
+								top 2px
+								margin-right 2px
+						
+								
+					.nav-right
+						justify-content flex-end
+						li
+							margin auto 7px
+							span, p
+								display inline-block
+								
+							a .userAvatar
+								display block
+								width 30px
+								height 30px
+								border-radius 50%
+								margin 0px auto
+								overflow hidden
+								
+						.btn-header-right
+							margin-right 7%
+
+	
+
+	
+.btn-login
+	height 20px
+	width 230px
+	margin 15px auto
+	border-radius 10px
+	padding 10px 30px
+	text-decoration none
+	display flex
+	justify-content space-around
+	align-items center
+	
+	p, span
+		font-family "Oxygen"
+		font-size 0.9em
+		font-weight normal
+		margin 0px
+		text-align center
+		line-height 30px
+		height 30px
+	
+	span
+		width 35px
+		
+.btn-login-fb
+	background-color #00599f
+	
+	span, p
+		color white
+	
+.popupLogin-enter
+	opacity 0.1
+	
+.popupLogin-enter.popupLogin-enter-active
+	opacity 1
+	transition opacity 300ms ease-in
+.popupLogin-leave
+	opacity 1
+.popupLogin-leave.popupLogin-leave-active
+	opacity 1
+	transition opacity 300ms ease-in
+	
+
+.popup-login
+	display block
+	width 100%
+	height 100vh
+	background: rgb(0,151,211);
+	background: -moz-linear-gradient(-45deg,  rgba(0,151,211,1) 0%, rgba(0,174,181,1) 100%);
+	background: -webkit-linear-gradient(-45deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
+	background: linear-gradient(135deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
+	position fixed
+	top 0px
+	z-index 11
+	.wrapper-popup-login
+		background-color white
+		display flex
+		align-content flex-start
+		flex-direction column
+		width 100%
+		height 100vh
+		margin-left auto
+		margin-right auto
+		position relative
+		top 0px
+		z-index 12
+		
+		.btn-close
+			display block
+			text-align right
+			font-size 1.8em
+			color #ccc
+			margin 10px 10px 0px 0px
+			cursor pointer
+
+		.popup-login-wrapper-content
+			width 90%
+			margin 0px auto
+			height 100%
+			display flex
+			justify-content center
+			flex-direction column
+			
+			h4
+				margin 0px auto 20px auto
+				padding 0px
+				font-family "Oxygen"
+				font-size 1em
+				font-weight normal
+				display block
+				width 80%
+				text-align center
+			.text-terms-conditions	
+				font-family "Oxygen"
+				font-size  0.9em
+				font-weight normal
+				color #404041
+				width 94%
+				padding 0px
+				margin 20px auto 80px auto
+				text-align justify
+				a
+					text-decoration none
+					color #0097d3
+					
+			figure
+				margin-top -80px
+
+			
+	
+.banner-background
+	width 100%
+	height auto
+	margin 0px
+	padding 0px
+	background: rgb(0,174,181)
+	background: -moz-linear-gradient(-45deg,  rgba(0,174,181,1) 6%, rgba(0,151,211,1) 100%)
+	background: -webkit-linear-gradient(-45deg,  rgba(0,174,181,1) 6%,rgba(0,151,211,1) 100%)
+	background: linear-gradient(135deg,  rgba(0,174,181,1) 6%,rgba(0,151,211,1) 100%)
+
+	.banner1
+		background-image url("img/Binndi_Fold1.jpg")
+		background-repeat no-repeat
+		background-size cover
+		background-position 68% 50px
+		height 632px
+		width 100%
+		
+		.wrapper-text-banners
+			width 95%
+			margin 0px auto
+			height auto
+			
+			h1
+				margin 0px auto
+	
+		.wrapper-text-banners-first
+			display block
+			position relative
+			top 160px
+			h2
+				width 95%
+				
+			.wrapper-btn-cta
+				display flex
+				justify-content space-between
+				width 300px
+				margin 40px auto
+				.btn-big-curve
+					width 110px
+					padding 10px 17px
+					margin 0px auto
+					
+				.btn-info
+					background-color #0097D2
+
+				.btn-register
+					background-color #02AC36
+					
+	.banner-binndi-tech
+		width 100%
+		margin 0px
+		padding 0px
+		background-color #F4F4F4
+		height auto
+		.wrapper-text-banner-secundary-tech
+			padding-top 30px
+			
+			figure
+				display block
+				margin 0px auto 20px auto
+				padding 0px
+				width 200px
+				img
+					display block
+					width 100%
+					
+			h3
+				margin 0px auto
+			h4
+				width 85%
+			.landing-wrapper-thumbnails
+				width 100%
+				height 260px
+				margin 30px auto 0px auto
+				overflow hidden
+				.landing-thumbnail
+					overflow hidden
+					cursor pointer
+					width 100%
+					position relative
+					height 260px
+					display block
+					a
+						text-decoration none
+						figure
+							padding 0px
+							margin 0px
+							width 100%
+							height 100%
+							overflow hidden
+							img 100%
+								
+						.wrapper-elements
+							position relative
+							top -260px
+							height 100%
+							display flex
+							flex-direction column
+								
+							h2, h3
+								margin 0px 10px 0px 0px
+								padding 0px
+								text-align right
+								position relative
+								top 60px
+								
+							.circle-shadow, .ico
+								display block
+								height 50px
+								width 50px
+								margin 0px auto
+								color white
+								
+							.circle-shadow
+								background-color white
+								opacity 0.5
+								border-radius 50%
+								margin-top 100px
+								
+								
+							.ico
+								font-size 2.8em
+								text-align center
+								margin-top -47px
+					
+	
+	.wrapper-slider
+		position relative
+		top 0px
+		width 100%
+		height 600px
+		
+		.banner-sequence .wrapper-banner-content wrapper-text-features-banners
+			display block
+		
+		.slide
+			position absolute
+			top 0px
+			width 100%
+			display none
+			height 600px
+			
+			.wrapper-banner-content
+				overflow hidden
+	
+		
+			.wrapper-banner-content .wrapper-text-features-banners
+				width 85%
+				position relative
+				top 0px
+				margin 80px auto 40px auto
+				h1, h2
+					text-align center
+					margin 0px auto
+					width 90%
+				h2
+					margin-top 20px
+					
+				.btn-big-curve-sub-banners
+					margin 30px auto
+					width 133px
+				
+			.wrapper-banner-content .banner-image
+				padding 0px
+				display block
+				position relative
+				img
+					display block
+					width 100%
+	
+
+			.img-banner-features-1
+				margin 0px auto 0px auto
+				width 200px
+				
+			.img-banner-features-2
+				margin 0px auto 0px auto
+				width 180px
+				
+			.img-banner-features-3
+				margin 70px auto 0px auto
+				width 220px
+			
+
+		.slide_visible
+			display block
+			
+
+	.otros
+		display block	
+		.banner-secundary
+			width 100%
+			margin 0px
+			padding 0px
+
+		
+		
+		.banner-binndi-points, .banner-binndi-enterprise, .banner-binndi-app
+			background-color #FFFFFF
+			display flex
+			flex-direction column
+			div
+				h3, h4
+					width 95%
+				h3
+					margin 0px auto
+			figure
+				display block
+				margin 0px
+				padding 0px
+				width 100%
+				height auto
+				img
+					width 100%
+			
+		.banner-binndi-points
+			.wrapper-text-banner-secundary-binndi-points
+				width 100%
+				height 300px
+				margin 50px 0px 0px 0px
+				
+				.ico-secundary-banners
+					color #02AC36
+					display block
+					margin 17px auto 25px auto
+				
+				.btn-big-curve
+					background-color #02AC36
+					width 125px
+					margin 30px auto
+					padding 10px 17px
+	
+		
+		.banner-binndi-enterprise
+			.wrapper-text-banner-secundary-enterprise
+				width 100%
+				height 320px
+				margin 20px 0px 0px 0px
+				
+				.ico-secundary-banners
+					color #0097D2
+				
+				.btn-big-curve
+					background-color #0097D2
+					width 125px
+					margin 30px auto 30px auto
+					padding 10px 17px
+					
+		.banner-binndi-app
+			.wrapper-text-banner-secundary-app
+				width 100%
+				height 275px
+				padding 40px 0px 40px 0px
+				.btn-big-curve
+					background-color #02AC36
+					width 155px
+					margin 30px auto 0px auto
+					padding 15px 17px
+					p
+						font-size 1.2em
+			.img-cell
+				width 70%
+				margin 0px auto
+				
+			.img-appstore-logos
+				width 200px
+				margin 0px auto
+
+.section-binndi-points
+	display flex
+	flex-direction column
+	margin 50px 0px 0px 0px
+	padding 0px
+	.grid-a 
+		height 260px
+		.wrapper-header-info 
+			.ico
+				display block
+				margin 30px auto 15px auto
+				padding 0px
+				width 30px
+				height 30px
+				line-height 30px
+				text-align center
+				font-size 1.3em
+				border solid 3px #02ad36
+				color #02ad36
+				border-radius 50%
+				
+			h3
+				text-align center
+				width 90%
+				margin 15px auto
+				
+		ol
+			margin 0px auto 0px auto
+			padding 0px 0px 0px 15px
+			width 280px
+	.grid-b
+		margin 0px
+		padding 0px
+		.section-binndi-points-popup-login
+			background-color #F5F5F5
+			padding-bottom 15px
+			.popup-login-wrapper-content
+				width 90%
+				padding 30px 0px 0px 0px
+				margin 0px auto
+				h4
+					text-align center
+					width 60%
+					margin 0px auto
+					padding 0px
+					display block
+					color #02ad36
+					font-size 1.1em
+					font-family "Oxygen"
+					font-weight normal
+				.text-terms-conditions
+					font-family "Oxygen"
+					font-size  0.6em
+					font-weight normal
+					color #404041
+					width 270px
+					padding 0px
+					margin 20px auto 20px auto
+					text-align justify
+					a
+						text-decoration none
+						color #0097d3
+				
+		
+	.grid-c
+		margin 0px
+		padding 20px 0px
+		figure
+			display block
+			margin 0px
+			padding 0px
+			width 100%
+			img
+				width 100%
+			
+.section-binndi-enterprise
+	display flex
+	flex-direction column
+	margin 50px 0px 0px 0px
+	padding 0px	
+	
+	.grid-a, .grid-b, .grid-c
+		display flex
+		flex-direction column
+		
+		figure
+			display block
+			margin 0px
+			padding 0px
+			
+			img
+				width 100%
+		
+	.grid-a 
+		.wrapper-text-tech-benefit
+			h1
+				text-align center
+				margin 40px auto 15px auto
+			h1, h2
+				width 80%
+				
+			a
+				background-color #0097D2
+				height 38px
+				line-height 38px
+				width 170px
+				margin 20px auto 20px auto
+				
+
+	.grid-b
+		display flex
+		flex-direction column
+		padding 0px
+		
+		.subgrid-a .wrapper-text-form
+			.ico
+				display block
+				margin 30px auto 15px auto
+				padding 0px
+				width 30px
+				height 30px
+				line-height 30px
+				text-align center
+				font-size 1.3em
+				border solid 3px #0097D2
+				color #0097D2
+				border-radius 50%
+				
+			h1
+				text-align center
+				width 90%
+				margin 15px auto
+				
+			h2
+				width 90%
+				margin 15px auto
+				
+			a
+				background-color #0097D2
+				height 38px
+				line-height 38px
+				width 170px
+				margin 20px auto 20px auto
+		.subgrid-b
+			margin 0px
+			padding 0px
+			.form-enterprise
+				background-color #F5F5F5
+				padding 10px 0px 30px 0px
+				h4
+					font-family "Oxygen"
+					font-size 1.4em
+					font-weight normal
+					color #0097D2
+					text-align center
+					display block
+					margin 20px auto 30px auto
+					width 300px
+				
+				.input-box
+					width 300px
+					height 40px
+					line-height 40px
+					margin 10px auto
+					border solid 1px #95989A
+					border-radius 10px
+					
+					input
+						border none
+						background-color #F5F5F5
+						color #95989A
+						font-family "Oxygen"
+						font-size 1em
+						height 30px
+						width 245px
+						position relative
+						left 10px
+						outline 0px
+						
+					.ico
+						color #95989A
+						font-size 1.3em
+						text-align center
+						display block
+						float right
+						position relative
+						top 10px
+						right 10px
+						
+				.btn
+					border none
+					border-radius 10px
+					height 40px
+					line-height 40px
+					width 300px
+					margin 25px auto 0px auto
+					padding 0px
+					font-family "Oxygen"
+					font-weight lighter
+					font-size 0.9em
+					color white
+					background-color #0097D2
+					
+		.subgrid-c
+			background-color #F5F5F5
+			margin 0px
+			padding 0px 0px 40px 0px
+			figure
+				display block
+				margin 20px auto 0px auto
+				padding 0px
+				width 90%
+				
+				img
+					width 100%
+		
+	.grid-c
+		margin 0px
+		padding 0px 0px 40px 0px
+		h1
+			width 90%
+			margin 40px auto 30px auto
+		.wrapper-text-benefits
+			display flex
+			flex-wrap wrap
+			justify-content center
+			.benefit
+				width 49%
+				magin-top 20px
+				margin-bottom 20px
+				h4
+					text-align center
+					width 120px
+					display block
+					margin 15px auto
+				
+				figure
+					display block
+					width 60px
+					padding 0px
+					margin 30px auto 20px auto
+					img
+						width 100%
+						
+				p
+					text-align center
+					width 90%
+					margin 0px auto 20px auto
+					
+						
+.btn-small-curve
+	display block
+	background rgba(34, 30, 31, 0.4)
+	height 16px
+	line-height 15px
+	width auto
+	margin 0px
+	padding 5px 6px 5px 11px
+	border-radius 15px
+	
+	p, span
+		display inline-block
+		float left
+		margin 0px
+		padding 0px
+		color white
+		font-family "Oxygen"
+		font-size 0.7em
+		font-weight lighter
+
+		
+	span
+		position relative
+		top 4px
+		left 1px
+
+
+.btn-big-curve
+	display block
+	height 15px
+	line-height 15px
+	text-decoration none
+	border-radius 30px
+	
+	p
+		margin 0px auto
+		padding 0px
+		color white
+		font-family "Oxygen"
+		font-size 0.9em
+		font-weight lighter
+		text-align center
+		
+	
+.nav-sub-banner
+	display block
+	float right
+	width 50px
+	height 470px
+	list-style none
+	margin 0px 
+	padding 0px
+	position absolute
+	top 1450px
+	right 5px
+	li
+		margin 15px auto
+		text-align center
+		
+		span 
+			opacity 0.5
+			text-align center
+		
+		.ico-subnav-banners
+			font-size 0.7em
+			border-radius 50%
+			border solid 2px
+			padding 4px
+			transition 0.3s
+			cursor pointer
+			
+		.ico-arrow-subnav-banners
+			font-size 0.8em
+			
+		.ico-subnav-banners:hover
+			color white
+			opacity 1
+	
+	.activeBanner
+		span
+			color white
+
+
+.wrapper-text-banner-secundary-enterprise
+	position relative
+	float left
+	margin 120px 0px 0px 100px
+	width 480px
+	
+.wrapper-btn-and-ico-secundary-banners
+	display flex
+	justify-content center
+	height 80px
+	span, a
+		margin auto 10px
+		
+.ico-secundary-banners
+	border solid 3px
+	padding 5px
+	border-radius 50%
+	font-size 1.3em
+	width 28px
+	height 28px
+	text-align center
+	line-height 28px
+	font-size 1.6em
+	display block
+	margin 17px auto 25px auto
+
+		
+	
+.footer
+	display block
+	position relative
+	bottom 0
+	margin 0px
+	padding 0px 0px 15px 0px
+	width 100%
+	background-color #535C61
+		
+	ul
+		margin 0px auto 0px auto
+		padding 0px
+		width 90%
+		height 100%
+		list-style none
+		display flex
+		justify-content flex-start
+		align-content center
+		flex-wrap wrap
+		
+		li
+			display flex
+			flex-direction column
+			justify-content center
+			text-align left
+			width 25%
+			margin-top 25px
+			
+			h5
+				font-family "Oxygen"
+				font-size 0.5em
+				font-weight normal
+				color white
+				margin 0px
+				padding 0px
+				
+			.footer-btn-underline
+				width 30px
+				height 7px
+				margin 11px 0px
+				background-color #41BCB7
+				float left
+			ul
+				margin 0px
+				padding 0px
+				width 100%
+				height 100%
+				list-style none
+				display flex
+				justify-content flex-start
+				align-content flex-start
+				flex-direction column
+				
+				li
+					width 100%
+					height 9px
+					margin 4px 0px
+					
+					a
+						text-decoration none
+						margin 0px
+						padding 0px
+						width auto
+						color white
+						font-family "Oxygen"
+						font-weight lighter
+						font-size 0.5em
+						text-align left
+						cursor pointer
+						
+					a:hover
+						color #ccc
+		.footer-grid-logos
+			width 40%
+
+			figure
+				display block
+				margin 0px auto
+				padding 0px
+				width 100%
+				a
+					text-decoration none
+					cursor pointer
+					
+					img
+						width 100%
+		.footer-grid-newsletter
+			display none
+					
+				
+			
+				
+.social-network-ico
+	position relative
+	top 2px
+	border solid 1px white
+	border-radius 50%
+	font-size 1em
+	padding 5px
+	
+
+@media screen and (min-width: 767px)
+	.headlines
+		margin 0px auto
+		width 51%
+		
+	.subtitle
+		width 67%
+		
+	.banner-background .wrapper-slider .slide .wrapper-banner-content .wrapper-text-features-banners h1, .banner-background .wrapper-slider .slide .wrapper-banner-content .wrapper-text-features-banners h2
+		width 47%
+
+		
+	.banner-background .otros .banner-binndi-points div h3, .banner-background .otros .banner-binndi-enterprise div h3, .banner-background .otros .banner-binndi-app div h3, .banner-background .otros .banner-binndi-points div h4, .banner-background .otros .banner-binndi-enterprise div h4, .banner-background .otros .banner-binndi-app div h4
+		width 51%
+	
+	.banner-background
+		.nav-sub-banner
+			top 1333px
+			right 45px
+		.banner-secundary
+			padding-bottom 20px
+			.wrapper-text-banner-secundary-tech .landing-wrapper-thumbnails
+				display flex
+				justify-content space-around
+				.landing-thumbnail
+					width 236px
+					height 227px
+					border-radius 15px
+
+	.section-binndi-points .grid-a .wrapper-header-info h3
+		width 49%
+	.section-binndi-points .grid-c
+		padding 35px 0px
+		
+	.section-binndi-enterprise .grid-c .wrapper-text-benefits .benefit
+		width 200px
+		
+	.section-binndi-enterprise .grid-b .subgrid-a .wrapper-text-form h2
+		width 65%
+		
+	.footer ul
+		width 70%
+		
+	.popup-login
+		display flex
+		justify-content center
+		align-items center
+		.wrapper-popup-login
+			height 450px
+			width 380px
+			.btn-close
+				margin-bottom 40px
+			
+@media screen and (min-width: 1020px)
+	body .appContainer .container .header .nav .nav-left 
+		.ico-menu-movil
+			display none
+		.btn-desktop
+			display flex
+			
+		.first-btn-nav
+			margin-left 40px
+			
+	.banner-background .banner1 .wrapper-text-banners-first
+		h1
+			width 462px
+			font-size 1.9em
+			
+		h2
+			font-size 1.4em
+			
+	.banner-background .banner-binndi-tech 
+		height 510px
+		padding-bottom 0px
+		.wrapper-text-banner-secundary-tech
+			top 64px
+			padding-top 50px
+			.landing-wrapper-thumbnails
+				margin-top 53px
+				width 1000px
+				.landing-thumbnail
+					width 320px
+
+	.banner-background 
+		.nav-sub-banner
+			top 1400px
+			li
+				margin 20px auto
+				.ico-subnav-banners
+					font-size 1.1em
+					
+				.ico-arrow-subnav-banners
+					font-size 1.2em
+		
+		.wrapper-slider 
+
+			#banner-sequence-1 .wrapper-banner-content
+				margin-top 100px
+				width 740px
+			#banner-sequence-2 .wrapper-banner-content
+				margin-top 100px
+				width 760px
+			#banner-sequence-3 .wrapper-banner-content
+				margin-top 100px
+				width 860px
+				
+			.slide
+				
+				.wrapper-banner-content
+					
+					margin 0px auto
+					.wrapper-text-features-banners, .banner-image
+						display block
+					
+					.wrapper-text-features-banners
+						width auto
+						margin 100px 0px 0px 0px
+						float right
+						h1, h2
+							display block
+							padding 0px
+							magin 0px
+							text-align left
+							width 379px
+							
+						h1
+							font-size 1.8em
+						h2
+							font-size 1.1em
+							font-weight lighter
+							
+						.btn-big-curve
+							margin 30px 0px 0px 0px
+					
+
+					.img-banner-features-1
+						width 310px
+					.img-banner-features-2
+						width 310px
+					.img-banner-features-3
+						width 465px
+					
+					.banner-image
+						margin 0px
+
+					
+	.banner-background .otros .banner-binndi-points, .banner-background .otros .banner-binndi-app
+		flex-direction row
+	.banner-background .otros .banner-binndi-enterprise
+		flex-direction row-reverse
+		
+	.banner-background .otros .banner-secundary figure img
+		display block 
+		
+	.banner-background .otros .banner-binndi-points .wrapper-text-banner-secundary-binndi-points
+		margin-top 29px
+			
+	.banner-background .otros .banner-binndi-enterprise .wrapper-text-banner-secundary-enterprise
+		margin-top 34px
+		
+	.banner-background .otros .banner-binndi-points div h3, .banner-background .otros .banner-binndi-enterprise div h3, .banner-background .otros .banner-binndi-app div h3, .banner-background .otros .banner-binndi-points div h4, .banner-background .otros .banner-binndi-enterprise div h4, .banner-background .otros .banner-binndi-app div h4
+		width 323px
+	.banner-background .otros .banner-binndi-app 
+		background-color #e0e0e0
+		.wrapper-text-banner-secundary-app
+			width 50%
+			background-color white
+			height 100%
+		.img-cell
+			width 27%
+			
+
+	.section-binndi-points
+		flex-direction row
+		flex-wrap wrap
+		.grid-a
+			width 60%
+			
+		.grid-c
+			width 56%
+			
+		.grid-a
+			.wrapper-header-info
+				display flex
+				justify-content flex-end
+				width 470px
+				margin 80px auto 0px auto
+				h3
+					font-size 1.7em
+					width 405px
+					text-align left
+					margin 0px
+					
+				.ico
+					margin 7px 20px 0px 0px
+			ol 
+				width 395px
+				margin-top 35px
+				padding-left 75px
+				li
+					font-size 0.9em
+					
+		.grid-b .section-binndi-points-popup-login
+			width 355px
+			margin 80px auto 0px auto
+			.popup-login-wrapper-content 
+				h4
+					font-size 1.2em
+				.btn-login
+					margin 25px auto
+				
+					
+		.grid-c
+			figure
+				width 575px
+				margin 20px 0px 0px 0px
+				float right
+	
+	.section-binndi-enterprise 
+		.grid-a
+			flex-direction row-reverse
+			padding 50px 145px
+			background-color #F5F5F5
+			
+			.wrapper-text-tech-benefit
+				h1, h2
+					text-align left
+				a
+					float left
+					margin-left 60px
+					margin-top 20px
+					
+				h1
+					font-size 1.7em
+					margin-top 0px
+					
+				h2
+					font-size 1em
+		.grid-b
+			flex-direction row
+			flex-wrap wrap
+			.subgrid-a
+				width 60%
+				height 370px
+				
+				.wrapper-text-form
+				
+					.wrapper-header-info
+						display flex
+						justify-content flex-end
+						width 530px
+						margin 80px auto 0px auto
+						
+						h1
+							font-size 1.7em
+							width 465px
+							text-align left
+							margin 0px
+							
+						.ico
+							margin 7px 20px 0px 0px
+							width 37px
+							height 37px
+							line-height 37px
+							font-size 1.5em
+							
+					h2
+						width 435px
+						margin-top 20px
+						padding-left 30px
+						text-align left
+						font-size 1em
+					a
+						float left
+						margin-left 175px
+						margin-top 15px
+						
+			.subgrid-b
+				.form-enterprise
+					display block
+					padding 18px 18px 28px 18px
+					margin-top 86px
+					
+					h4
+						display block
+						font-size 1.1em
+						width 270px
+						margin-top 0px
+						
+					.input-box
+						width 250px
+						height 33px
+						line-height 33px
+						border-radius 6px
+						background-color white
+						border-color #ccc
+						input
+							width 200px
+							font-size 0.8em
+							background-color white
+						.ico
+							font-size 1em
+							
+					.btn
+						border-radius 6px
+						height 35px
+						line-height 35px
+						width 250px
+						margin-top 15px
+						font-size 0.8em
+				
+			.subgrid-c
+				width 60%
+				background-color white
+				margin-top -140px
+				figure
+					width 76%
+					float right
+					margin-right 80px
+
+		.grid-c
+			.wrapper-text-benefits
+				border-top solid 1px #95989A
+				width 1020px
+				margin 25px auto
+				
+				h1
+					margin-top 40px
+					font-size 1.9em
+					
+				.benefit
+					figure 
+						margin 40px auto 30px auto
+						width 75px
+						
+					p
+						width 85%
+						
+	.footer ul
+		width 950px
+		
+		li
+			margin-top 50px
+			margin-bottom 40px
+			width auto
+			width 18%
+			h5
+				font-size 0.6em
+				
+			.footer-btn-underline
+				height 3px
+				
+			ul li 
+				height 13px
+				a
+					font-size 0.6em
+		.footer-grid-logos
+			width 20%
+			order -1
+			margin-right 6%
+			figure
+				margin 0px
+				float left
+				width 150px
+				
+				
+
+.movil-menu
+	display none
+.section-landing
+	display block
+	
+body .appContainer .container .header .nav .nav-left .btn-desktop
+	display none
+
+
+
+@import "explore.styl"
+		
+@import "explore-video-scene.styl"
+
+@import "userprofile.styl"
+@import "forms.styl"
+@import "font-style.styl"
+@import "videoScene.styl"

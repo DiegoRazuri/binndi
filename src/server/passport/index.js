@@ -88,7 +88,7 @@ module.exports = function (passport){
 		clientID: process.env.FACEBOOK_APP_ID,
 		clientSecret: process.env.FACEBOOK_APP_SECRET,
 		callbackURL: process.env.FACEBOOK_CALLBACK_URI || 'http://localhost:3000/auth/facebook/callback',
-		profileFields: ['id', 'first_name', 'photos', 'email', 'last_name']
+		profileFields: ['id', 'first_name', 'emails', 'last_name', 'link', 'locale', 'location', 'picture.type(large)']
 	}, (token, refreshToken, profile, done)=> {
 		//logica si el usuario es nuevo o no, si se le va a registrar, etc.
 	//pasamos el metodo done y el usuario ya esta autenticado.
@@ -123,16 +123,22 @@ module.exports = function (passport){
 				return done(err);
 			}
 			if(user){
-				console.log(user.name)
+				
 				return done(null, user)
 			}else{
 				let user = new Userprofiles()
+			
+
 
 				user.provider = profile.provider;
 				user.photo = profile.photos[0].value;
 				user.lastname = profile.name.familyName;
 				user.name = profile.name.givenName;
 				user.username = profile.id;
+				user.link = profile.profileUrl;
+				user.location = profile._json.location.name;
+
+		
 
 				user.save(function(err){
 					if(err)

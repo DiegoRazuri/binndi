@@ -1,42 +1,5 @@
-$(document).ready(function(){
-	console.log("holaa")
-
-	$("#btnEnviar").on("click", function(e){
-		e.preventDefault();
-		console.log("click en btn")
-		let companyName = $("#companyName").val()
-		console.log(txt)
-
-		let json = {
-			"valor" : txt
-		}
-
-		$.post("/api/new_enterprise", json, function(res){
-			console.log(res)
-		});
-	});
-});
-
-function handleCreateEnterprise(e){
-	e.preventDefault();
-	console.log("click en boton")
-	var txt1 = document.getElementById('companyName');
-	var valor = txt1.value();
-	console.log(valor);
-
-}
-/*
-import React from 'react'
-import ReactDom from 'react-dom'
-import Layout from './components/layout'
 
 
-	ReactDom.render(
-      <Layout/>,
-      document.getElementById('container')
-    );
-
-*/
 
 /*
 * Modul dependencies
@@ -45,21 +8,270 @@ import Layout from './components/layout'
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
-import Explore from './components/explore'
-import App from './components/app'
+import LandingStage from './components/landingStage'
+import Explore from './components/exploreSection'
+import Userprofile from './components/userprofile'
+import ExploreScene from './components/exploreScene'
+import BinndiPoints from './components/binndiPoints'
 import EnterpriseRegisterInfo from './components/enterpriseRegisterInfo'
+import VideoScene from './components/videoScene'
+
+
+import App from './components/app'
+
 import TeamAdmin from './components/teamAdmin'
 
 
-const routes = (<Router history={browserHistory}>
+//
+function handleUpdate() {
+  let {
+    action
+  } = this.state.location;
+
+  if (action === 'PUSH') {
+    window.scrollTo(0, 0);
+  }
+}
+/*
+//example:  solo se mantiene el scroll position si el usuario regresa con el back del browser
+<Route path="/" component = {LandingStage} onChange={(prevState, nextState) => {
+      if (nextState.location.action !== "POP") {
+        window.scrollTo(0, 0);
+      }
+    }}/>
+
+*/
+
+// LA RUTA QUE DICE EXPLORE DEBE CAMBIAR A EXPLORESCENE Y PASAR EL PARAMETRO CON EL ID DE LA ACTIVIDAD
+const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
+
+                    <Route path="/" component = {LandingStage} />
                 	<Route path="/" component = {App} >
-                		<Route path="explore" component = {Explore} />
-                		<Route path="info-enterprise-register" component = {EnterpriseRegisterInfo} />
-                		
+                    	<Route path="explore" component = {Explore} />
+                        <Route path="userprofile" component = {Userprofile} />
+                        <Route path="explore-scene/:service_id" component = {ExploreScene} />
+                		<Route path="binndis" component = {BinndiPoints} />
+                        <Route path="enterprise-registration" component = {EnterpriseRegisterInfo} />
+                        <Route path="video-scene" component = {VideoScene} />
                 	</Route>
                 	<Route path="binndi-team" component = {TeamAdmin} />
              
             </Router>);
 
-ReactDom.render(routes, document.getElementById('container'));
+ReactDom.render(routes, document.getElementById('appContainer'));
 
+
+
+
+
+
+
+
+
+window.onload = function(){
+
+    console.log("cargo")
+
+
+}
+
+
+
+
+
+
+
+var btnMovilMenu = document.querySelector('#btn-movil-menu');
+var movilMenu = document.querySelector('#movil-menu');
+var btnClosePopupMovilMenu = document.querySelector('#btn-close-movil-menu')
+
+
+btnMovilMenu.addEventListener('click', function(e){
+    e.preventDefault()
+    console.log("ejecutando ani")
+
+    fadeIn(movilMenu,1, true, 0)
+    //fadeIn(backgroundMovilMenu,1)
+    var screenHeight = screen.height + "px"
+    //$(".btn-entered-hidden").css("display", "none");
+    $(".btn-header-hidden").animate({
+        opacity : 0
+    }, "fast");
+    
+    $(".header").animate({
+        height: screenHeight
+    }, "slow");
+    $("#navigation").animate({
+        backgroundColor: '#0097d3'
+    }, "slow");
+    $("#movil-menu").animate({
+        position: "fixed",
+        top: -10
+    }, "slow");
+    console.log(window.pageYOffset);
+    console.log("hey");
+    
+})
+
+btnClosePopupMovilMenu.addEventListener('click', function(e){
+    e.preventDefault()
+    console.log("ejecutando");
+    fadeOut(movilMenu)
+    $(".header").animate({
+        height: "50px"
+    }, "slow");
+    $(".btn-header-hidden").animate({
+        opacity : 1
+    }, "fast");
+    $("#navigation").animate({
+        backgroundColor: 'transparent'
+    }, "slow");
+
+    //fadeOut(backgroundMovilMenu)
+})
+
+
+function fadeOut(element) {
+    var op = 1;  // opacidad inicial
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 8);
+    var doc = document.querySelector('body');
+
+    doc.style.height = "auto";
+}
+
+function fadeIn(element, finalOpacity, center, pixels) {
+    if(center == true){
+
+        console.log(window.innerWidth)
+
+        if(window.innerWidth <= 770 ){
+            var aditionalPixels = -10;
+        }else{
+            var aditionalPixels = pixels;
+        }
+
+        var height = window.pageYOffset + aditionalPixels  + "px"
+        element.style.top = height
+    }
+    var op = 0.1;  // opacidad inicial
+    element.style.display = 'block';
+    
+ //   element.style.marginTop = "400px"
+    var timer = setInterval(function () {
+        if (op >= finalOpacity){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+        element.style.display = 'block'
+    }, 8);
+    var container = document.querySelector("container");
+    //container.style.overflow = "hidden";
+}
+
+function slideDown(element){
+    var hg = document.getElementById('header').offsetHeight;
+    var finalHeight = screen.height;
+    
+    console.log(hg)
+
+    var timer = setInterval(function(){
+        if(hg >= finalHeight){
+            clearInterval(timer)
+        }
+        
+        element.style.height = hg + "px";
+        hg += hg * 2;
+        
+
+    }, 1);
+}
+
+function slideUp(element, finalHeight){
+    var hg = document.getElementById('header').offsetHeight;
+    var fh = finalHeight; //60px
+
+    var timer = setInterval(function(){
+        if(hg <= finalHeight){
+            clearInterval(timer)
+        }
+        element.style.height = hg +50 + "px";
+        hg -= hg;
+        
+    }, 1);
+}
+
+// ANIMACIÓN DEL SCROLL
+
+/*
+
+$(document).ready(function(){
+
+    var bannersHeight =  document.getElementById("banner-sequence-1").offsetHeight;
+
+
+    var el = document.getElementById("extraBanners")
+
+    PointNormalScroll = el.offsetTop - screen.height;
+
+    var lastScrollTop = 0;
+
+    var contScrollDistance = bannersHeight;
+    
+    $(window).scroll(function(event){
+
+        var initPosition = $(document).scrollTop()
+
+
+        if( initPosition < PointNormalScroll ){
+            
+
+            var st = $(this).scrollTop();
+            
+            if (st > lastScrollTop){
+                console.log("abajo")
+                $("html, body").animate({ scrollTop: contScrollDistance }, 2000, function(){
+                    contScrollDistance = contScrollDistance + bannersHeight;
+                    console.log(contScrollDistance)
+                });
+            } else {
+                // upscroll code
+                console.log("arriba")
+
+                //$("html, body").animate({ scrollTop: -bannersHeight }, 2000);
+            }
+            
+        
+        }else{
+            console.log("ya no scrollea auto")
+        }
+        lastScrollTop = st;
+    });
+
+/*
+
+    var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+   } else {
+      // upscroll code
+   }
+   lastScrollTop = st;
+});
+    
+
+    
+
+});
+*/

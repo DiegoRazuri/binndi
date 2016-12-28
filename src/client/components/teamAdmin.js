@@ -2,7 +2,8 @@
 *	module dependencies
 */
 import React from 'react';
-import RegisterTstVideoForm from './registerTstVideoForm'
+import CreateEnterpriseForm from './createEnterpriseForm'
+
 
 export default class TeamAdmin extends React.Component{
 
@@ -12,23 +13,39 @@ export default class TeamAdmin extends React.Component{
 
 		}
 
-		this.registerVideo = this.registerVideo.bind(this);
+		this.createEnterprise = this.createEnterprise.bind(this);
         
 	}
 
-	registerVideo(json){
+	
+	createEnterprise(formdata){
 
-        $.post('/api/pregunta', json, function(res){
-        	console.log(res)
-            
+		$.ajax({
+            type:'POST',
+            url: '/api/new_enterprise', 
+            processData: false,  // tell jQuery not to process the data
+ 			contentType: false,   // tell jQuery not to set contentType
+            cache:false,
+            data:formdata,
+            success: (res)=>{
+            	console.log(res)
+             
+            },
+            error: function(data){
+                console.log("error");
+                console.log(data);
+            }
         })
+
+
 	}
+
 
 // SI EL USUARIO NO ESTA AUTORIZADO ENTONCES MOSTRAR ERROR
 
 	render(){
-		return <RegisterTstVideoForm 
-			registerVideo = {this.registerVideo}/>
+		return <CreateEnterpriseForm 
+			createEnterprise = {this.createEnterprise}/>
 
 	}
 }
