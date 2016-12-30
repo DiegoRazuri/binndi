@@ -704,7 +704,7 @@ export default class Layout extends React.Component{
 								</li>
 							</ul>
 							<figure className="logo-binndi-header">
-								<Link to={"/"}><img src="style/img/Binndi_Logo_header.png" alt="Binndi"/></Link>
+								<Link to={"/"}><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Logo_header.png" alt="Binndi"/></Link>
 							</figure>
 
 							
@@ -797,7 +797,7 @@ export default class Layout extends React.Component{
 								<h5>RECONOCIDOS POR</h5>
 								<div className="footer-btn-underline"></div>
 								<figure>
-									<a href="#"><img src="style/img/andes-logo.png"/></a>
+									<a href="#"><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/andes-logo.png"/></a>
 								</figure>
 							</li>
 							<li className="footer-grid-newsletter">

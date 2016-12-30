@@ -41,7 +41,7 @@ export default class BinndiPoints extends React.Component{
 					</div>
 					<div className="grid-c">
 						<figure>
-							<img src="style/img/ptsbnnd-info-vectores.png"/>	
+							<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/ptsbnnd-info-vectores.png"/>	
 						</figure>
 						
 					</div>

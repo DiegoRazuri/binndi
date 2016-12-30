@@ -99,7 +99,7 @@ export default class EnterpriseRegisterInfo extends React.Component{
 							</a>
 						</div>
 						<figure>
-							<img src="style/img/VRheadsets.jpg"/>
+							<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/VRheadsets.jpg"/>
 						</figure>
 					</div>
 					<div  id="section-improve-sales" className="grid-b">
@@ -150,7 +150,7 @@ export default class EnterpriseRegisterInfo extends React.Component{
 						</div>
 						<div className="subgrid-c">
 							<figure>
-								<img src="style/img/Bnnd-empresas-vectores.png"/>
+								<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Bnnd-empresas-vectores.png"/>
 							</figure>
 						</div>
 					</div>
@@ -160,27 +160,27 @@ export default class EnterpriseRegisterInfo extends React.Component{
 							<h1 className="text-big-normal-grey-o headline-black">¿Cúales son los beneficios?</h1>
 							<div className="benefit">
 								<h4 className="text-medium-normal-grey-o">Incrementa tus ventas</h4>
-								<figure><img src="style/img/NegociosBenefit1.png"/></figure>
+								<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit1.png"/></figure>
 								<p className="text-halfmedium-normal-grey-o">Vende a viajeros de todo el mundo, en cualquier momento del día desde cualquier dispositivo.</p>
 							</div>
 							<div className="benefit">
 								<h4 className="text-medium-normal-grey-o">Simples procesos de pago</h4>
-								<figure><img src="style/img/NegociosBenefit2.png"/></figure>
+								<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit2.png"/></figure>
 								<p className="text-halfmedium-normal-grey-o">Los viajeros pueden reservar tus servicios y pagarlos al instante con diferentes métodos de pago.</p>
 							</div>
 							<div className="benefit">
 								<h4 className="text-medium-normal-grey-o">Crea un perfil de forma gratuita</h4>
-								<figure><img src="style/img/NegociosBenefit3.png"/></figure>
+								<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit3.png"/></figure>
 								<p className="text-halfmedium-normal-grey-o"> Tu marca y servicios estarán publicados en nuestra plataforma, donde también serán promocionados.</p>
 							</div>
 							<div className="benefit">
 								<h4 className="text-medium-normal-grey-o">Mejora tu reputación online</h4>
-								<figure><img src="style/img/NegociosBenefit4.png"/></figure>
+								<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit4.png"/></figure>
 								<p className="text-halfmedium-normal-grey-o">Los clientes que viajan con tus servicios pueden calificarte y dejar un comentario sobre su experiencia.</p>
 							</div>
 							<div className="benefit">
 								<h4 className="text-medium-normal-grey-o">Cuenta con un soporte comercial</h4>
-								<figure><img src="style/img/NegociosBenefit5.png"/></figure>
+								<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit5.png"/></figure>
 								<p className="text-halfmedium-normal-grey-o">Estamos a tu disposición y a la de tus clientes para resolver cualquier duda.</p>
 							</div>
 						</div>

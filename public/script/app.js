@@ -27785,7 +27785,7 @@ var Layout = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/" },
-								_react2.default.createElement('img', { src: 'style/img/Binndi_Logo_header.png', alt: 'Binndi' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Logo_header.png', alt: 'Binndi' })
 							)
 						),
 						userPanel
@@ -28018,7 +28018,7 @@ var Layout = function (_React$Component) {
 								_react2.default.createElement(
 									'a',
 									{ href: '#' },
-									_react2.default.createElement('img', { src: 'style/img/andes-logo.png' })
+									_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/andes-logo.png' })
 								)
 							)
 						),
@@ -28221,7 +28221,7 @@ var BinndiPoints = function (_React$Component) {
 					_react2.default.createElement(
 						"figure",
 						null,
-						_react2.default.createElement("img", { src: "style/img/ptsbnnd-info-vectores.png" })
+						_react2.default.createElement("img", { src: "https://s3-sa-east-1.amazonaws.com/binndi/landing/ptsbnnd-info-vectores.png" })
 					)
 				)
 			);
@@ -29124,7 +29124,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 					_react2.default.createElement(
 						'figure',
 						null,
-						_react2.default.createElement('img', { src: 'style/img/VRheadsets.jpg' })
+						_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/VRheadsets.jpg' })
 					)
 				),
 				_react2.default.createElement(
@@ -29222,7 +29222,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 						_react2.default.createElement(
 							'figure',
 							null,
-							_react2.default.createElement('img', { src: 'style/img/Bnnd-empresas-vectores.png' })
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Bnnd-empresas-vectores.png' })
 						)
 					)
 				),
@@ -29248,7 +29248,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								null,
-								_react2.default.createElement('img', { src: 'style/img/NegociosBenefit1.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit1.png' })
 							),
 							_react2.default.createElement(
 								'p',
@@ -29267,7 +29267,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								null,
-								_react2.default.createElement('img', { src: 'style/img/NegociosBenefit2.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit2.png' })
 							),
 							_react2.default.createElement(
 								'p',
@@ -29286,7 +29286,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								null,
-								_react2.default.createElement('img', { src: 'style/img/NegociosBenefit3.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit3.png' })
 							),
 							_react2.default.createElement(
 								'p',
@@ -29305,7 +29305,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								null,
-								_react2.default.createElement('img', { src: 'style/img/NegociosBenefit4.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit4.png' })
 							),
 							_react2.default.createElement(
 								'p',
@@ -29324,7 +29324,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								null,
-								_react2.default.createElement('img', { src: 'style/img/NegociosBenefit5.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/NegociosBenefit5.png' })
 							),
 							_react2.default.createElement(
 								'p',
@@ -30974,7 +30974,7 @@ var LandingSection = function (_React$Component) {
 						_react2.default.createElement(
 							'figure',
 							null,
-							_react2.default.createElement('img', { src: 'style/img/Binndi_VidIcons.png' })
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_VidIcons.png' })
 						),
 						_react2.default.createElement(
 							'h3',
@@ -30999,7 +30999,7 @@ var LandingSection = function (_React$Component) {
 										'figure',
 										null,
 										_react2.default.createElement('span', { className: 'landing-image-shadow' }),
-										_react2.default.createElement('img', { src: 'style/img/ciclismo-montana-1.png' })
+										_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/ciclismo-montana-1.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -31029,7 +31029,7 @@ var LandingSection = function (_React$Component) {
 										'figure',
 										null,
 										_react2.default.createElement('span', { className: 'landing-image-shadow' }),
-										_react2.default.createElement('img', { src: 'style/img/ciclismo-montana-1.png' })
+										_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/ciclismo-montana-1.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -31059,7 +31059,7 @@ var LandingSection = function (_React$Component) {
 										'figure',
 										null,
 										_react2.default.createElement('span', { className: 'landing-image-shadow' }),
-										_react2.default.createElement('img', { src: 'style/img/ciclismo-montana-1.png' })
+										_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/ciclismo-montana-1.png' })
 									),
 									_react2.default.createElement(
 										'div',
@@ -31108,7 +31108,7 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								{ className: 'element-banner-1 img-banner-features-1 banner-image' },
-								_react2.default.createElement('img', { src: 'style/img/Binndi_planwithfriends.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_planwithfriends.png' })
 							)
 						)
 					),
@@ -31137,7 +31137,7 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								{ className: 'element-banner-2 img-banner-features-2 banner-image ' },
-								_react2.default.createElement('img', { src: 'style/img/Binndi_sharedpayment.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_sharedpayment.png' })
 							)
 						)
 					),
@@ -31164,7 +31164,7 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								{ className: 'element-banner3 img-banner-features-3 banner-image' },
-								_react2.default.createElement('img', { src: 'style/img/Binndi_Locations.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png' })
 							)
 						)
 					)
@@ -31207,7 +31207,7 @@ var LandingSection = function (_React$Component) {
 						_react2.default.createElement(
 							'figure',
 							null,
-							_react2.default.createElement('img', { src: 'style/img/Binndi_points.jpg' })
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_points.jpg' })
 						)
 					),
 					_react2.default.createElement(
@@ -31240,7 +31240,7 @@ var LandingSection = function (_React$Component) {
 						_react2.default.createElement(
 							'figure',
 							null,
-							_react2.default.createElement('img', { src: 'style/img/Binndi_business.jpg' })
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_business.jpg' })
 						)
 					),
 					_react2.default.createElement(
@@ -31271,13 +31271,13 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								{ className: 'img-appstore-logos' },
-								_react2.default.createElement('img', { src: 'style/img/Appstores-logos.png' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Appstores-logos.png' })
 							)
 						),
 						_react2.default.createElement(
 							'figure',
 							{ className: 'img-cell' },
-							_react2.default.createElement('img', { src: 'style/img/Iphone-appstore.png' })
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Iphone-appstore.png' })
 						)
 					)
 				),
@@ -31634,7 +31634,7 @@ var LandingStage = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/" },
-								_react2.default.createElement('img', { src: 'style/img/Binndi_Logo_header.png', alt: 'Binndi' })
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Logo_header.png', alt: 'Binndi' })
 							)
 						),
 						userPanel
@@ -31840,7 +31840,7 @@ var LandingStage = function (_React$Component) {
 								_react2.default.createElement(
 									'a',
 									{ href: 'http://www.andesaccelerator.com/' },
-									_react2.default.createElement('img', { src: 'style/img/andes-logo.png' })
+									_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/andes-logo.png' })
 								)
 							)
 						),
@@ -32038,7 +32038,7 @@ var MessageEnterprisesPopup = function (_React$Component) {
 
 			return _react2.default.createElement(
 				"div",
-				{ id: "popup-shadow", className: "popup-login" },
+				{ id: "popup-shadow", className: "popup-login popup-message" },
 				_react2.default.createElement(
 					"div",
 					{ className: "wrapper-popup-login" },
@@ -32049,7 +32049,7 @@ var MessageEnterprisesPopup = function (_React$Component) {
 						_react2.default.createElement(
 							"figure",
 							null,
-							_react2.default.createElement("img", { src: "style/img/Logo-FondoBlanco.png" })
+							_react2.default.createElement("img", { src: "https://s3-sa-east-1.amazonaws.com/binndi/landing/Logo-FondoBlanco.png" })
 						),
 						_react2.default.createElement(
 							"h4",
@@ -32111,7 +32111,7 @@ var MessageUserPopup = function (_React$Component) {
 
 			return _react2.default.createElement(
 				"div",
-				{ id: "popup-shadow", className: "popup-login" },
+				{ id: "popup-shadow", className: "popup-login popup-message" },
 				_react2.default.createElement(
 					"div",
 					{ className: "wrapper-popup-login" },
@@ -32122,7 +32122,7 @@ var MessageUserPopup = function (_React$Component) {
 						_react2.default.createElement(
 							"figure",
 							null,
-							_react2.default.createElement("img", { src: "style/img/Logo-FondoBlanco.png" })
+							_react2.default.createElement("img", { src: "https://s3-sa-east-1.amazonaws.com/binndi/landing/Logo-FondoBlanco.png" })
 						),
 						_react2.default.createElement(
 							"h4",
@@ -32804,7 +32804,7 @@ var UserInfo = function (_React$Component) {
 					'Puntos Binndis'
 				),
 				_react2.default.createElement('div', { className: 'profileinfo-divisor' }),
-				_react2.default.createElement('img', { src: 'style/img/binndi-billetes.png' }),
+				_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/binndi-billetes.png' }),
 				_react2.default.createElement(
 					'h2',
 					{ className: 'text-smaller-normal-grey-m' },

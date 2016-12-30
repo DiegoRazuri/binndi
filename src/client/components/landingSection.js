@@ -89,7 +89,7 @@ export default class LandingSection extends React.Component{
 					<div className="banner-binndi-tech banner-secundary">
 						<div className="wrapper-text-banner-secundary-tech">
 							<figure>
-								<img src="style/img/Binndi_VidIcons.png"/>
+								<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_VidIcons.png"/>
 							</figure>
 							<h3 className="headlines headline-black">Sumérgete en la experiencia antes de comprar</h3>
 							<h4 className="subtitle headline-black">Aventuras y lugares increibles por descubrir en realidad virtual y videos 360º</h4>
@@ -98,7 +98,7 @@ export default class LandingSection extends React.Component{
 									<Link to={"/video-scene"}>
 										<figure>
 											<span className="landing-image-shadow"></span>
-											<img src="style/img/ciclismo-montana-1.png"/>
+											<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/ciclismo-montana-1.png"/>
 										</figure>
 										<div className="wrapper-elements">
 											<span className="circle-shadow"></span>
@@ -112,7 +112,7 @@ export default class LandingSection extends React.Component{
 									<Link to={"/video-scene"}>
 										<figure>
 											<span className="landing-image-shadow"></span>
-											<img src="style/img/ciclismo-montana-1.png"/>
+											<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/ciclismo-montana-1.png"/>
 										</figure>
 										<div className="wrapper-elements">
 											<span className="circle-shadow"></span>
@@ -126,7 +126,7 @@ export default class LandingSection extends React.Component{
 									<Link to={"/video-scene"}>
 										<figure>
 											<span className="landing-image-shadow"></span>
-											<img src="style/img/ciclismo-montana-1.png"/>
+											<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/ciclismo-montana-1.png"/>
 										</figure>
 										<div className="wrapper-elements">
 											<span className="circle-shadow"></span>
@@ -149,7 +149,7 @@ export default class LandingSection extends React.Component{
 									
 								</div>
 								<figure className="element-banner-1 img-banner-features-1 banner-image">
-									<img src="style/img/Binndi_planwithfriends.png"/>
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_planwithfriends.png"/>
 								</figure>
 							</div>
 							
@@ -162,7 +162,7 @@ export default class LandingSection extends React.Component{
 									
 								</div>
 								<figure className="element-banner-2 img-banner-features-2 banner-image ">
-									<img src="style/img/Binndi_sharedpayment.png"/>
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_sharedpayment.png"/>
 								</figure>
 							</div>
 							
@@ -175,7 +175,7 @@ export default class LandingSection extends React.Component{
 									
 								</div>
 								<figure className="element-banner3 img-banner-features-3 banner-image">
-									<img src="style/img/Binndi_Locations.png"/>
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png"/>
 								</figure>
 							</div>
 							
@@ -194,7 +194,7 @@ export default class LandingSection extends React.Component{
 								</Link>
 							</div>
 							<figure>
-								<img src="style/img/Binndi_points.jpg"/>
+								<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_points.jpg"/>
 							</figure>
 						</div>
 						<div className="banner-binndi-enterprise banner-secundary">
@@ -208,7 +208,7 @@ export default class LandingSection extends React.Component{
 								</Link>
 							</div>
 							<figure>
-								<img src="style/img/Binndi_business.jpg"/>
+								<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_business.jpg"/>
 							</figure>
 						</div>
 						<div className="banner-binndi-app banner-secundary">
@@ -221,12 +221,12 @@ export default class LandingSection extends React.Component{
 									<p>Registrarme</p>
 								</a>
 								<figure className="img-appstore-logos">
-									<img src="style/img/Appstores-logos.png"/>
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Appstores-logos.png"/>
 								</figure>
 							</div>
 							
 							<figure className="img-cell">
-								<img src="style/img/Iphone-appstore.png"/>
+								<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Iphone-appstore.png"/>
 							</figure>
 						</div>
 					</div>

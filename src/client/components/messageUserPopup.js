@@ -16,11 +16,11 @@ export default class MessageUserPopup extends React.Component{
 	render(){
 		
 
-		return <div id="popup-shadow" className="popup-login">
+		return <div id="popup-shadow" className="popup-login popup-message">
 				<div className="wrapper-popup-login">
 					<span className="btn-close btn-close-popup icon-cross" onClick={this.showingMessageUser.bind(this)}></span>
 					<div className="popup-login-wrapper-content">
-						<figure><img src="style/img/Logo-FondoBlanco.png" /></figure>
+						<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Logo-FondoBlanco.png" /></figure>
 						<h4>¡Gracias por registrarte en Binndi! Anda pensando cual sera tu próxima aventura, no te imaginas lo que tenemos para ti!</h4>
 
 					</div>

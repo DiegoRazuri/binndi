@@ -36,7 +36,7 @@ export default class UserInfo extends React.Component{
 					
 					<h5 className="text-medium-normal-grey-o">Puntos Binndis</h5>
 					<div className="profileinfo-divisor"></div>
-					<img src="style/img/binndi-billetes.png"/>
+					<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/binndi-billetes.png"/>
 					<h2 className="text-smaller-normal-grey-m">{this.props.user.binndis} Binndis</h2>
 					<h5 className="text-medium-normal-grey-o">Retos cumplidos</h5>
 					<div className="profileinfo-divisor"></div>
