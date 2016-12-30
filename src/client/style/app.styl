@@ -1294,6 +1294,9 @@ body
 	padding 0px 0px 15px 0px
 	width 100%
 	background-color #535C61
+	
+	.background-footer
+		display none
 		
 	ul
 		margin 0px auto 0px auto
@@ -1725,33 +1728,51 @@ body
 					p
 						width 85%
 						
-	.footer ul
-		width 950px
+	.footer
+		display flex
+		padding 7px 0px
+		.background-footer
+			background-image url("img/logoFooter.png")
+			background-position -89px
+			background-repeat no-repeat
+			background-size cover
+			display block
+			width 100px
+			height 195px
+			margin auto 0px
+			padding 0px
+			
+		.background-footer-right
+			background-position 7px
 		
-		li
-			margin-top 50px
-			margin-bottom 40px
-			width auto
-			width 18%
-			h5
-				font-size 0.6em
-				
-			.footer-btn-underline
-				height 3px
-				
-			ul li 
-				height 13px
-				a
+		ul
+			width 950px
+			background-color #535c61
+			
+			li
+				margin-top 50px
+				margin-bottom 40px
+				width auto
+				width 18%
+				h5
 					font-size 0.6em
-		.footer-grid-logos
-			width 20%
-			order -1
-			margin-right 6%
-			figure
-				margin 0px
-				float left
-				width 150px
-				
+					
+				.footer-btn-underline
+					height 3px
+					
+				ul li 
+					height 13px
+					a
+						font-size 0.6em
+			.footer-grid-logos
+				width 20%
+				order -1
+				margin-right 6%
+				figure
+					margin 0px
+					float left
+					width 150px
+					
 				
 
 .movil-menu

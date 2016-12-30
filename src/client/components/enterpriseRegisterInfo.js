@@ -99,7 +99,7 @@ export default class EnterpriseRegisterInfo extends React.Component{
 							</a>
 						</div>
 						<figure>
-							<img src="style/img/VRheadsets.png"/>
+							<img src="style/img/VRheadsets.jpg"/>
 						</figure>
 					</div>
 					<div  id="section-improve-sales" className="grid-b">

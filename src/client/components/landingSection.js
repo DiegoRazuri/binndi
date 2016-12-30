@@ -194,7 +194,7 @@ export default class LandingSection extends React.Component{
 								</Link>
 							</div>
 							<figure>
-								<img src="style/img/Binndi_points.png"/>
+								<img src="style/img/Binndi_points.jpg"/>
 							</figure>
 						</div>
 						<div className="banner-binndi-enterprise banner-secundary">

@@ -754,6 +754,7 @@ export default class Layout extends React.Component{
 					
 					
 					<div className="footer">
+						<span className="background-footer"></span>
 						<ul>
 							<li>
 								<h5>BINNDI</h5>
@@ -806,6 +807,7 @@ export default class Layout extends React.Component{
 							</li>
 
 						</ul>
+						<span className="background-footer background-footer-right"></span>
 					</div>
 
 					

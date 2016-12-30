@@ -27826,6 +27826,7 @@ var Layout = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'footer' },
+					_react2.default.createElement('span', { className: 'background-footer' }),
 					_react2.default.createElement(
 						'ul',
 						null,
@@ -28036,7 +28037,8 @@ var Layout = function (_React$Component) {
 								'comp'
 							)
 						)
-					)
+					),
+					_react2.default.createElement('span', { className: 'background-footer background-footer-right' })
 				),
 				popup_add_to_plan,
 				_react2.default.createElement(
@@ -29122,7 +29124,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 					_react2.default.createElement(
 						'figure',
 						null,
-						_react2.default.createElement('img', { src: 'style/img/VRheadsets.png' })
+						_react2.default.createElement('img', { src: 'style/img/VRheadsets.jpg' })
 					)
 				),
 				_react2.default.createElement(
@@ -31205,7 +31207,7 @@ var LandingSection = function (_React$Component) {
 						_react2.default.createElement(
 							'figure',
 							null,
-							_react2.default.createElement('img', { src: 'style/img/Binndi_points.png' })
+							_react2.default.createElement('img', { src: 'style/img/Binndi_points.jpg' })
 						)
 					),
 					_react2.default.createElement(
@@ -31646,6 +31648,7 @@ var LandingStage = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'footer' },
+					_react2.default.createElement('span', { className: 'background-footer' }),
 					_react2.default.createElement(
 						'ul',
 						null,
@@ -31856,7 +31859,8 @@ var LandingStage = function (_React$Component) {
 								'comp'
 							)
 						)
-					)
+					),
+					_react2.default.createElement('span', { className: 'background-footer background-footer-right' })
 				),
 				popup_add_to_plan,
 				_react2.default.createElement(
@@ -32685,7 +32689,7 @@ var UserAvatar = function (_React$Component) {
 					_react2.default.createElement(
 						'figure',
 						{ className: 'userAvatar' },
-						_react2.default.createElement('img', { src: this.props.user.photo, alt: 'user' })
+						_react2.default.createElement('img', { src: this.props.user != undefined ? this.props.user.photo : "img/Profile-pic.png", alt: 'user' })
 					)
 				);
 			} else {
@@ -32901,7 +32905,7 @@ var UserAvatar = function (_React$Component) {
 					_react2.default.createElement(
 						'figure',
 						{ className: 'userAvatar' },
-						_react2.default.createElement('img', { src: this.props.user.photo, alt: 'user' })
+						_react2.default.createElement('img', { src: this.props.user != undefined ? this.props.user.photo : "img/Profile-pic.png", alt: 'user' })
 					)
 				);
 			} else {
@@ -33099,7 +33103,7 @@ var Userprofile = function (_React$Component) {
 							_react2.default.createElement(
 								'figure',
 								{ className: 'userprofile-wrapper-photo' },
-								_react2.default.createElement('img', { src: this.props.user.photo })
+								_react2.default.createElement('img', { src: this.props.user != undefined ? this.props.user.photo : "img/Profile-pic.png" })
 							)
 						),
 						_react2.default.createElement('div', { className: 'userprofile-header-color-filter' })

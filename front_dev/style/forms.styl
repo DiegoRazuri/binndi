@@ -1,6 +1,6 @@
 	
 .popup-add-to-plan
-	display none
+	display flex
 	flex-direction column
 	position fixed
 	top 0
@@ -139,6 +139,103 @@
 			width 100px
 			
 
+	
+.btn-login
+	height 20px
+	width 230px
+	margin 15px auto
+	border-radius 10px
+	padding 10px 30px
+	text-decoration none
+	display flex
+	justify-content space-around
+	align-items center
+	
+	p, span
+		font-family "Oxygen"
+		font-size 0.8em
+		font-weight normal
+		margin 0px
+		text-align center
+		line-height 30px
+		height 30px
+	
+	span
+		width 35px
+		
+.btn-login-fb
+	background-color #00599f
+	
+	span, p
+		color white
+	
+.popup-login, .popup-planner
+	display none
+	width 100%
+	height 100vh
+	background: rgb(0,151,211);
+	background: -moz-linear-gradient(-45deg,  rgba(0,151,211,1) 0%, rgba(0,174,181,1) 100%);
+	background: -webkit-linear-gradient(-45deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
+	background: linear-gradient(135deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
+	position fixed
+	top 0px
+	z-index 11
+	.wrapper-popup-login, .wrapper-popup-planner
+		background-color white
+		display flex
+		align-content flex-start
+		flex-direction column
+		width 100%
+		height 100vh
+		margin-left auto
+		margin-right auto
+		position relative
+		top 0px
+		z-index 12
+		
+		.btn-close
+			display block
+			text-align right
+			font-size 1.8em
+			color #ccc
+			margin 10px 10px 0px 0px
+			cursor pointer
+
+		.popup-login-wrapper-content, .popup-planner-wrapper-content
+			width 90%
+			margin 0px auto
+			height 100%
+			display flex
+			justify-content center
+			flex-direction column
+			
+			h4
+				margin 0px auto 20px auto
+				padding 0px
+				font-family "Oxygen"
+				font-size 1em
+				font-weight normal
+				display block
+				width 80%
+				text-align center
+			.text-terms-conditions	
+				font-family "Oxygen"
+				font-size  0.9em
+				font-weight normal
+				color #404041
+				width 94%
+				padding 0px
+				margin 20px auto 80px auto
+				text-align justify
+				a
+					text-decoration none
+					color #0097d3
+					
+
+.popup-planner
+	display none
+
+
 @media screen and (min-width: 767px)
 	.popup-add-to-plan
 		width 310px
@@ -149,5 +246,18 @@
 		right 0
 		top 100px
 		position fixed
+		
+	.popup-login, .popup-planner
+		display none
+		justify-content center
+		align-items center
+		.wrapper-popup-login, .wrapper-popup-planner
+			height 450px
+			width 380px
+			.btn-close
+				margin-bottom 40px
+				
+	.popup-planner
+		display none
 		
 			

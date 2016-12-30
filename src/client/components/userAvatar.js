@@ -12,7 +12,8 @@ export default class UserAvatar extends React.Component{
 		if(this.props.user.photo){
 			btnEnter = <Link to={'/userprofile'}>
 						<figure className="userAvatar">
-							<img src={this.props.user.photo} alt="user"/>
+							<img src={this.props.user != undefined ? this.props.user.photo : "img/Profile-pic.png"} alt="user"/>
+							
 						</figure>
 					</Link>
 		}else{

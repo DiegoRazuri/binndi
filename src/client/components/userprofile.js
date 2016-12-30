@@ -113,7 +113,7 @@ export default class Userprofile extends React.Component{
 							<div className="userprofile-wrapper-banner"></div>
 							<div className="userprofiles-wrapper-margin-photo">
 								<figure className="userprofile-wrapper-photo">
-									<img src={this.props.user.photo}/>
+									<img src={this.props.user != undefined ? this.props.user.photo : "img/Profile-pic.png"}/>
 								</figure>
 							</div>
 							<div className="userprofile-header-color-filter"></div>

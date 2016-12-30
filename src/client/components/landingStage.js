@@ -206,6 +206,7 @@ export default class LandingStage extends React.Component{
 					</div>
 					
 					<div className="footer">
+						<span className="background-footer"></span>
 						<ul>
 							<li>
 								<h5>BINNDI</h5>
@@ -258,6 +259,7 @@ export default class LandingStage extends React.Component{
 							</li>
 
 						</ul>
+						<span className="background-footer background-footer-right"></span>
 					</div>
 					
 					{ popup_add_to_plan }

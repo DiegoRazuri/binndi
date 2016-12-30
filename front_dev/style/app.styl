@@ -536,99 +536,6 @@ body
 							margin-right 7%
 
 	
-
-	
-.btn-login
-	height 20px
-	width 230px
-	margin 15px auto
-	border-radius 10px
-	padding 10px 30px
-	text-decoration none
-	display flex
-	justify-content space-around
-	align-items center
-	
-	p, span
-		font-family "Oxygen"
-		font-size 0.8em
-		font-weight normal
-		margin 0px
-		text-align center
-		line-height 30px
-		height 30px
-	
-	span
-		width 35px
-		
-.btn-login-fb
-	background-color #00599f
-	
-	span, p
-		color white
-	
-.popup-login
-	display none
-	width 100%
-	height 100vh
-	background: rgb(0,151,211);
-	background: -moz-linear-gradient(-45deg,  rgba(0,151,211,1) 0%, rgba(0,174,181,1) 100%);
-	background: -webkit-linear-gradient(-45deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
-	background: linear-gradient(135deg,  rgba(0,151,211,1) 0%,rgba(0,174,181,1) 100%);
-	position fixed
-	top 0px
-	z-index 11
-	.wrapper-popup-login
-		background-color white
-		display flex
-		align-content flex-start
-		flex-direction column
-		width 100%
-		height 100vh
-		margin-left auto
-		margin-right auto
-		position relative
-		top 0px
-		z-index 12
-		
-		.btn-close
-			display block
-			text-align right
-			font-size 1.8em
-			color #ccc
-			margin 10px 10px 0px 0px
-			cursor pointer
-
-		.popup-login-wrapper-content
-			width 90%
-			margin 0px auto
-			height 100%
-			display flex
-			justify-content center
-			flex-direction column
-			
-			h4
-				margin 0px auto 20px auto
-				padding 0px
-				font-family "Oxygen"
-				font-size 1em
-				font-weight normal
-				display block
-				width 80%
-				text-align center
-			.text-terms-conditions	
-				font-family "Oxygen"
-				font-size  0.9em
-				font-weight normal
-				color #404041
-				width 94%
-				padding 0px
-				margin 20px auto 80px auto
-				text-align justify
-				a
-					text-decoration none
-					color #0097d3
-					
 			
 	
 .banner-background
@@ -1278,6 +1185,9 @@ body
 	padding 0px 0px 15px 0px
 	width 100%
 	background-color #535C61
+	
+	.background-footer
+		display none
 		
 	ul
 		margin 0px auto 0px auto
@@ -1414,15 +1324,7 @@ body
 	.footer ul
 		width 70%
 		
-	.popup-login
-		display none
-		justify-content center
-		align-items center
-		.wrapper-popup-login
-			height 450px
-			width 380px
-			.btn-close
-				margin-bottom 40px
+	
 			
 @media screen and (min-width: 1020px)
 	body .appContainer .container .header .nav .nav-left 
@@ -1709,32 +1611,52 @@ body
 					p
 						width 85%
 						
-	.footer ul
-		width 950px
+	.footer
+		display flex
+		padding 7px 0px
+		.background-footer
+			background-image url("img/logoFooter.png")
+			background-position -89px
+			background-repeat no-repeat
+			background-size cover
+			display block
+			width 100px
+			height 195px
+			margin auto 0px
+			padding 0px
+			
+		.background-footer-right
+			background-position 7px
+			
 		
-		li
-			margin-top 50px
-			margin-bottom 40px
-			width auto
-			width 18%
-			h5
-				font-size 0.6em
-				
-			.footer-btn-underline
-				height 3px
-				
-			ul li 
-				height 13px
-				a
+		
+		ul
+			width 950px
+			background-color #535c61
+			
+			li
+				margin-top 50px
+				margin-bottom 40px
+				width auto
+				width 18%
+				h5
 					font-size 0.6em
-		.footer-grid-logos
-			width 20%
-			order -1
-			margin-right 6%
-			figure
-				margin 0px
-				float left
-				width 150px
+					
+				.footer-btn-underline
+					height 3px
+					
+				ul li 
+					height 13px
+					a
+						font-size 0.6em
+			.footer-grid-logos
+				width 20%
+				order -1
+				margin-right 6%
+				figure
+					margin 0px
+					float left
+					width 150px
 				
 				
 
