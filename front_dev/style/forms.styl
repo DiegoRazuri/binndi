@@ -169,7 +169,7 @@
 	span, p
 		color white
 	
-.popup-login, .popup-planner
+.popup-login, .popup-planner, .popup-planner-fly
 	display none
 	width 100%
 	height 100vh
@@ -180,8 +180,8 @@
 	position fixed
 	top 0px
 	z-index 11
-	.wrapper-popup-login, .wrapper-popup-planner
-		background-color white
+	.wrapper-popup-login, .wrapper-popup-planner, .wrapper-popup-planner-fly
+		background-color #FFFFFF
 		display flex
 		align-content flex-start
 		flex-direction column
@@ -201,7 +201,7 @@
 			margin 10px 10px 0px 0px
 			cursor pointer
 
-		.popup-login-wrapper-content, .popup-planner-wrapper-content
+		.popup-login-wrapper-content, .popup-planner-wrapper-content, .popup-planner-wrapper-content-fly
 			width 90%
 			margin 0px auto
 			height 100%
@@ -230,11 +230,87 @@
 				a
 					text-decoration none
 					color #0097d3
-					
+			form
+				margin-top 20px
 
+.popup-planner, .popup-planner-fly
+	display flex
+	.wrapper-popup-planner .popup-planner-wrapper-content, .wrapper-popup-planner-fly .popup-planner-wrapper-content-fly 
+		justify-content flex-start
+		margin-top 50px
+		h4
+			margin-bottom 0px
+			
+.popup-planner-fly .btnBack
+	color #95989A
+	
+	
+.input-box
+	width 100%
+	height 40px
+	line-height 40px
+	margin 10px auto
+	border solid 1px #95989A
+	border-radius 10px
+	
+	input
+		border none
+		background-color #FFFFFF
+		color #95989A
+		font-family "Oxygen"
+		font-size 1em
+		height 30px
+		width 245px
+		position relative
+		left 10px
+		outline 0px
+		
+	.ico
+		color #95989A
+		font-size 1.3em
+		text-align center
+		display block
+		float right
+		position relative
+		top 10px
+		right 10px
+
+.btnForm
+	width 100%
+	height 40px
+	line-height 40px
+	margin 30px auto 10px auto
+	background-color #02AC36
+	border-radius 10px
+	display flex
+	justify-content space-between
+	align-items center
+	cursor pointer
+	
+	p
+		font-family "Oxygen"
+		font-size 0.9em
+		font-weight lighter
+		color white
+		margin 0px
+		padding 0px
+		text-align center
+		
+	span
+		color white
+		margin-right 13px
+		
+.btnCancel
+	cursor pointer
+	color #DC5F5F
+	font-family "Oxygen"
+	font-weight lighter
+	font-size 0.9em
+	text-align center
+	margin-top 15px
+		
 .popup-planner
 	display none
-
 
 @media screen and (min-width: 767px)
 	.popup-add-to-plan
@@ -247,17 +323,29 @@
 		top 100px
 		position fixed
 		
-	.popup-login, .popup-planner
+	.popup-login, .popup-planner, .popup-planner-fly
 		display none
 		justify-content center
 		align-items center
-		.wrapper-popup-login, .wrapper-popup-planner
+		.wrapper-popup-login, .wrapper-popup-planner, .wrapper-popup-planner-fly
 			height 450px
 			width 380px
 			.btn-close
 				margin-bottom 40px
 				
-	.popup-planner
-		display none
+	.btnForm
+		width 300px
+	.input-box
+		width 300px
+
+
+	.popup-planner, .popup-planner-fly
+		display flex
+		.wrapper-popup-planner .popup-planner-wrapper-content, .wrapper-popup-planner-fly .popup-planner-wrapper-content-fly
+			margin-top 0px
+	.popup-planner-fly .wrapper-popup-planner-fly
+		height 506px
+
+		
 		
 			

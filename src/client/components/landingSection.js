@@ -26,7 +26,7 @@ export default class LandingSection extends React.Component{
 
 		function avanzar2(){
 		    var size = $('#wrapper-slider').find('.slide').size();
-		    console.log(size)
+		    
 	        $('#wrapper-slider').find('.slide').each(
 	            function(index,value){
 
@@ -86,6 +86,49 @@ export default class LandingSection extends React.Component{
 										
 						</div>
 					</div>
+					
+					<div id="wrapper-slider" className="wrapper-slider">
+						
+						<div id="banner-sequence-1" className="banner-sequence slide slide_visible">
+							<div className="wrapper-banner-content">
+								<div className="element-banner-1 wrapper-text-features-banners">
+									<h1 className="headlines text-banner-white">Encuentra vuelos, hospedajes y actividades</h1>
+									<h2 className="subtitle text-banner-white">Invita a tus amigos al plan y decidan juntos que experiencias formaran parte de la aventura.</h2>
+									
+								</div>
+								<figure className="element-banner-1 img-banner-features-1 banner-image">
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_planification2.png"/>
+								</figure>
+							</div>
+							
+						</div>
+						<div id="banner-sequence-2" className="banner-sequence slide ">
+							<div className="wrapper-banner-content">
+								<div className="element-banner-2 wrapper-text-features-banners">
+									<h1 className="headlines text-banner-white">No sufras más<br/> coordinando pagos</h1>
+									<h2 className="subtitle text-banner-white">Divide el pago entre tus compañeros de viaje y todos sabran cuando se hayan realizado las reservas.</h2>
+									
+								</div>
+								<figure className="element-banner-2 img-banner-features-2 banner-image ">
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_sharedpayment.png"/>
+								</figure>
+							</div>
+							
+						</div>
+						<div id="banner-sequence-3" className="banner-sequence slide ">
+							<div className="wrapper-banner-content">
+								<div className="element-banner-3 wrapper-text-features-banners">
+									<h1  className="headlines text-banner-white">Ubicate en tu destino.</h1>
+									<h2 className="subtitle text-banner-white">Un mapa que te acompañará durante el viaje para guiarte del aeropuerto a tu hospedaje y a cada actividad que hayas planificado.</h2>
+									
+								</div>
+								<figure className="element-banner3 img-banner-features-3 banner-image">
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png"/>
+								</figure>
+							</div>
+							
+						</div>
+					</div>
 					<div className="banner-binndi-tech banner-secundary">
 						<div className="wrapper-text-banner-secundary-tech">
 							<figure>
@@ -139,49 +182,6 @@ export default class LandingSection extends React.Component{
 							</div>
 						</div>
 					</div>
-					<div id="wrapper-slider" className="wrapper-slider">
-						
-						<div id="banner-sequence-1" className="banner-sequence slide slide_visible">
-							<div className="wrapper-banner-content">
-								<div className="element-banner-1 wrapper-text-features-banners">
-									<h1 className="headlines text-banner-white">Comparte y arma tu itinerario en grupo</h1>
-									<h2 className="subtitle text-banner-white">Invita a tus amigos al plan y decidan juntos que experiencias formaran parte de la aventura.</h2>
-									
-								</div>
-								<figure className="element-banner-1 img-banner-features-1 banner-image">
-									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_planwithfriends.png"/>
-								</figure>
-							</div>
-							
-						</div>
-						<div id="banner-sequence-2" className="banner-sequence slide ">
-							<div className="wrapper-banner-content">
-								<div className="element-banner-2 wrapper-text-features-banners">
-									<h1 className="headlines text-banner-white">No sufras más<br/> coordinando pagos</h1>
-									<h2 className="subtitle text-banner-white">Divide el pago entre tus compañeros de viaje y todos sabran cuando se hayan realizado las reservas.</h2>
-									
-								</div>
-								<figure className="element-banner-2 img-banner-features-2 banner-image ">
-									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_sharedpayment.png"/>
-								</figure>
-							</div>
-							
-						</div>
-						<div id="banner-sequence-3" className="banner-sequence slide ">
-							<div className="wrapper-banner-content">
-								<div className="element-banner-3 wrapper-text-features-banners">
-									<h1  className="headlines text-banner-white">Ubicate en tu destino.</h1>
-									<h2 className="subtitle text-banner-white">Un mapa que te acompañará durante el viaje para guiarte del aeropuerto a tu hospedaje y a cada actividad que hayas planificado.</h2>
-									
-								</div>
-								<figure className="element-banner3 img-banner-features-3 banner-image">
-									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png"/>
-								</figure>
-							</div>
-							
-						</div>
-					</div>
-					
 					<div id="extraBanners" className="otros">
 						<div className="banner-binndi-points banner-secundary">
 							<div className="wrapper-text-banner-secundary-binndi-points">

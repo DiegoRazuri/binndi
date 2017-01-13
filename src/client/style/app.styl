@@ -446,10 +446,10 @@ body
 			.header
 				display block
 				height 50px
-				background #00aeb5
-				background -moz-linear-gradient(left, rgba(0,174,181,1) 1%, rgba(0,174,181,1) 33%, rgba(0,151,211,1) 100%)
-				background -webkit-linear-gradient(left, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
-				background linear-gradient(to right, rgba(0,174,181,1) 1%,rgba(0,174,181,1) 33%,rgba(0,151,211,1) 100%)
+				background: rgb(0,173,121);
+				background: -moz-linear-gradient(left,  rgba(0,173,121,1) 0%, rgba(0,174,181,1) 23%, rgba(0,174,181,1) 68%, rgba(0,151,211,1) 100%);
+				background: -webkit-linear-gradient(left,  rgba(0,173,121,1) 0%,rgba(0,174,181,1) 23%,rgba(0,174,181,1) 68%,rgba(0,151,211,1) 100%);
+				background: linear-gradient(to right,  rgba(0,173,121,1) 0%,rgba(0,174,181,1) 23%,rgba(0,174,181,1) 68%,rgba(0,151,211,1) 100%);
 				width 100%
 				position fixed
 				top 0px
@@ -661,10 +661,11 @@ body
 	height auto
 	margin 0px
 	padding 0px
-	background: rgb(0,174,181)
-	background: -moz-linear-gradient(-45deg,  rgba(0,174,181,1) 6%, rgba(0,151,211,1) 100%)
-	background: -webkit-linear-gradient(-45deg,  rgba(0,174,181,1) 6%,rgba(0,151,211,1) 100%)
-	background: linear-gradient(135deg,  rgba(0,174,181,1) 6%,rgba(0,151,211,1) 100%)
+	background: rgb(162,196,152);
+	background: -moz-linear-gradient(-45deg,  rgba(162,196,152,1) 0%, rgba(0,151,211,1) 100%);
+	background: -webkit-linear-gradient(-45deg,  rgba(162,196,152,1) 0%,rgba(0,151,211,1) 100%);
+	background: linear-gradient(135deg,  rgba(162,196,152,1) 0%,rgba(0,151,211,1) 100%);
+
 
 	.banner1
 		background-image url("https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Fold1.jpg")
@@ -713,6 +714,7 @@ body
 		height auto
 		.wrapper-text-banner-secundary-tech
 			padding-top 30px
+			padding-bottom 30px
 			
 			figure
 				display block
@@ -728,6 +730,7 @@ body
 			h4
 				width 85%
 			.landing-wrapper-thumbnails
+				display none
 				width 100%
 				height 260px
 				margin 30px auto 0px auto
@@ -813,7 +816,7 @@ body
 					margin 0px auto
 					width 90%
 				h2
-					margin-top 20px
+					margin-top 10px
 					
 				.btn-big-curve-sub-banners
 					margin 30px auto
@@ -1229,7 +1232,7 @@ body
 	margin 0px 
 	padding 0px
 	position absolute
-	top 1450px
+	top 970px
 	right 5px
 	li
 		margin 15px auto
@@ -1415,6 +1418,7 @@ body
 			.wrapper-text-banner-secundary-tech .landing-wrapper-thumbnails
 				display flex
 				justify-content space-around
+				display none
 				.landing-thumbnail
 					width 236px
 					height 227px
@@ -1463,7 +1467,7 @@ body
 			font-size 1.4em
 			
 	.banner-background .banner-binndi-tech 
-		height 510px
+		height 245px
 		padding-bottom 0px
 		.wrapper-text-banner-secundary-tech
 			top 64px
@@ -1476,7 +1480,7 @@ body
 
 	.banner-background 
 		.nav-sub-banner
-			top 1400px
+			top 820px
 			li
 				margin 20px auto
 				.ico-subnav-banners
@@ -1488,8 +1492,8 @@ body
 		.wrapper-slider 
 
 			#banner-sequence-1 .wrapper-banner-content
-				margin-top 100px
-				width 740px
+				margin-top 130px
+				width 803px
 			#banner-sequence-2 .wrapper-banner-content
 				margin-top 100px
 				width 760px
@@ -1527,7 +1531,7 @@ body
 					
 
 					.img-banner-features-1
-						width 310px
+						width 374px
 					.img-banner-features-2
 						width 310px
 					.img-banner-features-3

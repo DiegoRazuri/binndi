@@ -30552,21 +30552,9 @@ var Itineraries = function (_React$Component) {
 							_react2.default.createElement(
 								'ul',
 								null,
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								)
+								_react2.default.createElement('li', null),
+								_react2.default.createElement('li', null),
+								_react2.default.createElement('li', null)
 							)
 						)
 					)
@@ -30680,21 +30668,9 @@ var Itineraries = function (_React$Component) {
 							_react2.default.createElement(
 								'ul',
 								null,
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								)
+								_react2.default.createElement('li', null),
+								_react2.default.createElement('li', null),
+								_react2.default.createElement('li', null)
 							)
 						)
 					)
@@ -30808,21 +30784,9 @@ var Itineraries = function (_React$Component) {
 							_react2.default.createElement(
 								'ul',
 								null,
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									_react2.default.createElement('img', { src: '#' })
-								)
+								_react2.default.createElement('li', null),
+								_react2.default.createElement('li', null),
+								_react2.default.createElement('li', null)
 							)
 						)
 					)
@@ -30833,6 +30797,23 @@ var Itineraries = function (_React$Component) {
 
 	return Itineraries;
 }(_react2.default.Component);
+
+/*
+seccion de listado de imagenes de invitados en plan
+
+<ul>
+	<li>
+		<img src="#"/>
+	</li>
+	<li>
+		<img src="#"/>
+	</li>
+	<li>
+		<img src="#"/>
+	</li>
+</ul>
+*/
+
 
 exports.default = Itineraries;
 
@@ -30892,7 +30873,7 @@ var LandingSection = function (_React$Component) {
 
 			function avanzar2() {
 				var size = $('#wrapper-slider').find('.slide').size();
-				console.log(size);
+
 				$('#wrapper-slider').find('.slide').each(function (index, value) {
 
 					if ($(value).hasClass('slide_visible')) {
@@ -30961,6 +30942,93 @@ var LandingSection = function (_React$Component) {
 									null,
 									'Regístrate'
 								)
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ id: 'wrapper-slider', className: 'wrapper-slider' },
+					_react2.default.createElement(
+						'div',
+						{ id: 'banner-sequence-1', className: 'banner-sequence slide slide_visible' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'wrapper-banner-content' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'element-banner-1 wrapper-text-features-banners' },
+								_react2.default.createElement(
+									'h1',
+									{ className: 'headlines text-banner-white' },
+									'Encuentra vuelos, hospedajes y actividades'
+								),
+								_react2.default.createElement(
+									'h2',
+									{ className: 'subtitle text-banner-white' },
+									'Invita a tus amigos al plan y decidan juntos que experiencias formaran parte de la aventura.'
+								)
+							),
+							_react2.default.createElement(
+								'figure',
+								{ className: 'element-banner-1 img-banner-features-1 banner-image' },
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_planification2.png' })
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'banner-sequence-2', className: 'banner-sequence slide ' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'wrapper-banner-content' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'element-banner-2 wrapper-text-features-banners' },
+								_react2.default.createElement(
+									'h1',
+									{ className: 'headlines text-banner-white' },
+									'No sufras más',
+									_react2.default.createElement('br', null),
+									' coordinando pagos'
+								),
+								_react2.default.createElement(
+									'h2',
+									{ className: 'subtitle text-banner-white' },
+									'Divide el pago entre tus compañeros de viaje y todos sabran cuando se hayan realizado las reservas.'
+								)
+							),
+							_react2.default.createElement(
+								'figure',
+								{ className: 'element-banner-2 img-banner-features-2 banner-image ' },
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_sharedpayment.png' })
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'banner-sequence-3', className: 'banner-sequence slide ' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'wrapper-banner-content' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'element-banner-3 wrapper-text-features-banners' },
+								_react2.default.createElement(
+									'h1',
+									{ className: 'headlines text-banner-white' },
+									'Ubicate en tu destino.'
+								),
+								_react2.default.createElement(
+									'h2',
+									{ className: 'subtitle text-banner-white' },
+									'Un mapa que te acompañará durante el viaje para guiarte del aeropuerto a tu hospedaje y a cada actividad que hayas planificado.'
+								)
+							),
+							_react2.default.createElement(
+								'figure',
+								{ className: 'element-banner3 img-banner-features-3 banner-image' },
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png' })
 							)
 						)
 					)
@@ -31078,93 +31146,6 @@ var LandingSection = function (_React$Component) {
 										)
 									)
 								)
-							)
-						)
-					)
-				),
-				_react2.default.createElement(
-					'div',
-					{ id: 'wrapper-slider', className: 'wrapper-slider' },
-					_react2.default.createElement(
-						'div',
-						{ id: 'banner-sequence-1', className: 'banner-sequence slide slide_visible' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'wrapper-banner-content' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'element-banner-1 wrapper-text-features-banners' },
-								_react2.default.createElement(
-									'h1',
-									{ className: 'headlines text-banner-white' },
-									'Comparte y arma tu itinerario en grupo'
-								),
-								_react2.default.createElement(
-									'h2',
-									{ className: 'subtitle text-banner-white' },
-									'Invita a tus amigos al plan y decidan juntos que experiencias formaran parte de la aventura.'
-								)
-							),
-							_react2.default.createElement(
-								'figure',
-								{ className: 'element-banner-1 img-banner-features-1 banner-image' },
-								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_planwithfriends.png' })
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ id: 'banner-sequence-2', className: 'banner-sequence slide ' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'wrapper-banner-content' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'element-banner-2 wrapper-text-features-banners' },
-								_react2.default.createElement(
-									'h1',
-									{ className: 'headlines text-banner-white' },
-									'No sufras más',
-									_react2.default.createElement('br', null),
-									' coordinando pagos'
-								),
-								_react2.default.createElement(
-									'h2',
-									{ className: 'subtitle text-banner-white' },
-									'Divide el pago entre tus compañeros de viaje y todos sabran cuando se hayan realizado las reservas.'
-								)
-							),
-							_react2.default.createElement(
-								'figure',
-								{ className: 'element-banner-2 img-banner-features-2 banner-image ' },
-								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_sharedpayment.png' })
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ id: 'banner-sequence-3', className: 'banner-sequence slide ' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'wrapper-banner-content' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'element-banner-3 wrapper-text-features-banners' },
-								_react2.default.createElement(
-									'h1',
-									{ className: 'headlines text-banner-white' },
-									'Ubicate en tu destino.'
-								),
-								_react2.default.createElement(
-									'h2',
-									{ className: 'subtitle text-banner-white' },
-									'Un mapa que te acompañará durante el viaje para guiarte del aeropuerto a tu hospedaje y a cada actividad que hayas planificado.'
-								)
-							),
-							_react2.default.createElement(
-								'figure',
-								{ className: 'element-banner3 img-banner-features-3 banner-image' },
-								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png' })
 							)
 						)
 					)
@@ -33432,10 +33413,7 @@ var routes = _react2.default.createElement(
 
 _reactDom2.default.render(routes, document.getElementById('appContainer'));
 
-window.onload = function () {
-
-    console.log("cargo");
-};
+window.onload = function () {};
 
 var btnMovilMenu = document.querySelector('#btn-movil-menu');
 var movilMenu = document.querySelector('#movil-menu');
@@ -33443,7 +33421,6 @@ var btnClosePopupMovilMenu = document.querySelector('#btn-close-movil-menu');
 
 btnMovilMenu.addEventListener('click', function (e) {
     e.preventDefault();
-    console.log("ejecutando ani");
 
     fadeIn(movilMenu, 1, true, 0);
     //fadeIn(backgroundMovilMenu,1)
@@ -33463,13 +33440,11 @@ btnMovilMenu.addEventListener('click', function (e) {
         position: "fixed",
         top: -10
     }, "slow");
-    console.log(window.pageYOffset);
-    console.log("hey");
 });
 
 btnClosePopupMovilMenu.addEventListener('click', function (e) {
     e.preventDefault();
-    console.log("ejecutando");
+
     fadeOut(movilMenu);
     $(".header").animate({
         height: "50px"
@@ -33503,8 +33478,6 @@ function fadeOut(element) {
 function fadeIn(element, finalOpacity, center, pixels) {
     if (center == true) {
 
-        console.log(window.innerWidth);
-
         if (window.innerWidth <= 770) {
             var aditionalPixels = -10;
         } else {
@@ -33535,8 +33508,6 @@ function slideDown(element) {
     var hg = document.getElementById('header').offsetHeight;
     var finalHeight = screen.height;
 
-    console.log(hg);
-
     var timer = setInterval(function () {
         if (hg >= finalHeight) {
             clearInterval(timer);
@@ -33561,69 +33532,5 @@ function slideUp(element, finalHeight) {
 }
 
 // ANIMACIÓN DEL SCROLL
-
-/*
-
-$(document).ready(function(){
-
-    var bannersHeight =  document.getElementById("banner-sequence-1").offsetHeight;
-
-
-    var el = document.getElementById("extraBanners")
-
-    PointNormalScroll = el.offsetTop - screen.height;
-
-    var lastScrollTop = 0;
-
-    var contScrollDistance = bannersHeight;
-    
-    $(window).scroll(function(event){
-
-        var initPosition = $(document).scrollTop()
-
-
-        if( initPosition < PointNormalScroll ){
-            
-
-            var st = $(this).scrollTop();
-            
-            if (st > lastScrollTop){
-                console.log("abajo")
-                $("html, body").animate({ scrollTop: contScrollDistance }, 2000, function(){
-                    contScrollDistance = contScrollDistance + bannersHeight;
-                    console.log(contScrollDistance)
-                });
-            } else {
-                // upscroll code
-                console.log("arriba")
-
-                //$("html, body").animate({ scrollTop: -bannersHeight }, 2000);
-            }
-            
-        
-        }else{
-            console.log("ya no scrollea auto")
-        }
-        lastScrollTop = st;
-    });
-
-/*
-
-    var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       // downscroll code
-   } else {
-      // upscroll code
-   }
-   lastScrollTop = st;
-});
-    
-
-    
-
-});
-*/
 
 },{"./components/app":244,"./components/binndiPoints":245,"./components/enterpriseRegisterInfo":251,"./components/exploreScene":252,"./components/exploreSection":253,"./components/landingStage":257,"./components/teamAdmin":262,"./components/userprofile":269,"./components/videoScene":270,"react":241,"react-dom":3,"react-router":33}]},{},[272]);

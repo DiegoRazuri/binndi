@@ -70,7 +70,7 @@ ReactDom.render(routes, document.getElementById('appContainer'));
 
 window.onload = function(){
 
-    console.log("cargo")
+ 
 
 
 }
@@ -88,7 +88,6 @@ var btnClosePopupMovilMenu = document.querySelector('#btn-close-movil-menu')
 
 btnMovilMenu.addEventListener('click', function(e){
     e.preventDefault()
-    console.log("ejecutando ani")
 
     fadeIn(movilMenu,1, true, 0)
     //fadeIn(backgroundMovilMenu,1)
@@ -108,14 +107,12 @@ btnMovilMenu.addEventListener('click', function(e){
         position: "fixed",
         top: -10
     }, "slow");
-    console.log(window.pageYOffset);
-    console.log("hey");
     
 })
 
 btnClosePopupMovilMenu.addEventListener('click', function(e){
     e.preventDefault()
-    console.log("ejecutando");
+
     fadeOut(movilMenu)
     $(".header").animate({
         height: "50px"
@@ -150,7 +147,7 @@ function fadeOut(element) {
 function fadeIn(element, finalOpacity, center, pixels) {
     if(center == true){
 
-        console.log(window.innerWidth)
+    
 
         if(window.innerWidth <= 770 ){
             var aditionalPixels = -10;
@@ -181,8 +178,7 @@ function fadeIn(element, finalOpacity, center, pixels) {
 function slideDown(element){
     var hg = document.getElementById('header').offsetHeight;
     var finalHeight = screen.height;
-    
-    console.log(hg)
+  
 
     var timer = setInterval(function(){
         if(hg >= finalHeight){
@@ -212,66 +208,4 @@ function slideUp(element, finalHeight){
 
 // ANIMACIÓN DEL SCROLL
 
-/*
 
-$(document).ready(function(){
-
-    var bannersHeight =  document.getElementById("banner-sequence-1").offsetHeight;
-
-
-    var el = document.getElementById("extraBanners")
-
-    PointNormalScroll = el.offsetTop - screen.height;
-
-    var lastScrollTop = 0;
-
-    var contScrollDistance = bannersHeight;
-    
-    $(window).scroll(function(event){
-
-        var initPosition = $(document).scrollTop()
-
-
-        if( initPosition < PointNormalScroll ){
-            
-
-            var st = $(this).scrollTop();
-            
-            if (st > lastScrollTop){
-                console.log("abajo")
-                $("html, body").animate({ scrollTop: contScrollDistance }, 2000, function(){
-                    contScrollDistance = contScrollDistance + bannersHeight;
-                    console.log(contScrollDistance)
-                });
-            } else {
-                // upscroll code
-                console.log("arriba")
-
-                //$("html, body").animate({ scrollTop: -bannersHeight }, 2000);
-            }
-            
-        
-        }else{
-            console.log("ya no scrollea auto")
-        }
-        lastScrollTop = st;
-    });
-
-/*
-
-    var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       // downscroll code
-   } else {
-      // upscroll code
-   }
-   lastScrollTop = st;
-});
-    
-
-    
-
-});
-*/
