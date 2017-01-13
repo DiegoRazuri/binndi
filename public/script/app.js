@@ -26966,9 +26966,9 @@ var _logginPopup = require('./logginPopup');
 
 var _logginPopup2 = _interopRequireDefault(_logginPopup);
 
-var _useravatar = require('./useravatar');
+var _userAvatar = require('./userAvatar');
 
-var _useravatar2 = _interopRequireDefault(_useravatar);
+var _userAvatar2 = _interopRequireDefault(_userAvatar);
 
 var _exploreSection = require('./exploreSection');
 
@@ -27585,7 +27585,7 @@ var Layout = function (_React$Component) {
 			}
 
 			if (this.state.user != false) {
-				userPanel = _react2.default.createElement(_useravatar2.default, {
+				userPanel = _react2.default.createElement(_userAvatar2.default, {
 					user: this.state.user });
 
 				if (this.state.show_popup_add_to_plan == true) {
@@ -28074,7 +28074,7 @@ var Layout = function (_React$Component) {
 
 exports.default = Layout;
 
-},{"./btnCreateEnterpriseProfile":248,"./btnLoggin":249,"./exploreSection":253,"./logginPopup":258,"./messageEnterprisesPopup":259,"./messageUserPopup":260,"./popupAddToPlan":261,"./userAdminPanel":263,"./useravatar":268,"react":241,"react-addons-css-transition-group":2,"react-dom":3,"react-router":33}],245:[function(require,module,exports){
+},{"./btnCreateEnterpriseProfile":248,"./btnLoggin":249,"./exploreSection":253,"./logginPopup":258,"./messageEnterprisesPopup":259,"./messageUserPopup":260,"./popupAddToPlan":261,"./userAdminPanel":263,"./userAvatar":266,"react":241,"react-addons-css-transition-group":2,"react-dom":3,"react-router":33}],245:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32852,88 +32852,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = require('react-router');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *	module dependencies
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
-
-
-var UserAvatar = function (_React$Component) {
-	_inherits(UserAvatar, _React$Component);
-
-	function UserAvatar() {
-		_classCallCheck(this, UserAvatar);
-
-		return _possibleConstructorReturn(this, Object.getPrototypeOf(UserAvatar).apply(this, arguments));
-	}
-
-	_createClass(UserAvatar, [{
-		key: 'render',
-		value: function render() {
-			var btnEnter = void 0;
-
-			if (this.props.user.photo) {
-				btnEnter = _react2.default.createElement(
-					_reactRouter.Link,
-					{ to: '/userprofile' },
-					_react2.default.createElement(
-						'figure',
-						{ className: 'userAvatar' },
-						_react2.default.createElement('img', { src: this.props.user != undefined ? this.props.user.photo : "img/Profile-pic.png", alt: 'user' })
-					)
-				);
-			} else {
-				btnEnter = _react2.default.createElement(
-					_reactRouter.Link,
-					{ className: 'btn-entered btn-small-curve', to: '/userprofile' },
-					_react2.default.createElement(
-						'p',
-						null,
-						'Ingresa'
-					),
-					_react2.default.createElement('span', { className: 'icon-chevron-small-right' })
-				);
-			}
-
-			return _react2.default.createElement(
-				'ul',
-				{ className: 'nav-right' },
-				_react2.default.createElement(
-					'li',
-					{ className: 'btn-header-hidden btn-header-right' },
-					btnEnter
-				)
-			);
-		}
-	}]);
-
-	return UserAvatar;
-}(_react2.default.Component);
-//<Link to={'/userprofile/${user._id}'}>
-
-
-exports.default = UserAvatar;
-
-},{"react":241,"react-router":33}],269:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -33147,7 +33065,7 @@ var Userprofile = function (_React$Component) {
 
 exports.default = Userprofile;
 
-},{"./itineraries":255,"./userInfo":267,"./wishlist":271,"react":241,"react-dom":3}],270:[function(require,module,exports){
+},{"./itineraries":255,"./userInfo":267,"./wishlist":270,"react":241,"react-dom":3}],269:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33226,7 +33144,7 @@ var VideoScene = function (_React$Component) {
 
 exports.default = VideoScene;
 
-},{"react":241}],271:[function(require,module,exports){
+},{"react":241}],270:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33317,7 +33235,7 @@ var Wishlist = function (_React$Component) {
 
 exports.default = Wishlist;
 
-},{"./activityThumbnail":243,"react":241,"react-dom":3}],272:[function(require,module,exports){
+},{"./activityThumbnail":243,"react":241,"react-dom":3}],271:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -33533,4 +33451,4 @@ function slideUp(element, finalHeight) {
 
 // ANIMACIÓN DEL SCROLL
 
-},{"./components/app":244,"./components/binndiPoints":245,"./components/enterpriseRegisterInfo":251,"./components/exploreScene":252,"./components/exploreSection":253,"./components/landingStage":257,"./components/teamAdmin":262,"./components/userprofile":269,"./components/videoScene":270,"react":241,"react-dom":3,"react-router":33}]},{},[272]);
+},{"./components/app":244,"./components/binndiPoints":245,"./components/enterpriseRegisterInfo":251,"./components/exploreScene":252,"./components/exploreSection":253,"./components/landingStage":257,"./components/teamAdmin":262,"./components/userprofile":268,"./components/videoScene":269,"react":241,"react-dom":3,"react-router":33}]},{},[271]);
