@@ -49,6 +49,7 @@ const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
                 	<Route path="/" component = {App} >
                     	<Route path="explore" component = {Explore} />
                         <Route path="userprofile" component = {Userprofile} />
+                        <Route path="userprofile#_=_" component = {Userprofile} />
                         <Route path="explore-scene/:service_id" component = {ExploreScene} />
                 		<Route path="binndis" component = {BinndiPoints} />
                         <Route path="enterprise-registration" component = {EnterpriseRegisterInfo} />
