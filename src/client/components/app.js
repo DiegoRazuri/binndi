@@ -621,10 +621,10 @@ export default class Layout extends React.Component{
 								</a>
 							</li>
 							<li className="btn-header-hidden btn-header-right" onClick={this.showPopupLogin.bind(this)}>
-								<a id="btn-popup-login" className="btn-entered btn-small-curve" href="#">
+								<div id="btn-popup-login" className="btn-entered btn-small-curve">
 									<p>Ingresa</p>
 									<span className="icon-chevron-small-right"></span>
-								</a>
+								</div>
 							</li>
 						</ul>
 		}

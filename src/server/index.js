@@ -63,7 +63,9 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 		console.log("es nuevo")
 		return res.redirect('/otro')
 	}else{
-		res.redirect('/userprofile');
+
+		res.redirect('/');
+
 	}
 });
 

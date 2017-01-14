@@ -27616,8 +27616,8 @@ var Layout = function (_React$Component) {
 						'li',
 						{ className: 'btn-header-hidden btn-header-right', onClick: this.showPopupLogin.bind(this) },
 						_react2.default.createElement(
-							'a',
-							{ id: 'btn-popup-login', className: 'btn-entered btn-small-curve', href: '#' },
+							'div',
+							{ id: 'btn-popup-login', className: 'btn-entered btn-small-curve' },
 							_react2.default.createElement(
 								'p',
 								null,
@@ -31454,8 +31454,8 @@ var LandingStage = function (_React$Component) {
 						'li',
 						{ className: 'btn-header-hidden btn-header-right', onClick: this.showPopupLogin.bind(this) },
 						_react2.default.createElement(
-							'a',
-							{ id: 'btn-popup-login', className: 'btn-entered btn-small-curve', href: '#' },
+							'div',
+							{ id: 'btn-popup-login', className: 'btn-entered btn-small-curve' },
 							_react2.default.createElement(
 								'p',
 								null,
