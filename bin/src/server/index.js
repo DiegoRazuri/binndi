@@ -87,7 +87,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 		return res.redirect('/otro');
 	} else {
 
-		res.redirect('/');
+		res.redirect('/userprofile');
 	}
 });
 
