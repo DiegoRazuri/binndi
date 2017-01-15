@@ -45,17 +45,19 @@ function handleUpdate() {
 // LA RUTA QUE DICE EXPLORE DEBE CAMBIAR A EXPLORESCENE Y PASAR EL PARAMETRO CON EL ID DE LA ACTIVIDAD
 const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
 
-                    <Route component = {LandingStage} />
+                    
                 	<Route path="/" component = {App} >
                     	<Route path="explore" component = {Explore} />
                         <Route path="userprofile" component = {Userprofile} />
-                        <Route path="userprofile#_=_" component = {Userprofile} />
+                        
                         <Route path="explore-scene/:service_id" component = {ExploreScene} />
                 		<Route path="binndis" component = {BinndiPoints} />
                         <Route path="enterprise-registration" component = {EnterpriseRegisterInfo} />
                         <Route path="video-scene" component = {VideoScene} />
+                        
                 	</Route>
                 	<Route path="binndi-team" component = {TeamAdmin} />
+
              
             </Router>);
 

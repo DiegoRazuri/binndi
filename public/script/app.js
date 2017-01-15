@@ -33315,13 +33315,11 @@ function handleUpdate() {
 var routes = _react2.default.createElement(
     _reactRouter.Router,
     { history: _reactRouter.browserHistory, onUpdate: handleUpdate },
-    _react2.default.createElement(_reactRouter.Route, { component: _landingStage2.default }),
     _react2.default.createElement(
         _reactRouter.Route,
         { path: '/', component: _app2.default },
         _react2.default.createElement(_reactRouter.Route, { path: 'explore', component: _exploreSection2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'userprofile', component: _userprofile2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: 'userprofile#_=_', component: _userprofile2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'explore-scene/:service_id', component: _exploreScene2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'binndis', component: _binndiPoints2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'enterprise-registration', component: _enterpriseRegisterInfo2.default }),
