@@ -45,8 +45,8 @@ function handleUpdate() {
 // LA RUTA QUE DICE EXPLORE DEBE CAMBIAR A EXPLORESCENE Y PASAR EL PARAMETRO CON EL ID DE LA ACTIVIDAD
 const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
 
-                    <Route path="/" component = {LandingStage} />
-                	<Route component = {App} >
+                    <Route component = {LandingStage} />
+                	<Route path="/" component = {App} >
                     	<Route path="explore" component = {Explore} />
                         <Route path="userprofile" component = {Userprofile} />
                         <Route path="userprofile#_=_" component = {Userprofile} />
