@@ -84,7 +84,7 @@ app.use('/api', api)
 
 
 app.get('*', function (req, res){
-	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
+	res.sendFile(path.resolve(__dirname, '../../public', 'index.html'))
 
 })
 

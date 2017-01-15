@@ -102,7 +102,7 @@ app.use('/api', _api2.default);
 //configuracion de ruteo
 
 app.get('*', function (req, res) {
-	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
+	res.sendFile(_path2.default.resolve(__dirname, '../../public', 'index.html'));
 });
 
 //levantamiento de servidor
