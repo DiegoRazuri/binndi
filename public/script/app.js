@@ -33318,7 +33318,7 @@ var routes = _react2.default.createElement(
     _react2.default.createElement(
         _reactRouter.Route,
         { path: '/', component: _app2.default },
-        _react2.default.createElement(_reactRouter.Route, { path: 'explore', component: _exploreSection2.default }),
+        _react2.default.createElement(_reactRouter.IndexRoute, { component: _exploreSection2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'userprofile', component: _userprofile2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'explore-scene/:service_id', component: _exploreScene2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'binndis', component: _binndiPoints2.default }),
