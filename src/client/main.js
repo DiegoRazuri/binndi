@@ -46,7 +46,7 @@ function handleUpdate() {
 const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
 
                     <Route path="/" component = {LandingStage} />
-                	<Route path="/" component = {App} >
+                	<Route component = {App} >
                     	<Route path="explore" component = {Explore} />
                         <Route path="userprofile" component = {Userprofile} />
                         <Route path="userprofile#_=_" component = {Userprofile} />
