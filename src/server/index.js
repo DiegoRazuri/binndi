@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import path from 'path'
 import api from 'src/server/api'
+import fallback from 'express-history-api-fallback'
 
 //configuracion de autenticacion con passport
 const passport = require('passport');
@@ -81,13 +82,13 @@ app.use('/api', api)
 
 //configuracion de ruteo
 
-
-
+app.use(fallback(path.join(__dirname, '../../public', 'index.html')))
+/*
 app.get('*', function (req, res){
-	res.sendFile(path.resolve(__dirname, '../../public', 'index.html'))
+	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
 })
-
+*/
 //levantamiento de servidor
 server.listen(process.env.PORT || 3000, () => console.log("servidor iniciado"))
 
