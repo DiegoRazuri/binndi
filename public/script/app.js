@@ -33323,9 +33323,9 @@ var routes = _react2.default.createElement(
         _react2.default.createElement(_reactRouter.Route, { path: 'explore-scene/:service_id', component: _exploreScene2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'binndis', component: _binndiPoints2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'enterprise-registration', component: _enterpriseRegisterInfo2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: 'video-scene', component: _videoScene2.default })
-    ),
-    _react2.default.createElement(_reactRouter.Route, { path: 'binndi-team', component: _teamAdmin2.default })
+        _react2.default.createElement(_reactRouter.Route, { path: 'video-scene', component: _videoScene2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: 'binndi-team', component: _teamAdmin2.default })
+    )
 );
 
 _reactDom2.default.render(routes, document.getElementById('appContainer'));

@@ -17,6 +17,7 @@ import EnterpriseRegisterInfo from './components/enterpriseRegisterInfo'
 import VideoScene from './components/videoScene'
 
 
+
 import App from './components/app'
 
 import TeamAdmin from './components/teamAdmin'
@@ -46,16 +47,16 @@ function handleUpdate() {
 const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
 
                    
-                	<Route path="/" component = {App} >
-                        <IndexRoute component={LandingStage}/>
-                        <Route path="userprofile" component = {Userprofile} />
-                        <Route path="explore-scene/:service_id" component = {ExploreScene} />
-                		<Route path="binndis" component = {BinndiPoints} />
-                        <Route path="enterprise-registration" component = {EnterpriseRegisterInfo} />
-                        <Route path="video-scene" component = {VideoScene} />
+                <Route path="/" component = {App} >
+                    <IndexRoute component={LandingStage}/>
+                    <Route path="userprofile" component = {Userprofile} />
+                    <Route path="explore-scene/:service_id" component = {ExploreScene} />
+                    <Route path="binndis" component = {BinndiPoints} />
+                    <Route path="enterprise-registration" component = {EnterpriseRegisterInfo} />
+                    <Route path="video-scene" component = {VideoScene} />
+                    <Route path="binndi-team" component = {TeamAdmin} />
 
-                	</Route>
-                	<Route path="binndi-team" component = {TeamAdmin} />
+                </Route>
 
              
             </Router>);

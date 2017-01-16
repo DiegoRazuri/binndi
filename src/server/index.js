@@ -8,6 +8,8 @@ import path from 'path'
 import api from 'src/server/api'
 import fallback from 'express-history-api-fallback'
 
+
+
 //configuracion de autenticacion con passport
 const passport = require('passport');
 				 require('src/server/passport')(passport);
@@ -49,12 +51,6 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 /*
-app.get('/auth/twitter', passport.authenticate('twitter'))
-app.get('/auth/twitter/callback', passport.authenticate('twitter', {
-	successRedirect : '/',
-	failureRedirect : '/'
-}));
-*/
 
 app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -77,14 +73,34 @@ app.get('/logout', (req, res) =>{
 	req.logout()
 	res.redirect('/')
 })
-
+*/
 app.use('/api', api)
+
+app.get('/', function (req, res){
+	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
+
+})
 
 app.get('*', function (req, res){
 	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
 })
 
+/*
+app.get('*', function(req, res) {
+  // Note that req.url here should be the full URL path from
+  // the original request, including the query string.
+  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    if (error) {
+      res.status(500).send(error.message)
+    } else if (redirectLocation) {
+      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+    } else {
+      res.status(404).send('Not found :(')
+    }
+  })
+})
+*/
 //endpoints
 
 

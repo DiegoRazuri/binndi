@@ -75,38 +75,54 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 /*
-app.get('/auth/twitter', passport.authenticate('twitter'))
-app.get('/auth/twitter/callback', passport.authenticate('twitter', {
-	successRedirect : '/',
-	failureRedirect : '/'
-}));
-*/
 
-app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['public_profile', 'user_location'] }));
+app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-	//	successRedirect : '/',
-	failureRedirect: '/'
-}), function (req, res) {
-	if (req.user.isNew) {
-		console.log("es nuevo");
-		return res.redirect('/otro');
-	} else {
+//	successRedirect : '/',
+	failureRedirect : '/'
+}), function(req, res){
+	if( req.user.isNew){
+		console.log("es nuevo")
+		return res.redirect('/otro')
+	}else{
 
 		res.redirect('/userprofile');
+
 	}
 });
 
-app.get('/logout', function (req, res) {
-	req.logout();
-	res.redirect('/');
-});
 
+
+app.get('/logout', (req, res) =>{
+	req.logout()
+	res.redirect('/')
+})
+*/
 app.use('/api', _api2.default);
+
+app.get('/', function (req, res) {
+	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
+});
 
 app.get('*', function (req, res) {
 	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
 });
 
+/*
+app.get('*', function(req, res) {
+  // Note that req.url here should be the full URL path from
+  // the original request, including the query string.
+  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    if (error) {
+      res.status(500).send(error.message)
+    } else if (redirectLocation) {
+      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+    } else {
+      res.status(404).send('Not found :(')
+    }
+  })
+})
+*/
 //endpoints
 
 //configuracion de ruteo
