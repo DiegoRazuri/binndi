@@ -82,13 +82,13 @@ app.use('/api', api)
 
 //configuracion de ruteo
 
-app.use(fallback(path.join(__dirname, '../../public', 'index.html')))
-/*
-app.get('*', function (req, res){
+//app.use(fallback(path.join(__dirname, '../../public', 'index.html')))
+
+app.get('/*', function (req, res){
 	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
 })
-*/
+
 //levantamiento de servidor
 server.listen(process.env.PORT || 3000, () => console.log("servidor iniciado"))
 
