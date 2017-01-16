@@ -50,7 +50,9 @@ app.use(express.static('public'))
 app.use(passport.initialize())
 app.use(passport.session())
 
-/*
+
+var root = __dirname + 'public'
+app.use(fallback('index.html', { root: root }))
 
 app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -73,15 +75,15 @@ app.get('/logout', (req, res) =>{
 	req.logout()
 	res.redirect('/')
 })
-*/
-//app.use('/api', api)
 
+app.use('/api', api)
 
 
 app.get('*', function (req, res){
 	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
 })
+
 
 /*
 app.get('*', function(req, res) {

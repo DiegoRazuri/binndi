@@ -74,31 +74,29 @@ app.use(_express2.default.static('public'));
 app.use(passport.initialize());
 app.use(passport.session());
 
-/*
+var root = __dirname + 'public';
+app.use((0, _expressHistoryApiFallback2.default)('index.html', { root: root }));
 
-app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['public_profile', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-//	successRedirect : '/',
-	failureRedirect : '/'
-}), function(req, res){
-	if( req.user.isNew){
-		console.log("es nuevo")
-		return res.redirect('/otro')
-	}else{
+	//	successRedirect : '/',
+	failureRedirect: '/'
+}), function (req, res) {
+	if (req.user.isNew) {
+		console.log("es nuevo");
+		return res.redirect('/otro');
+	} else {
 
 		res.redirect('/userprofile');
-
 	}
 });
 
+app.get('/logout', function (req, res) {
+	req.logout();
+	res.redirect('/');
+});
 
-
-app.get('/logout', (req, res) =>{
-	req.logout()
-	res.redirect('/')
-})
-*/
-//app.use('/api', api)
+app.use('/api', _api2.default);
 
 app.get('*', function (req, res) {
 	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
