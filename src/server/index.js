@@ -76,7 +76,7 @@ app.get('/logout', (req, res) =>{
 	res.redirect('/')
 })
 
-app.use('/api', api)
+//app.use('/api', api)
 
 
 app.get('*', function (req, res){
