@@ -74,9 +74,6 @@ app.use(_express2.default.static('public'));
 app.use(passport.initialize());
 app.use(passport.session());
 
-var root = __dirname + 'public';
-app.use((0, _expressHistoryApiFallback2.default)('index.html', { root: root }));
-
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['public_profile', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 	//	successRedirect : '/',
@@ -96,10 +93,10 @@ app.get('/logout', function (req, res) {
 	res.redirect('/');
 });
 
-//app.use('/api', api)
+app.use('/api', _api2.default);
 
 app.get('*', function (req, res) {
-	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
+	res.sendFile(_path2.default.resolve(__dirname, '../../public', 'index.html'));
 });
 
 /*
