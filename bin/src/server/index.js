@@ -81,6 +81,7 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', {
 	failureRedirect : '/'
 }));
 */
+app.use('/api', _api2.default);
 app.get('*', function (req, res) {
 	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
 });
@@ -104,7 +105,6 @@ app.get('/logout', function (req, res) {
 });
 
 //endpoints
-app.use('/api', _api2.default);
 
 //configuracion de ruteo
 
