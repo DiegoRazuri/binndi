@@ -32,6 +32,10 @@ var _api = require('src/server/api');
 
 var _api2 = _interopRequireDefault(_api);
 
+var _expressHistoryApiFallback = require('express-history-api-fallback');
+
+var _expressHistoryApiFallback2 = _interopRequireDefault(_expressHistoryApiFallback);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //configuracion de autenticacion con passport
@@ -101,10 +105,13 @@ app.use('/api', _api2.default);
 
 //configuracion de ruteo
 
-app.get('*', function (req, res) {
-	res.sendFile(_path2.default.resolve(__dirname, '../../public', 'index.html'));
-});
+app.use((0, _expressHistoryApiFallback2.default)(_path2.default.join(__dirname, '../../public', 'index.html')));
+/*
+app.get('*', function (req, res){
+	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
+})
+*/
 //levantamiento de servidor
 server.listen(process.env.PORT || 3000, function () {
 	return console.log("servidor iniciado");
