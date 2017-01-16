@@ -81,9 +81,7 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', {
 	failureRedirect : '/'
 }));
 */
-app.get('*', function (req, res) {
-	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
-});
+
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['public_profile', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 	//	successRedirect : '/',
@@ -104,6 +102,10 @@ app.get('/logout', function (req, res) {
 });
 
 app.use('/api', _api2.default);
+
+app.get('*', function (req, res) {
+	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
+});
 
 //endpoints
 
