@@ -55,7 +55,6 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', {
 	failureRedirect : '/'
 }));
 */
-app.use('/api', api)
 app.get('*', function (req, res){
 	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
@@ -81,6 +80,8 @@ app.get('/logout', (req, res) =>{
 	req.logout()
 	res.redirect('/')
 })
+
+app.use('/api', api)
 
 //endpoints
 
