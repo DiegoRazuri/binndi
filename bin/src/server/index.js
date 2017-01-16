@@ -96,7 +96,7 @@ app.get('/logout', function (req, res) {
 	res.redirect('/');
 });
 
-app.use('/api', _api2.default);
+//app.use('/api', api)
 
 app.get('*', function (req, res) {
 	res.sendFile(_path2.default.join(__dirname, '../../public', 'index.html'));
