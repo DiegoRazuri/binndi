@@ -74,12 +74,9 @@ app.get('/logout', (req, res) =>{
 	res.redirect('/')
 })
 */
-app.use('/api', api)
+//app.use('/api', api)
 
-app.get('/', function (req, res){
-	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
 
-})
 
 app.get('*', function (req, res){
 	res.sendFile(path.join(__dirname, '../../public', 'index.html'))
