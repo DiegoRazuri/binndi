@@ -15,7 +15,7 @@ export default class BinndiPoints extends React.Component{
 					<div className="grid-a">
 						<div className="wrapper-header-info">
 							<span className="icon-trophy ico"></span>
-							<h3 className="text-big-normal-grey-o">Dedicate a disfrutar de nuevas experiencias y deja que Binndi se encargue del resto.</h3>	
+							<h3 className="text-small-normal-grey-m">Dedicate a disfrutar de nuevas experiencias y deja que Binndi se encargue del resto.</h3>	
 						</div>
 						<ol>
 							<li className="text-halfmedium-normal-grey-o">Elige tu destino y planifica tu viaje con nosotros.</li>

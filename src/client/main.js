@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import LandingStage from './components/landingStage'
+import LandingSection from './components/landingSection'
 import Explore from './components/exploreSection'
 import Userprofile from './components/userprofile'
 import ExploreScene from './components/exploreScene'
@@ -48,7 +49,7 @@ const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
 
                    
                 <Route path="/" component = {App} >
-                    <IndexRoute component={LandingStage}/>
+                    <IndexRoute component={LandingSection}/>
                     <Route path="userprofile" component = {Userprofile} />
                     <Route path="explore-scene/:service_id" component = {ExploreScene} />
                     <Route path="binndis" component = {BinndiPoints} />

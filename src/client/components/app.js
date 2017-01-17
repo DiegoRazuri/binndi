@@ -740,7 +740,8 @@ export default class Layout extends React.Component{
 								showPopupMessageUser: this.showPopupMessageUser,
 								showPopupMessageEnterprises: this.showPopupMessageEnterprises,
 								enterpriseAplication: this.enterpriseAplication,
-								removeFromWishlist: this.removeFromWishlist
+								removeFromWishlist: this.removeFromWishlist,
+								showPopupLogin: this.showPopupLogin
 
 								
 							})

@@ -9,31 +9,33 @@ import api from 'src/server/api'
 import history from 'connect-history-api-fallback'
 
 
-
 //configuracion de autenticacion con passport
+
 const passport = require('passport');
 				 require('src/server/passport')(passport);
 
+
 //configuracion de server
+
 const app = express()
 const server = http.createServer(app)
 
 //conexion a base de datos
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/binndi', function(err, res){
 	if(err) throw err;
 	console.log("conectado con éxito a la base de datos");
 })
 
 
-
-
-
 //Configuracion para obtener datos mediante post con body-parser
 //antes de configurar los archivos estaticos se indica los parsers
-app.use(cookieParser())
 
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true })) 
 app.use(bodyParser.json());
+
+
 //sesiones de express
 
 var sessionKey = process.env.SESSION_KEY;
@@ -43,20 +45,19 @@ app.use(expressSession({
 	saveUninitialized: false
 }))
 
-//configuracion de archivos estaticos
-
 
 //configuracion de passport
+
 app.use(passport.initialize())
 app.use(passport.session())
+
+
+//configuracion de endpoints
 
 app.use('/api', api)
 
 
-/*
-ACA ESTABA EL APP.USE HISTORY Y EL STATIC
-*/
-
+//configuracion de passport callbacks
 
 app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -73,21 +74,15 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 	}
 });
 
-
-
 app.get('/logout', (req, res) =>{
 	req.logout()
 	res.redirect('/')
 })
 
+
+//configuracion de ruteo ---> IMPORTANTE: Que la instrucción este posicionada antes del middleware de los archivos estaticos
+
 app.use(history());
-
-app.use(express.static('public'))
-/*
-var root = __dirname + '../../public'
-app.use(fallback('index.html', { root: root }))
-*/
-
 
 /*
 app.get('*', function (req, res){
@@ -97,28 +92,9 @@ app.get('*', function (req, res){
 */
 
 
+//configuracion de archivos estaticos
 
-/*
-app.get('*', function(req, res) {
-  // Note that req.url here should be the full URL path from
-  // the original request, including the query string.
-  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message)
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    } else {
-      res.status(404).send('Not found :(')
-    }
-  })
-})
-*/
-//endpoints
-
-
-//configuracion de ruteo
-
-//app.use(fallback(path.join(__dirname, '../../public', 'index.html')))
+app.use(express.static('public'))
 
 
 //levantamiento de servidor

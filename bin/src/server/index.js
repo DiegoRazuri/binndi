@@ -39,14 +39,17 @@ var _connectHistoryApiFallback2 = _interopRequireDefault(_connectHistoryApiFallb
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //configuracion de autenticacion con passport
+
 var passport = require('passport');
 require('src/server/passport')(passport);
 
 //configuracion de server
+
 var app = (0, _express2.default)();
 var server = _http2.default.createServer(app);
 
 //conexion a base de datos
+
 _mongoose2.default.connect(process.env.MONGODB_URI || 'mongodb://localhost/binndi', function (err, res) {
 	if (err) throw err;
 	console.log("conectado con éxito a la base de datos");
@@ -54,10 +57,11 @@ _mongoose2.default.connect(process.env.MONGODB_URI || 'mongodb://localhost/binnd
 
 //Configuracion para obtener datos mediante post con body-parser
 //antes de configurar los archivos estaticos se indica los parsers
-app.use((0, _cookieParser2.default)());
 
+app.use((0, _cookieParser2.default)());
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
 app.use(_bodyParser2.default.json());
+
 //sesiones de express
 
 var sessionKey = process.env.SESSION_KEY;
@@ -67,17 +71,16 @@ app.use((0, _expressSession2.default)({
 	saveUninitialized: false
 }));
 
-//configuracion de archivos estaticos
-
 //configuracion de passport
+
 app.use(passport.initialize());
 app.use(passport.session());
 
+//configuracion de endpoints
+
 app.use('/api', _api2.default);
 
-/*
-ACA ESTABA EL APP.USE HISTORY Y EL STATIC
-*/
+//configuracion de passport callbacks
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['public_profile', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -98,13 +101,9 @@ app.get('/logout', function (req, res) {
 	res.redirect('/');
 });
 
-app.use((0, _connectHistoryApiFallback2.default)());
+//configuracion de ruteo ---> IMPORTANTE: Que la instrucción este posicionada antes del middleware de los archivos estaticos
 
-app.use(_express2.default.static('public'));
-/*
-var root = __dirname + '../../public'
-app.use(fallback('index.html', { root: root }))
-*/
+app.use((0, _connectHistoryApiFallback2.default)());
 
 /*
 app.get('*', function (req, res){
@@ -113,26 +112,9 @@ app.get('*', function (req, res){
 })
 */
 
-/*
-app.get('*', function(req, res) {
-  // Note that req.url here should be the full URL path from
-  // the original request, including the query string.
-  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message)
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    } else {
-      res.status(404).send('Not found :(')
-    }
-  })
-})
-*/
-//endpoints
+//configuracion de archivos estaticos
 
-//configuracion de ruteo
-
-//app.use(fallback(path.join(__dirname, '../../public', 'index.html')))
+app.use(_express2.default.static('public'));
 
 //levantamiento de servidor
 server.listen(process.env.PORT || 3000, function () {

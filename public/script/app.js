@@ -27819,7 +27819,8 @@ var Layout = function (_React$Component) {
 						showPopupMessageUser: this.showPopupMessageUser,
 						showPopupMessageEnterprises: this.showPopupMessageEnterprises,
 						enterpriseAplication: this.enterpriseAplication,
-						removeFromWishlist: this.removeFromWishlist
+						removeFromWishlist: this.removeFromWishlist,
+						showPopupLogin: this.showPopupLogin
 
 					})
 				),
@@ -28123,7 +28124,7 @@ var BinndiPoints = function (_React$Component) {
 						_react2.default.createElement("span", { className: "icon-trophy ico" }),
 						_react2.default.createElement(
 							"h3",
-							{ className: "text-big-normal-grey-o" },
+							{ className: "text-small-normal-grey-m" },
 							"Dedicate a disfrutar de nuevas experiencias y deja que Binndi se encargue del resto."
 						)
 					),
@@ -29103,7 +29104,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 						{ className: 'wrapper-text-tech-benefit' },
 						_react2.default.createElement(
 							'h1',
-							{ className: 'text-big-normal-grey-o' },
+							{ className: 'text-small-normal-grey-m' },
 							'Servicio de producción de videos 360º gratuito.'
 						),
 						_react2.default.createElement(
@@ -29142,14 +29143,14 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 								_react2.default.createElement('span', { className: 'icon-store ico' }),
 								_react2.default.createElement(
 									'h1',
-									{ className: 'text-big-normal-grey-o' },
+									{ className: 'text-small-normal-grey-m' },
 									'Incrementa tus ventas ofreciendo tus servicios en nuestra plataforma.'
 								)
 							),
 							_react2.default.createElement(
 								'h2',
 								{ className: 'subtitle headline-black' },
-								'Binndi està diseñada especialmente para vender las mejores experiencias de cada ciudad. Si ofreces hospedaje, tours, actividades, paquetes o tienes un restaurant, bar entre otros este es tu lugar.'
+								'Binndi está diseñada especialmente para vender las mejores experiencias de cada ciudad. Si ofreces hospedaje, tours, actividades, paquetes o tienes un restaurant, bar entre otros este es tu lugar.'
 							),
 							_react2.default.createElement(
 								'a',
@@ -29234,7 +29235,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 						{ className: 'wrapper-text-benefits' },
 						_react2.default.createElement(
 							'h1',
-							{ className: 'text-big-normal-grey-o headline-black' },
+							{ className: 'text-small-normal-grey-m headline-black' },
 							'¿Cúales son los beneficios?'
 						),
 						_react2.default.createElement(
@@ -30865,7 +30866,7 @@ var LandingSection = function (_React$Component) {
 
 			var t = setInterval(function () {
 				avanzar2();
-			}, 5500);
+			}, 8500);
 
 			function stopinterval(tPromo) {
 				clearInterval(tPromo);
@@ -30940,7 +30941,7 @@ var LandingSection = function (_React$Component) {
 								_react2.default.createElement(
 									'p',
 									null,
-									'Regístrate'
+									'Registrarme'
 								)
 							)
 						)
@@ -30951,7 +30952,7 @@ var LandingSection = function (_React$Component) {
 					{ id: 'wrapper-slider', className: 'wrapper-slider' },
 					_react2.default.createElement(
 						'div',
-						{ id: 'banner-sequence-1', className: 'banner-sequence slide slide_visible' },
+						{ id: 'banner-sequence-1', className: 'banner-sequence slide ' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'wrapper-banner-content' },
@@ -31007,7 +31008,7 @@ var LandingSection = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'div',
-						{ id: 'banner-sequence-3', className: 'banner-sequence slide ' },
+						{ id: 'banner-sequence-3', className: 'banner-sequence slide slide_visible' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'wrapper-banner-content' },
@@ -31017,7 +31018,7 @@ var LandingSection = function (_React$Component) {
 								_react2.default.createElement(
 									'h1',
 									{ className: 'headlines text-banner-white' },
-									'Ubicate en tu destino.'
+									'Olvidate de los guías y ubicate en tu destino.'
 								),
 								_react2.default.createElement(
 									'h2',
@@ -31162,17 +31163,17 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement('span', { className: 'ico-secundary-banners icon-trophy' }),
 							_react2.default.createElement(
 								'h3',
-								{ className: 'headlines headline-black' },
+								{ className: 'text-small-normal-grey-m headline-black' },
 								'¿Quieres viajar gratis?'
 							),
 							_react2.default.createElement(
 								'h3',
-								{ className: 'headlines headline-black' },
+								{ className: 'text-small-normal-grey-m headline-black' },
 								'Con binndi es posible'
 							),
 							_react2.default.createElement(
 								'h4',
-								{ className: 'subtitle headline-black' },
+								{ className: 'text-big-normal-grey-o headline-black' },
 								'Cumple los retos y gana cientos de binndis, los que podras utilizar para pagar tus proximas aventuras.'
 							),
 							_react2.default.createElement(
@@ -31200,12 +31201,12 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement('span', { className: 'ico-secundary-banners icon-store' }),
 							_react2.default.createElement(
 								'h3',
-								{ className: 'headlines headline-black' },
+								{ className: 'text-small-normal-grey-m  headline-black' },
 								'Más oportunidades para tu negocio'
 							),
 							_react2.default.createElement(
 								'h4',
-								{ className: 'subtitle headline-black' },
+								{ className: 'text-big-normal-grey-o headline-black' },
 								'Incrementa las ventas con una plataforma diseñada especialmente para vender las experiencias de cada ciudad.'
 							),
 							_react2.default.createElement(
@@ -31232,12 +31233,12 @@ var LandingSection = function (_React$Component) {
 							{ className: 'wrapper-text-banner-secundary-app' },
 							_react2.default.createElement(
 								'h3',
-								{ className: 'headlines headline-black' },
+								{ className: 'text-small-normal-grey-m  headline-black' },
 								'¡Muy pronto lanzaremos nuestra app!'
 							),
 							_react2.default.createElement(
 								'h4',
-								{ className: 'subtitle headline-black' },
+								{ className: 'text-big-normal-grey-o headline-black' },
 								'Dejanos tu correo y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.'
 							),
 							_react2.default.createElement(
@@ -31267,7 +31268,7 @@ var LandingSection = function (_React$Component) {
 					{ className: 'nav-sub-banner' },
 					_react2.default.createElement(
 						'li',
-						{ id: 'slide3pag', className: 'pagination activeBanner' },
+						{ id: 'slide3pag', className: 'pagination' },
 						_react2.default.createElement('span', { className: 'icon-users ico-subnav-banners' })
 					),
 					_react2.default.createElement(
@@ -31287,7 +31288,7 @@ var LandingSection = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'li',
-						{ id: 'slide2pag', className: 'pagination' },
+						{ id: 'slide2pag', className: 'pagination activeBanner' },
 						_react2.default.createElement('span', { className: 'icon-map-marker ico-subnav-banners' })
 					)
 				)
@@ -33252,6 +33253,10 @@ var _landingStage = require('./components/landingStage');
 
 var _landingStage2 = _interopRequireDefault(_landingStage);
 
+var _landingSection = require('./components/landingSection');
+
+var _landingSection2 = _interopRequireDefault(_landingSection);
+
 var _exploreSection = require('./components/exploreSection');
 
 var _exploreSection2 = _interopRequireDefault(_exploreSection);
@@ -33287,12 +33292,6 @@ var _teamAdmin2 = _interopRequireDefault(_teamAdmin);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //
-
-
-/*
-* Modul dependencies
-*/
-
 function handleUpdate() {
     var action = this.state.location.action;
 
@@ -33312,13 +33311,19 @@ function handleUpdate() {
 */
 
 // LA RUTA QUE DICE EXPLORE DEBE CAMBIAR A EXPLORESCENE Y PASAR EL PARAMETRO CON EL ID DE LA ACTIVIDAD
+
+
+/*
+* Modul dependencies
+*/
+
 var routes = _react2.default.createElement(
     _reactRouter.Router,
     { history: _reactRouter.browserHistory, onUpdate: handleUpdate },
     _react2.default.createElement(
         _reactRouter.Route,
         { path: '/', component: _app2.default },
-        _react2.default.createElement(_reactRouter.IndexRoute, { component: _landingStage2.default }),
+        _react2.default.createElement(_reactRouter.IndexRoute, { component: _landingSection2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'userprofile', component: _userprofile2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'explore-scene/:service_id', component: _exploreScene2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'binndis', component: _binndiPoints2.default }),
@@ -33450,4 +33455,4 @@ function slideUp(element, finalHeight) {
 
 // ANIMACIÓN DEL SCROLL
 
-},{"./components/app":244,"./components/binndiPoints":245,"./components/enterpriseRegisterInfo":251,"./components/exploreScene":252,"./components/exploreSection":253,"./components/landingStage":257,"./components/teamAdmin":262,"./components/userprofile":268,"./components/videoScene":269,"react":241,"react-dom":3,"react-router":33}]},{},[271]);
+},{"./components/app":244,"./components/binndiPoints":245,"./components/enterpriseRegisterInfo":251,"./components/exploreScene":252,"./components/exploreSection":253,"./components/landingSection":256,"./components/landingStage":257,"./components/teamAdmin":262,"./components/userprofile":268,"./components/videoScene":269,"react":241,"react-dom":3,"react-router":33}]},{},[271]);

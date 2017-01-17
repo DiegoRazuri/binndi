@@ -16,7 +16,7 @@ export default class LandingSection extends React.Component{
 
 		stopinterval(t)
 
-		let t=setInterval(function(){avanzar2();},5500);
+		let t=setInterval(function(){avanzar2();},8500);
 
 		function stopinterval(tPromo){
 		    clearInterval(tPromo);
@@ -80,7 +80,7 @@ export default class LandingSection extends React.Component{
 							<h2 className="subtitle-selling-line subtitle-black">Reinventamos la forma de explorar el mundo.</h2>
 							<div className="wrapper-btn-cta">
 								<a className="btn-big-curve btn-register scrolleable" href="#" onClick={this.showingShowPopupLogin.bind(this)}>
-									<p>Regístrate</p>
+									<p>Registrarme</p>
 								</a>	
 							</div>
 										
@@ -89,7 +89,7 @@ export default class LandingSection extends React.Component{
 					
 					<div id="wrapper-slider" className="wrapper-slider">
 						
-						<div id="banner-sequence-1" className="banner-sequence slide slide_visible">
+						<div id="banner-sequence-1" className="banner-sequence slide ">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-1 wrapper-text-features-banners">
 									<h1 className="headlines text-banner-white">Encuentra vuelos, hospedajes y actividades</h1>
@@ -115,10 +115,10 @@ export default class LandingSection extends React.Component{
 							</div>
 							
 						</div>
-						<div id="banner-sequence-3" className="banner-sequence slide ">
+						<div id="banner-sequence-3" className="banner-sequence slide slide_visible">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-3 wrapper-text-features-banners">
-									<h1  className="headlines text-banner-white">Ubicate en tu destino.</h1>
+									<h1  className="headlines text-banner-white">Olvidate de los guías y ubicate en tu destino.</h1>
 									<h2 className="subtitle text-banner-white">Un mapa que te acompañará durante el viaje para guiarte del aeropuerto a tu hospedaje y a cada actividad que hayas planificado.</h2>
 									
 								</div>
@@ -186,9 +186,9 @@ export default class LandingSection extends React.Component{
 						<div className="banner-binndi-points banner-secundary">
 							<div className="wrapper-text-banner-secundary-binndi-points">
 								<span className="ico-secundary-banners icon-trophy"></span>
-								<h3 className="headlines headline-black">¿Quieres viajar gratis?</h3>
-								<h3 className="headlines headline-black">Con binndi es posible</h3>
-								<h4 className="subtitle headline-black">Cumple los retos y gana cientos de binndis, los que podras utilizar para pagar tus proximas aventuras.</h4>	
+								<h3 className="text-small-normal-grey-m headline-black">¿Quieres viajar gratis?</h3>
+								<h3 className="text-small-normal-grey-m headline-black">Con binndi es posible</h3>
+								<h4 className="text-big-normal-grey-o headline-black">Cumple los retos y gana cientos de binndis, los que podras utilizar para pagar tus proximas aventuras.</h4>	
 								<Link to={"/binndis"} className="btn-big-curve">
 									<p>Gana 100 binndis</p>
 								</Link>
@@ -200,9 +200,9 @@ export default class LandingSection extends React.Component{
 						<div className="banner-binndi-enterprise banner-secundary">
 							<div className="wrapper-text-banner-secundary-enterprise">
 								<span className="ico-secundary-banners icon-store"></span>
-								<h3 className="headlines headline-black">Más oportunidades para tu negocio</h3>
+								<h3 className="text-small-normal-grey-m  headline-black">Más oportunidades para tu negocio</h3>
 								
-								<h4 className="subtitle headline-black">Incrementa las ventas con una plataforma diseñada especialmente para vender las experiencias de cada ciudad.</h4>	
+								<h4 className="text-big-normal-grey-o headline-black">Incrementa las ventas con una plataforma diseñada especialmente para vender las experiencias de cada ciudad.</h4>	
 								<Link to={"/enterprise-registration"} className="btn-big-curve">
 									<p>Soy un negocio</p>
 								</Link>
@@ -214,9 +214,9 @@ export default class LandingSection extends React.Component{
 						<div className="banner-binndi-app banner-secundary">
 							<div className="wrapper-text-banner-secundary-app">
 								
-								<h3 className="headlines headline-black">¡Muy pronto lanzaremos nuestra app!</h3>
+								<h3 className="text-small-normal-grey-m  headline-black">¡Muy pronto lanzaremos nuestra app!</h3>
 								
-								<h4 className="subtitle headline-black">Dejanos tu correo y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.</h4>	
+								<h4 className="text-big-normal-grey-o headline-black">Dejanos tu correo y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.</h4>	
 								<a className="btn-big-curve" href="#" onClick={this.showingShowPopupLogin.bind(this)}>
 									<p>Registrarme</p>
 								</a>
@@ -232,7 +232,7 @@ export default class LandingSection extends React.Component{
 					</div>
 					<ul className="nav-sub-banner">
 						
-						<li id="slide3pag" className="pagination activeBanner">
+						<li id="slide3pag" className="pagination">
 							<span className="icon-users ico-subnav-banners"></span>
 						</li>
 						<li>
@@ -245,7 +245,7 @@ export default class LandingSection extends React.Component{
 						<li>
 							<span className="icon-arrow-down-thick ico-arrow-subnav-banners"></span>
 						</li>
-						<li id="slide2pag" className="pagination">
+						<li id="slide2pag" className="pagination activeBanner">
 							<span className="icon-map-marker ico-subnav-banners"></span>
 						</li>
 					</ul>
