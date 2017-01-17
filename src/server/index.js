@@ -53,9 +53,10 @@ app.use(passport.session())
 app.use('/api', api)
 
 
-app.use(history());
+/*
+ACA ESTABA EL APP.USE HISTORY Y EL STATIC
+*/
 
-app.use(express.static('public'))
 
 app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -78,6 +79,10 @@ app.get('/logout', (req, res) =>{
 	req.logout()
 	res.redirect('/')
 })
+
+app.use(history());
+
+app.use(express.static('public'))
 /*
 var root = __dirname + '../../public'
 app.use(fallback('index.html', { root: root }))
