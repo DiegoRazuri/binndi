@@ -32,9 +32,9 @@ var _api = require('src/server/api');
 
 var _api2 = _interopRequireDefault(_api);
 
-var _expressHistoryApiFallback = require('express-history-api-fallback');
+var _connectHistoryApiFallback = require('connect-history-api-fallback');
 
-var _expressHistoryApiFallback2 = _interopRequireDefault(_expressHistoryApiFallback);
+var _connectHistoryApiFallback2 = _interopRequireDefault(_connectHistoryApiFallback);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68,11 +68,16 @@ app.use((0, _expressSession2.default)({
 }));
 
 //configuracion de archivos estaticos
-app.use(_express2.default.static('public'));
 
 //configuracion de passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use('/api', _api2.default);
+
+app.use((0, _connectHistoryApiFallback2.default)());
+
+app.use(_express2.default.static('public'));
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['public_profile', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -92,12 +97,17 @@ app.get('/logout', function (req, res) {
 	req.logout();
 	res.redirect('/');
 });
+/*
+var root = __dirname + '../../public'
+app.use(fallback('index.html', { root: root }))
+*/
 
-app.use('/api', _api2.default);
+/*
+app.get('*', function (req, res){
+	res.sendFile(path.resolve(__dirname, '../../public', 'index.html'))
 
-app.get('*', function (req, res) {
-	res.sendFile(_path2.default.resolve(__dirname, '../../public', 'index.html'));
-});
+})
+*/
 
 /*
 app.get('*', function(req, res) {

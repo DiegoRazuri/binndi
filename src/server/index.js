@@ -6,7 +6,7 @@ import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import path from 'path'
 import api from 'src/server/api'
-import fallback from 'express-history-api-fallback'
+import history from 'connect-history-api-fallback'
 
 
 
@@ -44,13 +44,18 @@ app.use(expressSession({
 }))
 
 //configuracion de archivos estaticos
-app.use(express.static('public'))
+
 
 //configuracion de passport
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.use('/api', api)
 
+
+app.use(history());
+
+app.use(express.static('public'))
 
 app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['public_profile', 'user_location']}))
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
@@ -73,14 +78,19 @@ app.get('/logout', (req, res) =>{
 	req.logout()
 	res.redirect('/')
 })
+/*
+var root = __dirname + '../../public'
+app.use(fallback('index.html', { root: root }))
+*/
 
-app.use('/api', api)
 
-
+/*
 app.get('*', function (req, res){
 	res.sendFile(path.resolve(__dirname, '../../public', 'index.html'))
 
 })
+*/
+
 
 
 /*
