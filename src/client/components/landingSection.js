@@ -76,7 +76,7 @@ export default class LandingSection extends React.Component{
 		return <div className="section-landing banner-background">
 					<div id="banner-first-fold" className="banner1">
 						<div className="wrapper-text-banners wrapper-text-banners-first">
-							<h1 className="headlines headline-black">Planifica con tus amigos todo tu viaje desde un solo lugar</h1>
+							<h1 className="headline-black">Planifica con tus amigos todo tu viaje desde un solo lugar</h1>
 							<h2 className="subtitle-selling-line subtitle-black">Reinventamos la forma de explorar el mundo.</h2>
 							<div className="wrapper-btn-cta">
 								<a className="btn-big-curve btn-register scrolleable" href="#" onClick={this.showingShowPopupLogin.bind(this)}>

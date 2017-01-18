@@ -30924,7 +30924,7 @@ var LandingSection = function (_React$Component) {
 						{ className: 'wrapper-text-banners wrapper-text-banners-first' },
 						_react2.default.createElement(
 							'h1',
-							{ className: 'headlines headline-black' },
+							{ className: 'headline-black' },
 							'Planifica con tus amigos todo tu viaje desde un solo lugar'
 						),
 						_react2.default.createElement(
