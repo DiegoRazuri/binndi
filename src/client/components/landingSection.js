@@ -92,7 +92,7 @@ export default class LandingSection extends React.Component{
 						<div id="banner-sequence-1" className="banner-sequence slide ">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-1 wrapper-text-features-banners">
-									<h1 className="headlines text-banner-white">Encuentra vuelos, hospedajes y actividades</h1>
+									<h1 className="text-banner-white">Encuentra vuelos, hospedajes y actividades</h1>
 									<h2 className="subtitle text-banner-white">Invita a tus amigos al plan y decidan juntos que experiencias formaran parte de la aventura.</h2>
 									
 								</div>
@@ -105,7 +105,7 @@ export default class LandingSection extends React.Component{
 						<div id="banner-sequence-2" className="banner-sequence slide ">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-2 wrapper-text-features-banners">
-									<h1 className="headlines text-banner-white">No sufras más<br/> coordinando pagos</h1>
+									<h1 className="text-banner-white">No sufras más<br/> coordinando pagos</h1>
 									<h2 className="subtitle text-banner-white">Divide el pago entre tus compañeros de viaje y todos sabran cuando se hayan realizado las reservas.</h2>
 									
 								</div>
@@ -118,7 +118,7 @@ export default class LandingSection extends React.Component{
 						<div id="banner-sequence-3" className="banner-sequence slide slide_visible">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-3 wrapper-text-features-banners">
-									<h1  className="headlines text-banner-white">Olvidate de los guías y ubicate en tu destino.</h1>
+									<h1  className="text-banner-white">Olvidate de los guías y ubicate en tu destino.</h1>
 									<h2 className="subtitle text-banner-white">Un mapa que te acompañará durante el viaje para guiarte del aeropuerto a tu hospedaje y a cada actividad que hayas planificado.</h2>
 									
 								</div>

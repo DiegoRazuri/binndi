@@ -30961,7 +30961,7 @@ var LandingSection = function (_React$Component) {
 								{ className: 'element-banner-1 wrapper-text-features-banners' },
 								_react2.default.createElement(
 									'h1',
-									{ className: 'headlines text-banner-white' },
+									{ className: 'text-banner-white' },
 									'Encuentra vuelos, hospedajes y actividades'
 								),
 								_react2.default.createElement(
@@ -30988,7 +30988,7 @@ var LandingSection = function (_React$Component) {
 								{ className: 'element-banner-2 wrapper-text-features-banners' },
 								_react2.default.createElement(
 									'h1',
-									{ className: 'headlines text-banner-white' },
+									{ className: 'text-banner-white' },
 									'No sufras más',
 									_react2.default.createElement('br', null),
 									' coordinando pagos'
@@ -31017,7 +31017,7 @@ var LandingSection = function (_React$Component) {
 								{ className: 'element-banner-3 wrapper-text-features-banners' },
 								_react2.default.createElement(
 									'h1',
-									{ className: 'headlines text-banner-white' },
+									{ className: 'text-banner-white' },
 									'Olvidate de los guías y ubicate en tu destino.'
 								),
 								_react2.default.createElement(
