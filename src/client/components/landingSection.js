@@ -128,6 +128,25 @@ export default class LandingSection extends React.Component{
 							</div>
 							
 						</div>
+						<ul className="nav-sub-banner">
+						
+							<li id="slide3pag" className="pagination">
+								<span className="icon-users ico-subnav-banners"></span>
+							</li>
+							<li>
+								<span className="icon-arrow-down-thick ico-arrow-subnav-banners"></span>
+							</li>
+
+							<li id="slide1pag" className="pagination">
+								<span className="icon-cart ico-subnav-banners"></span>
+							</li>
+							<li>
+								<span className="icon-arrow-down-thick ico-arrow-subnav-banners"></span>
+							</li>
+							<li id="slide2pag" className="pagination activeBanner">
+								<span className="icon-map-marker ico-subnav-banners"></span>
+							</li>
+						</ul>
 					</div>
 					<div className="banner-binndi-tech banner-secundary">
 						<div className="wrapper-text-banner-secundary-tech">
@@ -224,32 +243,13 @@ export default class LandingSection extends React.Component{
 									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Appstores-logos.png"/>
 								</figure>
 							</div>
-							
-							<figure className="img-cell">
-								<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Iphone-appstore.png"/>
-							</figure>
+							<div className="wrapper-img-banner-binndi-app">
+								<figure className="img-cell">
+									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Iphone-appstore.png"/>
+								</figure>
+							</div>
 						</div>
 					</div>
-					<ul className="nav-sub-banner">
-						
-						<li id="slide3pag" className="pagination">
-							<span className="icon-users ico-subnav-banners"></span>
-						</li>
-						<li>
-							<span className="icon-arrow-down-thick ico-arrow-subnav-banners"></span>
-						</li>
-
-						<li id="slide1pag" className="pagination">
-							<span className="icon-cart ico-subnav-banners"></span>
-						</li>
-						<li>
-							<span className="icon-arrow-down-thick ico-arrow-subnav-banners"></span>
-						</li>
-						<li id="slide2pag" className="pagination activeBanner">
-							<span className="icon-map-marker ico-subnav-banners"></span>
-						</li>
-					</ul>
-					
 				</div>
 	}
 }

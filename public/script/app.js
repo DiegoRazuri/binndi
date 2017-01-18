@@ -31032,6 +31032,35 @@ var LandingSection = function (_React$Component) {
 								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Binndi_Locations.png' })
 							)
 						)
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'nav-sub-banner' },
+						_react2.default.createElement(
+							'li',
+							{ id: 'slide3pag', className: 'pagination' },
+							_react2.default.createElement('span', { className: 'icon-users ico-subnav-banners' })
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('span', { className: 'icon-arrow-down-thick ico-arrow-subnav-banners' })
+						),
+						_react2.default.createElement(
+							'li',
+							{ id: 'slide1pag', className: 'pagination' },
+							_react2.default.createElement('span', { className: 'icon-cart ico-subnav-banners' })
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('span', { className: 'icon-arrow-down-thick ico-arrow-subnav-banners' })
+						),
+						_react2.default.createElement(
+							'li',
+							{ id: 'slide2pag', className: 'pagination activeBanner' },
+							_react2.default.createElement('span', { className: 'icon-map-marker ico-subnav-banners' })
+						)
 					)
 				),
 				_react2.default.createElement(
@@ -31257,39 +31286,14 @@ var LandingSection = function (_React$Component) {
 							)
 						),
 						_react2.default.createElement(
-							'figure',
-							{ className: 'img-cell' },
-							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Iphone-appstore.png' })
+							'div',
+							{ className: 'wrapper-img-banner-binndi-app' },
+							_react2.default.createElement(
+								'figure',
+								{ className: 'img-cell' },
+								_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Iphone-appstore.png' })
+							)
 						)
-					)
-				),
-				_react2.default.createElement(
-					'ul',
-					{ className: 'nav-sub-banner' },
-					_react2.default.createElement(
-						'li',
-						{ id: 'slide3pag', className: 'pagination' },
-						_react2.default.createElement('span', { className: 'icon-users ico-subnav-banners' })
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement('span', { className: 'icon-arrow-down-thick ico-arrow-subnav-banners' })
-					),
-					_react2.default.createElement(
-						'li',
-						{ id: 'slide1pag', className: 'pagination' },
-						_react2.default.createElement('span', { className: 'icon-cart ico-subnav-banners' })
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement('span', { className: 'icon-arrow-down-thick ico-arrow-subnav-banners' })
-					),
-					_react2.default.createElement(
-						'li',
-						{ id: 'slide2pag', className: 'pagination activeBanner' },
-						_react2.default.createElement('span', { className: 'icon-map-marker ico-subnav-banners' })
 					)
 				)
 			);
