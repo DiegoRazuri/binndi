@@ -16,6 +16,7 @@ import ExploreScene from './components/exploreScene'
 import BinndiPoints from './components/binndiPoints'
 import EnterpriseRegisterInfo from './components/enterpriseRegisterInfo'
 import VideoScene from './components/videoScene'
+import ReactGA from 'react-ga'
 
 
 
@@ -23,17 +24,24 @@ import App from './components/app'
 
 import TeamAdmin from './components/teamAdmin'
 
+ReactGA.initialize('UA-50412677-3');
 
-//
-function handleUpdate() {
-  let {
-    action
-  } = this.state.location;
 
-  if (action === 'PUSH') {
-    window.scrollTo(0, 0);
-  }
+function logPageView(){
+    ReactGA.set({page : window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+
+    // instruccion para que suba el scroll hasta el tope cuando carga la ruta
+    let {
+        action
+    } = this.state.location;
+
+    if (action === 'PUSH') {
+        window.scrollTo(0, 0);
+    }
 }
+
+
 /*
 //example:  solo se mantiene el scroll position si el usuario regresa con el back del browser
 <Route path="/" component = {LandingStage} onChange={(prevState, nextState) => {
@@ -45,7 +53,7 @@ function handleUpdate() {
 */
 
 // LA RUTA QUE DICE EXPLORE DEBE CAMBIAR A EXPLORESCENE Y PASAR EL PARAMETRO CON EL ID DE LA ACTIVIDAD
-const routes = (<Router history={browserHistory} onUpdate={handleUpdate}>
+const routes = (<Router history={browserHistory} onUpdate={logPageView}>
 
                    
                 <Route path="/" component = {App} >
