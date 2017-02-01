@@ -27,11 +27,15 @@ let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "A
 // ENDPOINTS //
 
 router.get('/usersession', function ( req, res ){
+
+	//console.log(req.session.passport.user)
+	console.log(req)
+
 	if(!req.user){
 		res.json({user:false})
 	}else{
 		console.log("usuario conectado")
-
+		console.log(req.user)
 /*
 		res.json(req.user)
 		console.log(req.user)

@@ -10,7 +10,7 @@ import history from 'connect-history-api-fallback'
 
 //configuracion de session con Redis
 const RedisStore = require('connect-redis')(expressSession);
-
+var redis = require('redis').createClient();
 
 //configuracion de autenticacion con passport
 
@@ -44,12 +44,16 @@ app.use(bodyParser.json());
 var sessionKey = process.env.SESSION_KEY;
 
 app.use(expressSession({
-	store : new RedisStore(),
+	store : new RedisStore({ host: 'localhost', port: 6379, client: redis}),
 	secret: sessionKey,
 	resave : false,
 	saveUninitialized: false
 }))
-
+/*
+,
+	resave : false,
+	saveUninitialized: false
+*/
 
 
 //configuracion de passport

@@ -28,6 +28,7 @@
     "react-dom": "^15.2.1",
     "react-ga": "^2.1.2",
     "react-router": "^2.6.0",
+    "redis": "^2.6.5",
     "uid": "0.0.2"
   },
   "devDependencies": {},
