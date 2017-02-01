@@ -33810,6 +33810,8 @@ _reactGa2.default.initialize('UA-50412677-3');
 function logPageView() {
     _reactGa2.default.set({ page: window.location.pathname });
     _reactGa2.default.pageview(window.location.pathname);
+
+    // instruccion para que suba el scroll hasta el tope cuando carga la ruta
     var action = this.state.location.action;
 
 

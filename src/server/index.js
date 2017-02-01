@@ -8,6 +8,9 @@ import path from 'path'
 import api from 'src/server/api'
 import history from 'connect-history-api-fallback'
 
+//configuracion de session con Redis
+const RedisStore = require('connect-redis')(expressSession);
+
 
 //configuracion de autenticacion con passport
 
@@ -39,11 +42,14 @@ app.use(bodyParser.json());
 //sesiones de express
 
 var sessionKey = process.env.SESSION_KEY;
+
 app.use(expressSession({
+	store : new RedisStore(),
 	secret: sessionKey,
 	resave : false,
 	saveUninitialized: false
 }))
+
 
 
 //configuracion de passport

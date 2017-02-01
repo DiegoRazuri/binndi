@@ -38,6 +38,9 @@ var _connectHistoryApiFallback2 = _interopRequireDefault(_connectHistoryApiFallb
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//configuracion de session con Redis
+var RedisStore = require('connect-redis')(_expressSession2.default);
+
 //configuracion de autenticacion con passport
 
 var passport = require('passport');
@@ -65,7 +68,9 @@ app.use(_bodyParser2.default.json());
 //sesiones de express
 
 var sessionKey = process.env.SESSION_KEY;
+
 app.use((0, _expressSession2.default)({
+	store: new RedisStore(),
 	secret: sessionKey,
 	resave: false,
 	saveUninitialized: false
