@@ -63,8 +63,8 @@ router.get('/usersession', function (req, res) {
 	if (!req.user) {
 		res.json({ user: false });
 	} else {
-		console.log("usuario conectado");
-		console.log(req.user);
+		//console.log("usuario conectado")
+		//console.log(req.user)
 		/*
   		res.json(req.user)
   		console.log(req.user)
