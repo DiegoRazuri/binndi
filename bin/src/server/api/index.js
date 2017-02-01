@@ -59,7 +59,6 @@ var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "A
 router.get('/usersession', function (req, res) {
 
 	//console.log(req.session.passport.user)
-	console.log(req);
 
 	if (!req.user) {
 		res.json({ user: false });

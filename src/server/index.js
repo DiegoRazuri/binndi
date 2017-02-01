@@ -10,7 +10,7 @@ import history from 'connect-history-api-fallback'
 
 //configuracion de session con Redis
 const RedisStore = require('connect-redis')(expressSession);
-var redis = require('redis').createClient();
+var redis = require('redis').createClient(process.env.REDIS_URL);
 
 //configuracion de autenticacion con passport
 

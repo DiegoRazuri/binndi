@@ -40,7 +40,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //configuracion de session con Redis
 var RedisStore = require('connect-redis')(_expressSession2.default);
-var redis = require('redis').createClient();
+var redis = require('redis').createClient(process.env.REDIS_URL);
 
 //configuracion de autenticacion con passport
 
