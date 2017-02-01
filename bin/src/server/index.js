@@ -40,6 +40,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //configuracion de session con Redis
 var RedisStore = require('connect-redis')(_expressSession2.default);
+var redis = require('redis').createClient();
 
 //configuracion de autenticacion con passport
 
@@ -70,11 +71,16 @@ app.use(_bodyParser2.default.json());
 var sessionKey = process.env.SESSION_KEY;
 
 app.use((0, _expressSession2.default)({
-	store: new RedisStore(),
+	store: new RedisStore({ host: 'localhost', port: 6379, client: redis }),
 	secret: sessionKey,
 	resave: false,
 	saveUninitialized: false
 }));
+/*
+,
+	resave : false,
+	saveUninitialized: false
+*/
 
 //configuracion de passport
 
