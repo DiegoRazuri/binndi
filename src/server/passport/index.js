@@ -32,9 +32,6 @@ module.exports = function (passport){
 				return done(null, user)
 			}else{
 				let user = new Userprofiles()
-			
-				console.log("esta es el perfil")
-				console.log(profile);
 				
 
 				user.provider = profile.provider;

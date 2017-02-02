@@ -43,9 +43,6 @@ module.exports = function (passport) {
 				(function () {
 					var user = new _userprofiles2.default();
 
-					console.log("esta es el perfil");
-					console.log(profile);
-
 					user.provider = profile.provider;
 					user.photo = profile.photos[0].value;
 					user.lastname = profile.name.familyName;
