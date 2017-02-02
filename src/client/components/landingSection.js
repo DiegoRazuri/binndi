@@ -21,17 +21,17 @@ export default class LandingSection extends React.Component{
 
 		$(window).scroll(function(){
 			window_y = $(window).scrollTop(); // VALOR QUE SE HA MOVIDO DEL SCROLL
-			scroll_critical = parseInt($("#banner-first-fold").height()); // VALOR DE TU DIV
-			console.log("scrolling")
+			scroll_critical = parseInt($("#banner-first-fold").height()); // VALOR DEl DIV
 			
-			if (window_y > scroll_critical && change == true) { // SI EL SCROLL HA SUPERADO EL ALTO DE TU DIV
-			   // ACA MUESTRAS EL OTRO DIV Y EL OCULTAS EL DIV QUE QUIERES
+			
+			if (window_y > scroll_critical && change == true) { // SI EL SCROLL HA SUPERADO EL ALTO DEl DIV
+			   
 			   t=setInterval(function(){avanzar2();},8500);
-			   console.log("active banner")
+			   
 			   change = false;
 
 			} else {
-			   // ACA HACES TODO LO CONTRARIO
+			   
 			}
 		});
 
@@ -39,11 +39,9 @@ export default class LandingSection extends React.Component{
 			stopinterval(t)
 
 			let slide_selected = $(this).attr("id");
-			console.log("slideselected")
-			console.log(slide_selected)
+			
 			let bannerID = slide_selected.substr(-4,1);
-			console.log("bannerid")
-			console.log(bannerID)
+			
 
 			// desactivo los botones de paginacion
 			$(".pagination").each( function (){
@@ -69,24 +67,20 @@ export default class LandingSection extends React.Component{
 			);
 			let idNum;
 
-            console.log(bannerID)
+            
 
             if(bannerID == 1){
             	idNum = 2;
-            	console.log("se ejecuta el switch")
-            	console.log(idNum)
+
             }else if(bannerID == 2){
             	idNum = 3;
-            	console.log("se ejecuta el switch")
-            	console.log(idNum)
+
             }else{
             	idNum = 1;
-            	console.log("se ejecuta el switch")
-            	console.log(idNum)
+
             }
 
 
-            console.log(idNum);
 
             $($('#banner-sequence-' + idNum)).show("slide", { direction: "up" }, 4000);
             $($('#banner-sequence-' + idNum)).addClass('slide_visible');
