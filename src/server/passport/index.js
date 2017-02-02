@@ -33,9 +33,8 @@ module.exports = function (passport){
 			}else{
 				let user = new Userprofiles()
 			
+				console.log("esta es el perfil")
 				console.log(profile);
-				console.log("esta es el location")
-				console.log(profile._json.location.name)
 				
 
 				user.provider = profile.provider;
@@ -44,7 +43,7 @@ module.exports = function (passport){
 				user.name = profile.name.givenName;
 				user.username = profile.id;
 				user.link = profile.profileUrl;
-				user.location = profile._json.location.name;
+				//user.location = profile._json.location.name;
 
 		
 
