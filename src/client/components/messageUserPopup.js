@@ -21,7 +21,7 @@ export default class MessageUserPopup extends React.Component{
 					<span className="btn-close btn-close-popup icon-cross" onClick={this.showingMessageUser.bind(this)}></span>
 					<div className="popup-login-wrapper-content">
 						<figure><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Logo-FondoBlanco.png" /></figure>
-						<h4>¡Gracias por registrarte en Binndi! Anda pensando cual sera tu próxima aventura, no te imaginas lo que tenemos para ti!</h4>
+						<h4>¡Gracias por registrarte! ¡PRÓXIMAMENTE SERÁ EL LANZAMIENTO, no te imaginas lo que tenemos para ti!</h4>
 
 					</div>
 					

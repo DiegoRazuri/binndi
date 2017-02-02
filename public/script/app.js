@@ -31366,12 +31366,82 @@ var LandingSection = function (_React$Component) {
 
 			stopinterval(t);
 
-			var t = setInterval(function () {
-				avanzar2();
-			}, 9500);
+			var t, window_y, scroll_critical;
+			var change = true;
 
-			function stopinterval(tPromo) {
-				clearInterval(tPromo);
+			$(window).scroll(function () {
+				window_y = $(window).scrollTop(); // VALOR QUE SE HA MOVIDO DEL SCROLL
+				scroll_critical = parseInt($("#banner-first-fold").height()); // VALOR DE TU DIV
+				console.log("scrolling");
+
+				if (window_y > scroll_critical && change == true) {
+					// SI EL SCROLL HA SUPERADO EL ALTO DE TU DIV
+					// ACA MUESTRAS EL OTRO DIV Y EL OCULTAS EL DIV QUE QUIERES
+					t = setInterval(function () {
+						avanzar2();
+					}, 8500);
+					console.log("active banner");
+					change = false;
+				} else {
+					// ACA HACES TODO LO CONTRARIO
+				}
+			});
+
+			$(".pagination").on("click", function () {
+				stopinterval(t);
+
+				var slide_selected = $(this).attr("id");
+				console.log("slideselected");
+				console.log(slide_selected);
+				var bannerID = slide_selected.substr(-4, 1);
+				console.log("bannerid");
+				console.log(bannerID);
+
+				// desactivo los botones de paginacion
+				$(".pagination").each(function () {
+					$(this).removeClass("activeBanner");
+				});
+				//activo el boton de paginacion seleccionado
+				$("#" + slide_selected).addClass("activeBanner");
+
+				$('#wrapper-slider').find('.slide').each(function (index, value) {
+					if ($(value).hasClass('slide_visible')) {
+						//let id_visible = $(value).attr("id");
+
+						//desaparezco el slide que era visible
+						$(value).hide("slide", { direction: "down" }, 4000);
+						setTimeout(function () {
+							$(value).removeClass('slide_visible');
+						}, 4000);
+						//aparezco el slide seleccionado
+					}
+				});
+				var idNum = void 0;
+
+				console.log(bannerID);
+
+				if (bannerID == 1) {
+					idNum = 2;
+					console.log("se ejecuta el switch");
+					console.log(idNum);
+				} else if (bannerID == 2) {
+					idNum = 3;
+					console.log("se ejecuta el switch");
+					console.log(idNum);
+				} else {
+					idNum = 1;
+					console.log("se ejecuta el switch");
+					console.log(idNum);
+				}
+
+				console.log(idNum);
+
+				$($('#banner-sequence-' + idNum)).show("slide", { direction: "up" }, 4000);
+				$($('#banner-sequence-' + idNum)).addClass('slide_visible');
+			});
+
+			function stopinterval(tBanner) {
+				clearInterval(tBanner);
 			}
 
 			function avanzar2() {
@@ -32615,7 +32685,7 @@ var MessageUserPopup = function (_React$Component) {
 						_react2.default.createElement(
 							"h4",
 							null,
-							"¡Gracias por registrarte en Binndi! Anda pensando cual sera tu próxima aventura, no te imaginas lo que tenemos para ti!"
+							"¡Gracias por registrarte! ¡PRÓXIMAMENTE SERÁ EL LANZAMIENTO, no te imaginas lo que tenemos para ti!"
 						)
 					)
 				)
