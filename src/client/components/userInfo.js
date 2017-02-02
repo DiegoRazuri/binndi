@@ -47,7 +47,7 @@ export default class UserInfo extends React.Component{
 						<img src=""/>
 					</div>
 					<h6 className="text-medium-normal-grey-o">{this.props.user.description}</h6>
-					<p>de {this.props.user.location}</p>
+					
 					<p>Miembro desde {month} {yNum}</p>
 					<a href="/logout" className="text-medium-normal-grey-o btn-logout">Cerrar sesión</a>
 				</div>
@@ -55,3 +55,5 @@ export default class UserInfo extends React.Component{
 
 	}
 }
+
+//<p>de {this.props.user.location}</p>

@@ -33321,12 +33321,6 @@ var UserInfo = function (_React$Component) {
 				_react2.default.createElement(
 					'p',
 					null,
-					'de ',
-					this.props.user.location
-				),
-				_react2.default.createElement(
-					'p',
-					null,
 					'Miembro desde ',
 					month,
 					' ',
@@ -33343,6 +33337,9 @@ var UserInfo = function (_React$Component) {
 
 	return UserInfo;
 }(_react2.default.Component);
+
+//<p>de {this.props.user.location}</p>
+
 
 exports.default = UserInfo;
 
