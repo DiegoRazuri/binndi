@@ -31368,7 +31368,7 @@ var LandingSection = function (_React$Component) {
 
 			var t = setInterval(function () {
 				avanzar2();
-			}, 8500);
+			}, 9500);
 
 			function stopinterval(tPromo) {
 				clearInterval(tPromo);
@@ -31454,7 +31454,7 @@ var LandingSection = function (_React$Component) {
 					{ id: 'wrapper-slider', className: 'wrapper-slider' },
 					_react2.default.createElement(
 						'div',
-						{ id: 'banner-sequence-1', className: 'banner-sequence slide ' },
+						{ id: 'banner-sequence-1', className: 'banner-sequence slide slide_visible' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'wrapper-banner-content' },
@@ -31510,7 +31510,7 @@ var LandingSection = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'div',
-						{ id: 'banner-sequence-3', className: 'banner-sequence slide slide_visible' },
+						{ id: 'banner-sequence-3', className: 'banner-sequence slide ' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'wrapper-banner-content' },
@@ -31540,7 +31540,7 @@ var LandingSection = function (_React$Component) {
 						{ className: 'nav-sub-banner' },
 						_react2.default.createElement(
 							'li',
-							{ id: 'slide3pag', className: 'pagination' },
+							{ id: 'slide3pag', className: 'pagination activeBanner' },
 							_react2.default.createElement('span', { className: 'icon-users ico-subnav-banners' })
 						),
 						_react2.default.createElement(
@@ -31560,7 +31560,7 @@ var LandingSection = function (_React$Component) {
 						),
 						_react2.default.createElement(
 							'li',
-							{ id: 'slide2pag', className: 'pagination activeBanner' },
+							{ id: 'slide2pag', className: 'pagination ' },
 							_react2.default.createElement('span', { className: 'icon-map-marker ico-subnav-banners' })
 						)
 					)

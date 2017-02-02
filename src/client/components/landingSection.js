@@ -16,7 +16,7 @@ export default class LandingSection extends React.Component{
 
 		stopinterval(t)
 
-		let t=setInterval(function(){avanzar2();},8500);
+		let t=setInterval(function(){avanzar2();},9500);
 
 		function stopinterval(tPromo){
 		    clearInterval(tPromo);
@@ -89,7 +89,7 @@ export default class LandingSection extends React.Component{
 					
 					<div id="wrapper-slider" className="wrapper-slider">
 						
-						<div id="banner-sequence-1" className="banner-sequence slide ">
+						<div id="banner-sequence-1" className="banner-sequence slide slide_visible">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-1 wrapper-text-features-banners">
 									<h1 className="text-banner-white">Encuentra vuelos, hospedajes y actividades</h1>
@@ -115,7 +115,7 @@ export default class LandingSection extends React.Component{
 							</div>
 							
 						</div>
-						<div id="banner-sequence-3" className="banner-sequence slide slide_visible">
+						<div id="banner-sequence-3" className="banner-sequence slide ">
 							<div className="wrapper-banner-content">
 								<div className="element-banner-3 wrapper-text-features-banners">
 									<h1  className="text-banner-white">Olvidate de los guías y ubicate en tu destino.</h1>
@@ -130,7 +130,7 @@ export default class LandingSection extends React.Component{
 						</div>
 						<ul className="nav-sub-banner">
 						
-							<li id="slide3pag" className="pagination">
+							<li id="slide3pag" className="pagination activeBanner">
 								<span className="icon-users ico-subnav-banners"></span>
 							</li>
 							<li>
@@ -143,7 +143,7 @@ export default class LandingSection extends React.Component{
 							<li>
 								<span className="icon-arrow-down-thick ico-arrow-subnav-banners"></span>
 							</li>
-							<li id="slide2pag" className="pagination activeBanner">
+							<li id="slide2pag" className="pagination ">
 								<span className="icon-map-marker ico-subnav-banners"></span>
 							</li>
 						</ul>
