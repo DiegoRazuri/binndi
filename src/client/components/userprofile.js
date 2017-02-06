@@ -15,6 +15,7 @@ export default class Userprofile extends React.Component{
 		super(props);
 		this.state={
 			viewStage : 3
+			
 
 		}
 
@@ -50,18 +51,13 @@ export default class Userprofile extends React.Component{
 
 	}
 
-	componentDidMount(){
-		this.props.showPopupMessageUser();
-	}
-
-
-
-
 	
 	render(){
 
 		let viewStage
 		let userInfo;
+
+
 
 
 		if(screen.width > 768){

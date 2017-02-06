@@ -569,4 +569,29 @@ router.get('/unique_services/:service_id', function (req, res) {
 	});
 });
 
+router.post('/send_user_email', jsonParser, function (req, res) {
+	if (!req.body) return res.sendStatus(400);
+
+	var e = req.body;
+	console.log(e);
+
+	_userprofiles2.default.findOne({ _id: req.user }).exec(function (err, user) {
+		if (err) throw err;
+
+		user.email = e.userEmail;
+		user.userState = 1;
+
+		user.save(function (err) {
+			if (err) {
+				res.sendStatus(500).json(err);
+			}
+			var aplicationState = {
+				aplicationState: 1
+			};
+
+			res.json(aplicationState);
+		});
+	});
+});
+
 exports.default = router;

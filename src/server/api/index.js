@@ -50,6 +50,8 @@ router.get('/usersession', function ( req, res ){
 				
 				}else{
 
+
+
 					Services.aggregate([{$project: {city : 1}}, {$unwind:"$city"},{$group:{ _id: "$city"  }} ], (err, destinations)=>{
 						if(err){
 							return handleError(err);
@@ -622,5 +624,39 @@ router.get('/unique_services/:service_id', function ( req, res ){
 
 
 });
+
+router.post('/send_user_email', jsonParser, function (req, res){
+	if(!req.body) return res.sendStatus(400)
+
+	let e = req.body;
+	console.log(e)
+
+	Userprofiles
+		.findOne({_id: req.user})
+		.exec((err, user)=>{
+			if(err) throw err;
+
+			user.email = e.userEmail;
+			user.userState = 1;
+			
+			user.save(function(err){
+				if(err){
+					res.sendStatus(500).json(err);
+				}
+				let aplicationState = {
+					aplicationState : 1
+				}
+				
+				
+				res.json(aplicationState);
+			});
+
+
+
+		});
+
+});
+
+
 
 export default router

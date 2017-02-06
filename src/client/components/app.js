@@ -65,10 +65,36 @@ export default class Layout extends React.Component{
 		this.showPopupMessageUser = this.showPopupMessageUser.bind(this);
 		this.showPopupMessageEnterprises = this.showPopupMessageEnterprises.bind(this);
 		this.enterpriseAplication = this.enterpriseAplication.bind(this);
+		this.sendUserEmail = this.sendUserEmail.bind(this);
 		
 
 //		this.showLanding = this.showLanding.bind(this);
 	
+	}
+
+	sendUserEmail(json, direction){
+
+		
+        $.post('/api/send_user_email', json, (res)=>{
+			console.log(res)
+			if(res.aplicationState == 1){
+				if( direction == 1){
+					// se cierra el popup por q esta en el userprofile
+					this.showPopupMessageUser();
+				}else if( direction == 0){
+					//no se hace nada por q esta en seccion de puntos binndis
+					// aca lo optimo seria mostrar un mensaje al usuario diciendole que se registro su email
+				}
+				
+				this.state.user.userState = 1;
+				newUserInfo = this.state.user;
+				this.setState({user: newUserInfo});
+			}
+			
+        	
+		})
+
+
 	}
 
 	enterpriseAplication(json){
@@ -160,6 +186,11 @@ export default class Layout extends React.Component{
             success: (res)=>{
             	if(res.user != false){
             		console.log(res)
+
+            		if(res.user.userState != 1){
+            			this.showPopupMessageUser();
+            		}
+            		
 					// HAY QUE EDITAR EN EL SERVER PARA OBTENER USER + ITINERARIES + SERVICES
             		this.state.user = res.user;
             		let newUserInfo =  this.state.user;
@@ -179,6 +210,8 @@ export default class Layout extends React.Component{
 
 	            		
 	            	})
+
+
 
             	}
                
@@ -567,6 +600,7 @@ export default class Layout extends React.Component{
 	componentWillMount(){
 		this.isItLoggin();
 		
+		
 	}
 	render(){
 		
@@ -588,7 +622,8 @@ export default class Layout extends React.Component{
 		if(this.state.showMessageUser != false){
 
 			popupMessageUser = <MessageUserPopup
-							showPopupMessageUser = {this.showPopupMessageUser}/>
+							showPopupMessageUser = {this.showPopupMessageUser}
+							sendUserEmail = {this.sendUserEmail}/>
 		
 		}
 		if(this.state.showMessageEnterprises != false){
@@ -741,7 +776,8 @@ export default class Layout extends React.Component{
 								showPopupMessageEnterprises: this.showPopupMessageEnterprises,
 								enterpriseAplication: this.enterpriseAplication,
 								removeFromWishlist: this.removeFromWishlist,
-								showPopupLogin: this.showPopupLogin
+								showPopupLogin: this.showPopupLogin,
+								sendUserEmail: this.sendUserEmail,
 
 								
 							})

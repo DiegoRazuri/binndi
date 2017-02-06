@@ -14,7 +14,7 @@ export default class Itineraries extends React.Component{
 		
 
 		return <div className="userprofile-wrapper-plans">
-					<div className="wrapper-ad"><h4>Aquí podras guardar y editar todos los planes que vayas organizando con tus amigos.</h4></div>
+					<div className="wrapper-ad"><h4>Aquí podrás guardar y editar todos los planes que vayas organizando con tus amigos.</h4></div>
 					<div className="userprofile-wrapper-thumbnail">
 						<div className="userprofile-plan-thumbnail">
 							<figure>

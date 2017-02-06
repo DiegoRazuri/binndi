@@ -27787,6 +27787,7 @@ var Layout = function (_React$Component) {
 		_this.showPopupMessageUser = _this.showPopupMessageUser.bind(_this);
 		_this.showPopupMessageEnterprises = _this.showPopupMessageEnterprises.bind(_this);
 		_this.enterpriseAplication = _this.enterpriseAplication.bind(_this);
+		_this.sendUserEmail = _this.sendUserEmail.bind(_this);
 
 		//		this.showLanding = this.showLanding.bind(this);
 
@@ -27794,14 +27795,36 @@ var Layout = function (_React$Component) {
 	}
 
 	_createClass(Layout, [{
+		key: 'sendUserEmail',
+		value: function sendUserEmail(json, direction) {
+			var _this2 = this;
+
+			$.post('/api/send_user_email', json, function (res) {
+				console.log(res);
+				if (res.aplicationState == 1) {
+					if (direction == 1) {
+						// se cierra el popup por q esta en el userprofile
+						_this2.showPopupMessageUser();
+					} else if (direction == 0) {
+						//no se hace nada por q esta en seccion de puntos binndis
+						// aca lo optimo seria mostrar un mensaje al usuario diciendole que se registro su email
+					}
+
+					_this2.state.user.userState = 1;
+					newUserInfo = _this2.state.user;
+					_this2.setState({ user: newUserInfo });
+				}
+			});
+		}
+	}, {
 		key: 'enterpriseAplication',
 		value: function enterpriseAplication(json) {
-			var _this2 = this;
+			var _this3 = this;
 
 			$.post('/api/enterprise_aplication', json, function (res) {
 				console.log(res);
 				if (res.aplicationState == 1) {
-					_this2.showPopupMessageEnterprises();
+					_this3.showPopupMessageEnterprises();
 				}
 				// no se esta actualizando el valor de los likes del servicio, pero si se esta enviando la información
 			});
@@ -27839,7 +27862,7 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'loadServiceInfo',
 		value: function loadServiceInfo(service_id) {
-			var _this3 = this;
+			var _this4 = this;
 
 			$.ajax({
 				type: 'GET',
@@ -27849,7 +27872,7 @@ var Layout = function (_React$Component) {
 				cache: false,
 				success: function success(res) {
 
-					_this3.setState({
+					_this4.setState({
 						service_info: res
 
 					});
@@ -27874,7 +27897,7 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'isItLoggin',
 		value: function isItLoggin() {
-			var _this4 = this;
+			var _this5 = this;
 
 			$.ajax({
 				type: 'GET',
@@ -27885,18 +27908,23 @@ var Layout = function (_React$Component) {
 				success: function success(res) {
 					if (res.user != false) {
 						console.log(res);
+
+						if (res.user.userState != 1) {
+							_this5.showPopupMessageUser();
+						}
+
 						// HAY QUE EDITAR EN EL SERVER PARA OBTENER USER + ITINERARIES + SERVICES
-						_this4.state.user = res.user;
-						var newUserInfo = _this4.state.user;
+						_this5.state.user = res.user;
+						var _newUserInfo = _this5.state.user;
 
 						res.destinations.map(function (destination) {
-							_this4.state.destinations.push(destination._id);
+							_this5.state.destinations.push(destination._id);
 						});
 
-						var newDestinationInfo = _this4.state.destinations;
+						var newDestinationInfo = _this5.state.destinations;
 
-						_this4.setState({
-							user: newUserInfo,
+						_this5.setState({
+							user: _newUserInfo,
 							destinations: newDestinationInfo,
 							categories: res.categories_list,
 							months: res.months
@@ -27913,7 +27941,7 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'loadAllServices',
 		value: function loadAllServices() {
-			var _this5 = this;
+			var _this6 = this;
 
 			$.ajax({
 				type: 'GET',
@@ -27923,7 +27951,7 @@ var Layout = function (_React$Component) {
 				cache: false,
 				success: function success(res) {
 
-					_this5.setState({
+					_this6.setState({
 						all_services: res,
 						services: res
 					});
@@ -28082,7 +28110,7 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'filterDestination',
 		value: function filterDestination(destination, dataSelector, inf) {
-			var _this6 = this;
+			var _this7 = this;
 
 			var dataSource = void 0;
 			if (dataSelector == 1) {
@@ -28096,7 +28124,7 @@ var Layout = function (_React$Component) {
 			var newServicesInfo = [];
 
 			dataSource.map(function (service) {
-				if (service.city == _this6.state.destinations[destination - 1]) {
+				if (service.city == _this7.state.destinations[destination - 1]) {
 					newServicesInfo.push(service);
 				}
 			});
@@ -28122,33 +28150,33 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'addServiceToItinerary',
 		value: function addServiceToItinerary(json) {
-			var _this7 = this;
+			var _this8 = this;
 
 			$.post('/api/add_service_to_itinerary', json, function (res) {
 				console.log(res);
 
-				_this7.state.user.itineraries.map(function (itinerary) {
+				_this8.state.user.itineraries.map(function (itinerary) {
 					if (itinerary._id == json.itinerary_id) {
 						itinerary.services.push(res);
 					}
 				});
 
-				var newUserInfo = _this7.state.user;
-				_this7.setState({ user: newUserInfo });
+				var newUserInfo = _this8.state.user;
+				_this8.setState({ user: newUserInfo });
 				//despues de recibir la info cerrar el itinerarylist
 			});
 		}
 	}, {
 		key: 'createItinerary',
 		value: function createItinerary(json) {
-			var _this8 = this;
+			var _this9 = this;
 
 			$.post('/api/create_itinerary', json, function (res) {
 				console.log(res);
 
-				_this8.state.user.itineraries.push(res);
-				var newUserInfo = _this8.state.user;
-				_this8.setState({ user: newUserInfo });
+				_this9.state.user.itineraries.push(res);
+				var newUserInfo = _this9.state.user;
+				_this9.setState({ user: newUserInfo });
 				//despues de recibir la info cerrar el form
 			});
 		}
@@ -28175,7 +28203,7 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'addToWishlist',
 		value: function addToWishlist(activity_id) {
-			var _this9 = this;
+			var _this10 = this;
 
 			//este metodo debe cambiarse cuando implemente socket.io
 			//primero se debe hacer una solicitud para agregar al contacto
@@ -28188,17 +28216,17 @@ var Layout = function (_React$Component) {
 
 			$.post('/api/add_to_wishlist', json, function (res) {
 				console.log(res);
-				_this9.state.user.wishlist.push(res);
-				var newUserInfo = _this9.state.user;
+				_this10.state.user.wishlist.push(res);
+				var newUserInfo = _this10.state.user;
 
-				_this9.state.services.map(function (service, index) {
+				_this10.state.services.map(function (service, index) {
 					if (service._id == res._id) {
-						_this9.state.services[index] = res;
+						_this10.state.services[index] = res;
 					}
 				});
-				var newServicesInfo = _this9.state.services;
+				var newServicesInfo = _this10.state.services;
 
-				_this9.setState({
+				_this10.setState({
 					user: newUserInfo,
 					services: newServicesInfo
 				});
@@ -28207,7 +28235,7 @@ var Layout = function (_React$Component) {
 	}, {
 		key: 'removeFromWishlist',
 		value: function removeFromWishlist(activity_id) {
-			var _this10 = this;
+			var _this11 = this;
 
 			console.log("quitando de wishlist");
 			console.log(activity_id);
@@ -28218,7 +28246,7 @@ var Layout = function (_React$Component) {
 				console.log(res);
 
 				// no se esta actualizando el valor de los likes del servicio, pero si se esta enviando la información
-				_this10.setState({
+				_this11.setState({
 					user: res
 				});
 			});
@@ -28310,7 +28338,8 @@ var Layout = function (_React$Component) {
 			if (this.state.showMessageUser != false) {
 
 				popupMessageUser = _react2.default.createElement(_messageUserPopup2.default, {
-					showPopupMessageUser: this.showPopupMessageUser });
+					showPopupMessageUser: this.showPopupMessageUser,
+					sendUserEmail: this.sendUserEmail });
 			}
 			if (this.state.showMessageEnterprises != false) {
 
@@ -28554,7 +28583,8 @@ var Layout = function (_React$Component) {
 						showPopupMessageEnterprises: this.showPopupMessageEnterprises,
 						enterpriseAplication: this.enterpriseAplication,
 						removeFromWishlist: this.removeFromWishlist,
-						showPopupLogin: this.showPopupLogin
+						showPopupLogin: this.showPopupLogin,
+						sendUserEmail: this.sendUserEmail
 
 					})
 				),
@@ -28810,7 +28840,7 @@ var Layout = function (_React$Component) {
 exports.default = Layout;
 
 },{"./btnCreateEnterpriseProfile":258,"./btnLoggin":259,"./exploreSection":263,"./logginPopup":268,"./messageEnterprisesPopup":269,"./messageUserPopup":270,"./popupAddToPlan":271,"./userAdminPanel":273,"./userAvatar":276,"react":251,"react-addons-css-transition-group":3,"react-dom":4,"react-router":43}],255:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -28818,7 +28848,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -28843,120 +28873,185 @@ var BinndiPoints = function (_React$Component) {
 	}
 
 	_createClass(BinndiPoints, [{
-		key: "render",
+		key: 'handleSendUserEmail',
+		value: function handleSendUserEmail(e) {
+			e.preventDefault();
+
+			var userEmail_uef = ReactDom.findDOMNode(this.refs.userEmail_uef).value.trim();
+
+			console.log("se tomo los datos correctamente");
+			console.log(userEmail_uef);
+
+			var json = {
+				userEmail: userEmail_uef
+			};
+
+			this.props.sendUserEmail.call(null, json, 0);
+
+			ReactDom.findDOMNode(this.refs.userEmail_uef).value = '';
+
+			return;
+		}
+	}, {
+		key: 'render',
 		value: function render() {
 
-			return _react2.default.createElement(
-				"div",
-				{ className: "section-binndi-points" },
-				_react2.default.createElement(
-					"div",
-					{ className: "grid-a" },
+			var userForm = void 0;
+
+			if (this.props.user != false && this.props.user.userState != 0) {
+				userForm = _react2.default.createElement(
+					'div',
+					{ className: 'popup-login-wrapper-content' },
 					_react2.default.createElement(
-						"div",
-						{ className: "wrapper-header-info" },
-						_react2.default.createElement("span", { className: "icon-trophy ico" }),
+						'h4',
+						null,
+						'¡Gracias por registrate!'
+					),
+					_react2.default.createElement(
+						'h4',
+						null,
+						'Te avisaremos cuando sea el lanzamiento oficial para que canjees tus binndis.'
+					)
+				);
+			} else if (this.props.user != false && this.props.user.userState == 0) {
+				userForm = _react2.default.createElement(
+					'div',
+					{ className: 'popup-login-wrapper-content' },
+					_react2.default.createElement(
+						'h4',
+						null,
+						'¡Te obsequiamos 100 binndis!'
+					),
+					_react2.default.createElement(
+						'h4',
+						null,
+						'¡Déjanos tu correo para avisarte el día del lanzamiento oficial!'
+					),
+					_react2.default.createElement(
+						'form',
+						{ className: 'formUserEmail' },
 						_react2.default.createElement(
-							"h3",
-							{ className: "text-small-normal-grey-m" },
-							"Dedicate a disfrutar de nuevas experiencias y deja que Binndi se encargue del resto."
+							'div',
+							{ className: 'input-box' },
+							_react2.default.createElement('input', { type: 'email', name: '', ref: 'userEmail_uef', placeholder: 'Correo electrónico' }),
+							_react2.default.createElement('span', { className: 'icon-arrow-right-thick btn-ico', onClick: this.handleSendUserEmail.bind(this) })
+						)
+					)
+				);
+			} else {
+				userForm = _react2.default.createElement(
+					'div',
+					{ className: 'popup-login-wrapper-content' },
+					_react2.default.createElement(
+						'h4',
+						null,
+						'¡Ingresa y gana tus primeros 100 binndis!'
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: '/auth/facebook', className: 'btn-login btn-login-fb' },
+						_react2.default.createElement('span', { className: 'icon-facebook' }),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Ingresa con Facebook'
+						),
+						_react2.default.createElement('span', { className: 'icon-chevron-small-right' })
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'text-terms-conditions' },
+						'Al registrarme, acepto ',
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'Condiciones del servicio'
+						),
+						', ',
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'Condiciones sobre pagos'
+						),
+						', ',
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'Politica de privacidad y de cookies'
+						),
+						', ',
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'Politica de reembolso al cliente'
+						),
+						' y ',
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'Condiciones de la Garantia'
+						),
+						' en Binndi.'
+					)
+				);
+			}
+			return _react2.default.createElement(
+				'div',
+				{ className: 'section-binndi-points' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'grid-a' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'wrapper-header-info' },
+						_react2.default.createElement('span', { className: 'icon-trophy ico' }),
+						_react2.default.createElement(
+							'h3',
+							{ className: 'text-small-normal-grey-m' },
+							'Dedícate a disfrutar de nuevas experiencias y deja que Binndi se encargue del resto.'
 						)
 					),
 					_react2.default.createElement(
-						"ol",
+						'ol',
 						null,
 						_react2.default.createElement(
-							"li",
-							{ className: "text-halfmedium-normal-grey-o" },
-							"Elige tu destino y planifica tu viaje con nosotros."
+							'li',
+							{ className: 'text-halfmedium-normal-grey-o' },
+							'Elige tu destino y planifica tu viaje con nosotros.'
 						),
 						_react2.default.createElement(
-							"li",
-							{ className: "text-halfmedium-normal-grey-o" },
-							"Binndi te mostrara los retos e hitos que debes cumplir."
+							'li',
+							{ className: 'text-halfmedium-normal-grey-o' },
+							'Binndi te mostrará los retos e hitos que debes cumplir.'
 						),
 						_react2.default.createElement(
-							"li",
-							{ className: "text-halfmedium-normal-grey-o" },
-							"Cada vez que cumplas uno, acumularas binndis."
+							'li',
+							{ className: 'text-halfmedium-normal-grey-o' },
+							'Cada vez que cumplas uno, acumularás binndis.'
 						),
 						_react2.default.createElement(
-							"li",
-							{ className: "text-halfmedium-normal-grey-o" },
-							"Con esos binndis podrás pagar pasajes, hospedajes, y más."
+							'li',
+							{ className: 'text-halfmedium-normal-grey-o' },
+							'Con esos binndis podrás pagar actividades para realizar en tu destino.'
 						)
 					)
 				),
 				_react2.default.createElement(
-					"div",
-					{ className: "grid-b" },
+					'div',
+					{ className: 'grid-b' },
 					_react2.default.createElement(
-						"div",
-						{ className: "section-binndi-points-popup-login" },
-						_react2.default.createElement(
-							"div",
-							{ className: "popup-login-wrapper-content" },
-							_react2.default.createElement(
-								"h4",
-								null,
-								"¡Ingresa y gana tus primeros 100 binndis!"
-							),
-							_react2.default.createElement(
-								"a",
-								{ href: "/auth/facebook", className: "btn-login btn-login-fb" },
-								_react2.default.createElement("span", { className: "icon-facebook" }),
-								_react2.default.createElement(
-									"p",
-									null,
-									"Ingresa con Facebook"
-								),
-								_react2.default.createElement("span", { className: "icon-chevron-small-right" })
-							),
-							_react2.default.createElement(
-								"p",
-								{ className: "text-terms-conditions" },
-								"Al registrarme, acepto ",
-								_react2.default.createElement(
-									"a",
-									{ href: "#" },
-									"Condiciones del servicio"
-								),
-								", ",
-								_react2.default.createElement(
-									"a",
-									{ href: "#" },
-									"Condiciones sobre pagos"
-								),
-								", ",
-								_react2.default.createElement(
-									"a",
-									{ href: "#" },
-									"Politica de privacidad y de cookies"
-								),
-								", ",
-								_react2.default.createElement(
-									"a",
-									{ href: "#" },
-									"Politica de reembolso al cliente"
-								),
-								" y ",
-								_react2.default.createElement(
-									"a",
-									{ href: "#" },
-									"Condiciones de la Garantia"
-								),
-								" en Binndi."
-							)
-						)
+						'div',
+						{ className: 'section-binndi-points-popup-login' },
+						userForm
 					)
 				),
 				_react2.default.createElement(
-					"div",
-					{ className: "grid-c" },
+					'div',
+					{ className: 'grid-c' },
 					_react2.default.createElement(
-						"figure",
+						'figure',
 						null,
-						_react2.default.createElement("img", { src: "https://s3-sa-east-1.amazonaws.com/binndi/landing/ptsbnnd-info-vectores.png" })
+						_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/ptsbnnd-info-vectores.png' })
 					)
 				)
 			);
@@ -29844,7 +29939,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 						_react2.default.createElement(
 							'h2',
 							{ className: 'subtitle headline-black' },
-							'Los empresas que reúnan los requisitos pueden acceder gratuitamente a una producciòn profesional de videos 360º para mostrar una experiencia mas inmersiva de sus servicios a sus clientes. Ten en cuenta que no siempre podemos garantizar el servicio,  realiza una solicitud para ver disponibilidad.'
+							'Los empresas que reúnan los requisitos pueden acceder gratuitamente a una producción profesional de videos 360º para mostrar una experiencia más inmersiva de sus servicios a sus clientes. Ten en cuenta que no siempre podemos garantizar el servicio,  realiza una solicitud para ver disponibilidad.'
 						),
 						_react2.default.createElement(
 							'a',
@@ -29884,7 +29979,7 @@ var EnterpriseRegisterInfo = function (_React$Component) {
 							_react2.default.createElement(
 								'h2',
 								{ className: 'subtitle headline-black' },
-								'Binndi está diseñada especialmente para vender las mejores experiencias de cada ciudad. Si ofreces hospedaje, tours, actividades, paquetes o tienes un restaurant, bar entre otros este es tu lugar.'
+								'Binndi está diseñada especialmente para vender las mejores experiencias de cada ciudad. Si ofreces hospedaje, tours, actividades, paquetes o tienes un restaurante, bar entre otros este es tu lugar.'
 							),
 							_react2.default.createElement(
 								'a',
@@ -31175,7 +31270,7 @@ var Itineraries = function (_React$Component) {
 					_react2.default.createElement(
 						'h4',
 						null,
-						'Aquí podras guardar y editar todos los planes que vayas organizando con tus amigos.'
+						'Aquí podrás guardar y editar todos los planes que vayas organizando con tus amigos.'
 					)
 				),
 				_react2.default.createElement(
@@ -31469,6 +31564,41 @@ var LandingSection = function (_React$Component) {
 		key: 'render',
 		value: function render() {
 
+			var cta = void 0,
+			    bottomCta = void 0;
+			if (this.props.user == false) {
+				cta = _react2.default.createElement(
+					'a',
+					{ className: 'btn-big-curve btn-register scrolleable', href: '#', onClick: this.showingShowPopupLogin.bind(this) },
+					_react2.default.createElement(
+						'p',
+						null,
+						'Registrarme'
+					)
+				);
+			}
+			if (this.props.user == false) {
+				bottomCta = _react2.default.createElement(
+					'a',
+					{ className: 'btn-big-curve', href: '#', onClick: this.showingShowPopupLogin.bind(this) },
+					_react2.default.createElement(
+						'p',
+						null,
+						'Registrarme'
+					)
+				);
+			} else {
+				bottomCta = _react2.default.createElement(
+					_reactRouter.Link,
+					{ to: '/userprofile', className: 'btn-big-curve' },
+					_react2.default.createElement(
+						'p',
+						null,
+						'Ingresar'
+					)
+				);
+			}
+
 			return _react2.default.createElement(
 				'div',
 				{ className: 'section-landing banner-background' },
@@ -31491,15 +31621,7 @@ var LandingSection = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'wrapper-btn-cta' },
-							_react2.default.createElement(
-								'a',
-								{ className: 'btn-big-curve btn-register scrolleable', href: '#', onClick: this.showingShowPopupLogin.bind(this) },
-								_react2.default.createElement(
-									'p',
-									null,
-									'Registrarme'
-								)
-							)
+							cta
 						)
 					)
 				),
@@ -31749,17 +31871,17 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement(
 								'h3',
 								{ className: 'text-small-normal-grey-m headline-black' },
-								'¿Quieres viajar gratis?'
+								'¡Gana descuentos'
 							),
 							_react2.default.createElement(
 								'h3',
 								{ className: 'text-small-normal-grey-m headline-black' },
-								'Con binndi es posible'
+								'y viaja mucho más!'
 							),
 							_react2.default.createElement(
 								'h4',
 								{ className: 'text-big-normal-grey-o headline-black' },
-								'Cumple los retos y gana cientos de binndis, los que podras utilizar para pagar tus proximas aventuras.'
+								'Te daremos retos para tu viaje. Cúmplelos y acumularás cientos de binndis que podrás canjear por increíbles descuentos.'
 							),
 							_react2.default.createElement(
 								_reactRouter.Link,
@@ -31824,17 +31946,9 @@ var LandingSection = function (_React$Component) {
 							_react2.default.createElement(
 								'h4',
 								{ className: 'text-big-normal-grey-o headline-black' },
-								'Dejanos tu correo y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.'
+								'Regístrate y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.'
 							),
-							_react2.default.createElement(
-								'a',
-								{ className: 'btn-big-curve', href: '#', onClick: this.showingShowPopupLogin.bind(this) },
-								_react2.default.createElement(
-									'p',
-									null,
-									'Registrarme'
-								)
-							),
+							bottomCta,
 							_react2.default.createElement(
 								'figure',
 								{ className: 'img-appstore-logos' },
@@ -32610,7 +32724,7 @@ var MessageEnterprisesPopup = function (_React$Component) {
 exports.default = MessageEnterprisesPopup;
 
 },{"react":251}],270:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -32618,9 +32732,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32643,33 +32761,69 @@ var MessageUserPopup = function (_React$Component) {
 	}
 
 	_createClass(MessageUserPopup, [{
-		key: "showingMessageUser",
+		key: 'showingMessageUser',
 		value: function showingMessageUser() {
 			this.props.showPopupMessageUser();
 		}
 	}, {
-		key: "render",
+		key: 'handleSendUserEmail',
+		value: function handleSendUserEmail(e) {
+			e.preventDefault();
+
+			var userEmail_uef = _reactDom2.default.findDOMNode(this.refs.userEmail_uef).value.trim();
+
+			console.log("se tomo los datos correctamente");
+			console.log(userEmail_uef);
+
+			var json = {
+				userEmail: userEmail_uef
+			};
+
+			this.props.sendUserEmail.call(null, json, 1);
+
+			_reactDom2.default.findDOMNode(this.refs.userEmail_uef).value = '';
+
+			return;
+		}
+	}, {
+		key: 'render',
 		value: function render() {
 
 			return _react2.default.createElement(
-				"div",
-				{ id: "popup-shadow", className: "popup-login popup-message" },
+				'div',
+				{ id: 'popup-shadow', className: 'popup-login popup-message' },
 				_react2.default.createElement(
-					"div",
-					{ className: "wrapper-popup-login" },
-					_react2.default.createElement("span", { className: "btn-close btn-close-popup icon-cross", onClick: this.showingMessageUser.bind(this) }),
+					'div',
+					{ className: 'wrapper-popup-login' },
+					_react2.default.createElement('span', { className: 'btn-close btn-close-popup icon-cross', onClick: this.showingMessageUser.bind(this) }),
 					_react2.default.createElement(
-						"div",
-						{ className: "popup-login-wrapper-content" },
+						'div',
+						{ className: 'popup-login-wrapper-content' },
 						_react2.default.createElement(
-							"figure",
+							'figure',
 							null,
-							_react2.default.createElement("img", { src: "https://s3-sa-east-1.amazonaws.com/binndi/landing/Logo-FondoBlanco.png" })
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Logo-FondoBlanco.png' })
 						),
 						_react2.default.createElement(
-							"h4",
+							'h4',
 							null,
-							"¡Gracias por registrarte! ¡PRÓXIMAMENTE SERÁ EL LANZAMIENTO, no te imaginas lo que tenemos para ti!"
+							'¡Te obsequiamos 100 Binndis',
+							_react2.default.createElement('br', null),
+							'para que canjees por descuentos!',
+							_react2.default.createElement('br', null),
+							'¡Déjanos tu correo para avisarte',
+							_react2.default.createElement('br', null),
+							'el día del LANZAMIENTO OFICIAL!'
+						),
+						_react2.default.createElement(
+							'form',
+							{ className: 'formUserEmail' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'input-box' },
+								_react2.default.createElement('input', { type: 'email', name: '', ref: 'userEmail_uef', placeholder: 'Correo electrónico' }),
+								_react2.default.createElement('span', { className: 'icon-arrow-right-thick btn-ico', onClick: this.handleSendUserEmail.bind(this) })
+							)
 						)
 					)
 				)
@@ -32682,7 +32836,7 @@ var MessageUserPopup = function (_React$Component) {
 
 exports.default = MessageUserPopup;
 
-},{"react":251}],271:[function(require,module,exports){
+},{"react":251,"react-dom":4}],271:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33488,11 +33642,6 @@ var Userprofile = function (_React$Component) {
 			this.props.showPopupMessageUser();
 		}
 	}, {
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			this.props.showPopupMessageUser();
-		}
-	}, {
 		key: 'render',
 		value: function render() {
 
@@ -33776,7 +33925,7 @@ var Wishlist = function (_React$Component) {
 					_react2.default.createElement(
 						'h4',
 						null,
-						'En esta seccion guardas todas las aventuras y experiencias que deseas realizar en el futuro.'
+						'En esta sección guardas todas las aventuras y experiencias que deseas realizar en el futuro.'
 					)
 				),
 				_react2.default.createElement(

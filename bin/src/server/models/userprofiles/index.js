@@ -34,6 +34,7 @@ var UserprofileSchema = new _mongoose2.default.Schema({
 	contacts: [{ type: _mongoose2.default.Schema.Types.ObjectId, ref: 'Userprofiles' }],
 	itineraries: [{ type: _mongoose2.default.Schema.Types.ObjectId, ref: 'Itineraries' }],
 	wishlist: [{ type: _mongoose2.default.Schema.Types.ObjectId, ref: 'Services' }],
+	userState: { type: Number, default: 0 },
 	createdAt: { type: Date, default: Date.now }
 
 });

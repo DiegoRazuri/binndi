@@ -144,15 +144,30 @@ export default class LandingSection extends React.Component{
 	
 	render(){
 
+		let cta, bottomCta;
+		if(this.props.user == false){
+			cta = <a className="btn-big-curve btn-register scrolleable" href="#" onClick={this.showingShowPopupLogin.bind(this)}>
+					<p>Registrarme</p>
+				</a>
+		}
+		if(this.props.user == false){
+			bottomCta = <a className="btn-big-curve" href="#" onClick={this.showingShowPopupLogin.bind(this)}>
+					<p>Registrarme</p>
+				</a>
+		}else{
+			bottomCta = <Link to={'/userprofile'} className="btn-big-curve">
+					<p>Ingresar</p>
+				</Link>
+		}
+		
+
 		return <div className="section-landing banner-background">
 					<div id="banner-first-fold" className="banner1">
 						<div className="wrapper-text-banners wrapper-text-banners-first">
 							<h1 className="headline-black">Planifica con tus amigos todo tu viaje desde un solo lugar</h1>
 							<h2 className="subtitle-selling-line subtitle-black">Reinventamos la forma de explorar el mundo.</h2>
 							<div className="wrapper-btn-cta">
-								<a className="btn-big-curve btn-register scrolleable" href="#" onClick={this.showingShowPopupLogin.bind(this)}>
-									<p>Registrarme</p>
-								</a>	
+								{ cta }
 							</div>
 										
 						</div>
@@ -276,9 +291,9 @@ export default class LandingSection extends React.Component{
 						<div className="banner-binndi-points banner-secundary">
 							<div className="wrapper-text-banner-secundary-binndi-points">
 								<span className="ico-secundary-banners icon-trophy"></span>
-								<h3 className="text-small-normal-grey-m headline-black">¿Quieres viajar gratis?</h3>
-								<h3 className="text-small-normal-grey-m headline-black">Con binndi es posible</h3>
-								<h4 className="text-big-normal-grey-o headline-black">Cumple los retos y gana cientos de binndis, los que podras utilizar para pagar tus proximas aventuras.</h4>	
+								<h3 className="text-small-normal-grey-m headline-black">¡Gana descuentos</h3>
+								<h3 className="text-small-normal-grey-m headline-black">y viaja mucho más!</h3>
+								<h4 className="text-big-normal-grey-o headline-black">Te daremos retos para tu viaje. Cúmplelos y acumularás cientos de binndis que podrás canjear por increíbles descuentos.</h4>	
 								<Link to={"/binndis"} className="btn-big-curve">
 									<p>Gana 100 binndis</p>
 								</Link>
@@ -306,10 +321,8 @@ export default class LandingSection extends React.Component{
 								
 								<h3 className="text-small-normal-grey-m  headline-black">¡Muy pronto lanzaremos nuestra app!</h3>
 								
-								<h4 className="text-big-normal-grey-o headline-black">Dejanos tu correo y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.</h4>	
-								<a className="btn-big-curve" href="#" onClick={this.showingShowPopupLogin.bind(this)}>
-									<p>Registrarme</p>
-								</a>
+								<h4 className="text-big-normal-grey-o headline-black">Regístrate y recibe la invitación para ser uno de los primeros en planificar tus viajes con amigos.</h4>	
+								{ bottomCta }
 								<figure className="img-appstore-logos">
 									<img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Appstores-logos.png"/>
 								</figure>
@@ -324,3 +337,4 @@ export default class LandingSection extends React.Component{
 				</div>
 	}
 }
+

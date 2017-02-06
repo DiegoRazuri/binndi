@@ -20,6 +20,7 @@ let UserprofileSchema = new mongoose.Schema({
 	contacts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Userprofiles' }],
 	itineraries: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Itineraries' }],
 	wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Services' }],
+	userState: { type: Number, default: 0 },
 	createdAt: {type: Date, default: Date.now}
 
 

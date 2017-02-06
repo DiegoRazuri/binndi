@@ -93,7 +93,7 @@ export default class EnterpriseRegisterInfo extends React.Component{
 						<div className="wrapper-text-tech-benefit">
 							
 							<h1 className="text-small-normal-grey-m">Servicio de producción de videos 360º gratuito.</h1>
-							<h2 className="subtitle headline-black">Los empresas que reúnan los requisitos pueden acceder gratuitamente a una producciòn profesional de videos 360º para mostrar una experiencia mas inmersiva de sus servicios a sus clientes. Ten en cuenta que no siempre podemos garantizar el servicio,  realiza una solicitud para ver disponibilidad.</h2>
+							<h2 className="subtitle headline-black">Los empresas que reúnan los requisitos pueden acceder gratuitamente a una producción profesional de videos 360º para mostrar una experiencia más inmersiva de sus servicios a sus clientes. Ten en cuenta que no siempre podemos garantizar el servicio,  realiza una solicitud para ver disponibilidad.</h2>
 							<a className="btn-big-curve scrolleable" href="#section-improve-sales">
 								<p>Enviar solicitud</p>
 							</a>
@@ -110,7 +110,7 @@ export default class EnterpriseRegisterInfo extends React.Component{
 									<h1 className="text-small-normal-grey-m">Incrementa tus ventas ofreciendo tus servicios en nuestra plataforma.</h1>
 								</div>
 								
-								<h2 className="subtitle headline-black">Binndi está diseñada especialmente para vender las mejores experiencias de cada ciudad. Si ofreces hospedaje, tours, actividades, paquetes o tienes un restaurant, bar entre otros este es tu lugar.</h2>
+								<h2 className="subtitle headline-black">Binndi está diseñada especialmente para vender las mejores experiencias de cada ciudad. Si ofreces hospedaje, tours, actividades, paquetes o tienes un restaurante, bar entre otros este es tu lugar.</h2>
 								<a className="btn-big-curve scrolleable" href="#section-enterprise-benefits">
 									<p>Beneficios</p>
 								</a>

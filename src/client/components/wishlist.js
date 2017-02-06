@@ -43,7 +43,7 @@ export default class Wishlist extends React.Component{
 			
 
 		return <div className="userprofile-wrapper-wishlist">
-					<div className="wrapper-ad"><h4>En esta seccion guardas todas las aventuras y experiencias que deseas realizar en el futuro.</h4></div>
+					<div className="wrapper-ad"><h4>En esta sección guardas todas las aventuras y experiencias que deseas realizar en el futuro.</h4></div>
 
 					<div className="wrapper-thumbnails">
 						{
