@@ -76,7 +76,7 @@ export default class Layout extends React.Component{
 
 		
         $.post('/api/send_user_email', json, (res)=>{
-			console.log(res)
+			
 			if(res.aplicationState == 1){
 				if( direction == 1){
 					// se cierra el popup por q esta en el userprofile
@@ -101,7 +101,7 @@ export default class Layout extends React.Component{
 
 		
         $.post('/api/enterprise_aplication', json, (res)=>{
-			console.log(res)
+			
 			if(res.aplicationState == 1){
 				this.showPopupMessageEnterprises();
 			}

@@ -16,8 +16,7 @@ export default class MessageUserPopup extends React.Component{
 
 		let userEmail_uef = ReactDom.findDOMNode(this.refs.userEmail_uef).value.trim()
 	
-		console.log("se tomo los datos correctamente")
-		console.log(userEmail_uef)
+		
 
 		let json = {
 			userEmail : userEmail_uef
