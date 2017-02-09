@@ -46,8 +46,6 @@
     "copy-vrview": "cp -R src/vrview public/",
     "copy-fonts": "cp -R src/client/style/fonts public/style/ && cp src/client/style/style.styl public/style/style.styl",
     "copy-images": "cp -R src/client/style/img public/style/",
-    "make-dir-image-social-network": "mkdir -p public/style/img-sn",
-    "copy-image-social-networks": "cp src/client/style/img-sn/binndi-viajes.png public/style/img-sn/binndi-viajes.png",
     "build": "npm run public && npm run copy-files && npm run build-js",
     "build-front-dev": "npm run public-front-dev && npm run copy-files-front-dev && npm run copy-fonts-front-dev && npm run build-js-front-dev",
     "build-w-vrview": "npm run public && npm run copy-files && npm run build-js && npm run copy-vrview",
