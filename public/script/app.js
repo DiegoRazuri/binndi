@@ -27800,7 +27800,7 @@ var Layout = function (_React$Component) {
 			var _this2 = this;
 
 			$.post('/api/send_user_email', json, function (res) {
-				console.log(res);
+
 				if (res.aplicationState == 1) {
 					if (direction == 1) {
 						// se cierra el popup por q esta en el userprofile
@@ -27822,7 +27822,7 @@ var Layout = function (_React$Component) {
 			var _this3 = this;
 
 			$.post('/api/enterprise_aplication', json, function (res) {
-				console.log(res);
+
 				if (res.aplicationState == 1) {
 					_this3.showPopupMessageEnterprises();
 				}
@@ -31614,9 +31614,9 @@ var LandingSection = function (_React$Component) {
 							'Planifica con tus amigos todo tu viaje desde un solo lugar'
 						),
 						_react2.default.createElement(
-							'h2',
-							{ className: 'subtitle-selling-line subtitle-black' },
-							'Reinventamos la forma de explorar el mundo.'
+							'div',
+							{ className: 'wrapper-fold-icos' },
+							_react2.default.createElement('img', { src: 'https://s3-sa-east-1.amazonaws.com/binndi/landing/Oferta-binndi.png' })
 						),
 						_react2.default.createElement(
 							'div',
@@ -32771,9 +32771,6 @@ var MessageUserPopup = function (_React$Component) {
 			e.preventDefault();
 
 			var userEmail_uef = _reactDom2.default.findDOMNode(this.refs.userEmail_uef).value.trim();
-
-			console.log("se tomo los datos correctamente");
-			console.log(userEmail_uef);
 
 			var json = {
 				userEmail: userEmail_uef

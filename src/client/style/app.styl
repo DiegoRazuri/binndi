@@ -679,22 +679,29 @@ body
 			h1
 				font-family "Montserrat"
 				margin 0px auto
-				font-size 1.4em
+				font-size 1.3em
 				line-height 1.3em
 				font-weight normal
+				color #0B3245
+				
 	
 		.wrapper-text-banners-first
 			display block
 			position relative
-			top 111px
-			h2
-				width 250px
-				
+			top 125px
+			
+			.wrapper-fold-icos
+				margin 15px auto 0px auto
+				width 200px
+				img
+					width 100%
+					margin 0px auto
+					display block
 			.wrapper-btn-cta
 				display flex
 				justify-content space-between
 				width 300px
-				margin 40px auto
+				margin 18px auto
 				.btn-big-curve
 					width 110px
 					padding 10px 17px
@@ -707,6 +714,7 @@ body
 					background-color #02AC36
 					
 	.banner-binndi-tech
+		display none
 		width 100%
 		margin 0px
 		padding 0px
@@ -914,6 +922,7 @@ body
 	
 		
 		.banner-binndi-enterprise
+			display none
 			.wrapper-text-banner-secundary-enterprise
 				width 100%
 				height 320px
@@ -1030,7 +1039,7 @@ body
 				width 100%
 			
 .section-binndi-enterprise
-	display flex
+	display none
 	flex-direction column
 	margin 50px 0px 0px 0px
 	padding 0px	
@@ -1538,14 +1547,15 @@ body
 				width 525px
 				font-size 2em
 				
-			h2
-				font-size 1.5em
-				margin 0px auto
-				width 290px
+			.wrapper-fold-icos
+				width 250px
 			.wrapper-btn-cta
 				margin 21px auto
 				.btn-big-curve
-					width 120px
+					width 140px
+					padding 13px 20px
+					p
+						font-size 1em
 			
 	.banner-background .banner-binndi-tech 
 		height 245px
@@ -1642,9 +1652,9 @@ body
 				h2, h1
 					width 378px
 			
-	.banner-background .otros .banner-binndi-points, .banner-background .otros .banner-binndi-app
+	.banner-background .otros .banner-binndi-app
 		flex-direction row
-	.banner-background .otros .banner-binndi-enterprise
+	.banner-background .otros .banner-binndi-points
 		flex-direction row-reverse
 		
 	.banner-background .otros .banner-secundary figure img
@@ -1723,7 +1733,8 @@ body
 				margin 20px 0px 0px 0px
 				float right
 	
-	.section-binndi-enterprise 
+	.section-binndi-enterprise
+		display none
 		.grid-a
 			flex-direction row-reverse
 			padding 50px 145px

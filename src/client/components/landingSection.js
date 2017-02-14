@@ -165,7 +165,7 @@ export default class LandingSection extends React.Component{
 					<div id="banner-first-fold" className="banner1">
 						<div className="wrapper-text-banners wrapper-text-banners-first">
 							<h1 className="headline-black">Planifica con tus amigos todo tu viaje desde un solo lugar</h1>
-							<h2 className="subtitle-selling-line subtitle-black">Reinventamos la forma de explorar el mundo.</h2>
+							<div className="wrapper-fold-icos"><img src="https://s3-sa-east-1.amazonaws.com/binndi/landing/Oferta-binndi.png" /></div>
 							<div className="wrapper-btn-cta">
 								{ cta }
 							</div>
